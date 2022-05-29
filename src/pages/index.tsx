@@ -105,7 +105,7 @@ const images = [
   { id: 6, source: '/projects-images/image6.png', alt: 'Uma de nossas obras' },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
