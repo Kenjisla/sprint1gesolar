@@ -1,42 +1,32 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import {
-  ChartBarIcon,
-  CursorClickIcon,
-  MenuIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  ViewGridIcon,
-  XIcon,
-} from '@heroicons/react/outline'
+
 import { Navlink } from './Navlink'
 import { Logo } from '../Logo'
 
+import { HiOutlineMenuAlt4 } from 'react-icons/hi'
+import { MdClose } from 'react-icons/md'
+import { FaHome } from 'react-icons/fa'
+
 const solutions = [
   {
-    name: 'Analytics',
-    description: 'Get a better understanding of where your traffic is coming from.',
+    name: 'Home',
     href: '#',
-    icon: ChartBarIcon,
+    icon: FaHome
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
+    name: 'Afiliados',
     href: '#',
-    icon: CursorClickIcon,
+    icon: FaHome
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
+  { name: 'Investir em solar', 
     href: '#',
-    icon: ViewGridIcon,
+    icon: FaHome
   },
   {
-    name: 'Automations',
-    description: 'Build strategic funnels that will drive your customers to convert',
+    name: 'Plataforma',
     href: '#',
-    icon: RefreshIcon,
+    icon: FaHome
   },
 ]
 
@@ -44,27 +34,27 @@ export function Navbar() {
   return (
     <Popover className="relative">
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-6 lg:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Logo />
           </div>
-          <div className="-mr-2 -my-2 md:hidden">
+          <div className="-mr-2 -my-2 lg:hidden">
             <Popover.Button className="bg-neutral-800 rounded-md p-2 inline-flex items-center justify-center text-neutral-200 hover:text-sun-500 hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sun-500">
               <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <HiOutlineMenuAlt4 className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
 
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden lg:flex space-x-10">
 
-            <Navlink href="#">navlink</Navlink>
-            <Navlink href="#">navlink</Navlink>
-            <Navlink href="#">navlink</Navlink>
-            <Navlink href="#">navlink</Navlink>
+            <Navlink href="#">Home</Navlink>
+            <Navlink href="#">Investir em solar</Navlink>
+            <Navlink href="#">Afiliados</Navlink>
+            <Navlink href="#">Plataforma</Navlink>
 
           </nav>
 
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+          <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
             <a href="#" className="whitespace-nowrap text-base font-medium text-neutral-200 hover:text-sun-500 focus:outline-none focus:text-sun-500 focus:underline focus:underline-offset-2">
               Sign in
             </a>
@@ -87,7 +77,7 @@ export function Navbar() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
           <div className="rounded-lg shadow-lg bg-neutral-800 divide-y-2 divide-neutral-700">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
@@ -97,7 +87,7 @@ export function Navbar() {
                 <div className="-mr-2">
                   <Popover.Button className="bg-neutral-700 rounded-md p-2 inline-flex items-center justify-center text-neutral-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sun-500">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <MdClose className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>

@@ -1,13 +1,10 @@
-import { FormEvent, Fragment, useEffect, useState } from 'react';
-import axios from 'axios';
-
 import { Button } from "../components/Button";
 import { Navbar } from "../components/Navbar";
 import { Logo } from "../components/Logo";
+import { ProjectsCards } from '../components/ProjectsCards';
+import { Form } from '../components/Form';
 
-import { CircleWavyCheck, FacebookLogo, InstagramLogo, LinkedinLogo } from "phosphor-react";
-import { Listbox, Transition } from '@headlessui/react';
-import { CheckIcon, SelectorIcon, ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/outline';
+import { BsCheck2Circle, BsFacebook, BsInstagram, BsLinkedin} from 'react-icons/bs'
 
 const slide = [
   { id: 1, source: './logos/leverosSolar.png', alt: 'Logo da leveros' },
@@ -33,69 +30,6 @@ const reverseSlide = [
   { id: 9, source: './logos/renovigi.png', alt: 'Logo da adias' },
 ]
 
-const people = [
-  {
-    id: 1,
-    name: 'Wade Cooper',
-    avatar:
-      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 2,
-    name: 'Arlene Mccoy',
-    avatar:
-      'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 3,
-    name: 'Devon Webb',
-    avatar:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80',
-  },
-  {
-    id: 4,
-    name: 'Tom Cook',
-    avatar:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 5,
-    name: 'Tanya Fox',
-    avatar:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 6,
-    name: 'Hellen Schmidt',
-    avatar:
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 7,
-    name: 'Caroline Schultz',
-    avatar:
-      'https://images.unsplash.com/photo-1568409938619-12e139227838?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 8,
-    name: 'Mason Heaney',
-    avatar:
-      'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 9,
-    name: 'Claudie Smitham',
-    avatar:
-      'https://images.unsplash.com/photo-1584486520270-19eca1efcce5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    id: 10,
-    name: 'Emil Schaefer',
-    avatar:
-      'https://images.unsplash.com/photo-1561505457-3bcad021f8ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-]
-
 const images = [
   { id: 1, source: '/projects-images/image1.png', alt: 'Uma de nossas obras' },
   { id: 2, source: '/projects-images/image2.png', alt: 'Uma de nossas obras' },
@@ -105,40 +39,8 @@ const images = [
   { id: 6, source: '/projects-images/image6.png', alt: 'Uma de nossas obras' },
 ]
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Home() {
-  const [selected, setSelected] = useState(people[3])
-  const [imageIndex, setImageIndex] = useState(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex(index => index === (images.length - 1) ? index = 0 : index + 1);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-
-  async function createLead(e: FormEvent) {
-    e.preventDefault()
-
-    try {
-      const response = await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
-      {
-        value: 250,
-        zip_code: '123',
-        name: 'leonardo',
-        phone_number: '11972202384',
-        email: 'emailteste@teste.com'
-      })
-
-      console.log(response)
-    } catch (err) {
-      console.log(err)
-    }
-  }
 
   return (
     <div className="bg-neutral-900 min-h-screen">
@@ -213,7 +115,7 @@ export default function Home() {
       </div>
 
       <div className="max-w-[1450px] mx-auto py-24 px-6 md:px-4 md:py-32">
-        <div className="w-full h-full flex flex-col gap-12 xs:gap-32">
+        <div className="w-full h-full flex flex-col gap-12 xs:gap-36">
           <div className="flex flex-col items-start justify-center gap-6 md:items-center md:text-center xl:gap-4">
             <h1 className="text-3xl font-bold text-neutral-200 tracking-tight md:text-4xl">
               Acompanhe a geração de energia na pauma da sua mão
@@ -225,7 +127,7 @@ export default function Home() {
           </div>  
 
           <div className="w-full h-full flex items-center justify-center">
-            <div className="flex items-center justify-center w-[500px] h-[510px] md:h-[610px]">
+            <div className="flex items-center justify-center w-[500px] h-[510px] md:h-[480px]">
               <img  
                 src="iphone.svg" 
                 alt="Image do nosso aplicativo" 
@@ -318,7 +220,7 @@ export default function Home() {
                   <ul className="flex flex-col gap-6 border-t-2 border-t-neutral-800 pt-12">
                     <li className="flex items-center gap-4">
                       <span>
-                        <CircleWavyCheck weight='bold' size={22} className="text-sun-500" />
+                        <BsCheck2Circle className="text-sun-500 w-5 h-5" />
                       </span>
                       <p className="text-sm font-medium text-neutral-500 tracking-tight">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
@@ -328,7 +230,7 @@ export default function Home() {
 
                     <li className="flex items-center gap-4">
                       <span>
-                        <CircleWavyCheck weight='bold' size={22} className="text-sun-500" />
+                        <BsCheck2Circle className="text-sun-500 w-5 h-5" />
                       </span>
                       <p className="text-sm font-medium text-neutral-500 tracking-tight">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
@@ -338,7 +240,7 @@ export default function Home() {
 
                     <li className="flex items-center gap-4">
                       <span>
-                        <CircleWavyCheck weight='bold' size={22} className="text-sun-500" />
+                        <BsCheck2Circle className="text-sun-500 w-5 h-5" />
                       </span>
                       <p className="text-sm font-medium text-neutral-500 tracking-tight">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
@@ -391,9 +293,9 @@ export default function Home() {
       </div>
 
       <div className="bg-[#131313] w-full">
-        <div className="max-w-[1450px] h-[800px] mx-auto py-6 px-4 md:px-4 md:py-14 lg:py-24">
-          <div className="flex flex-col h-full gap-12 xl:flex-row">
-            <div className="w-full h-1/2 flex flex-col items-start justify-center xl:w-1/2 xl:h-full xl:flex-row md:items-center">
+        <div className="max-w-[1450px] h-full mx-auto py-20 px-4 lg:py-24">
+          <div className="flex flex-col items-center h-full gap-20 lg:gap-32">
+            <div className="w-full flex flex-col items-start justify-center md:items-center">
               <div className='flex flex-col gap-2'>
                 <h1 className="text-3xl font-bold text-neutral-200 tracking-tight md:text-4xl">
                   Nossos projetos
@@ -405,47 +307,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative w-full h-full">
-            {images.map((image, index) => (
-              <Transition
-                key={image.id}
-                show={imageIndex === index}
-                enter="transition-opacity duration-55 ease-in-out"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-200 ease-in-out"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
-                <img
-                  key={image.id}
-                  src={image.source} 
-                  alt="Imagem de um dos nossos projetos" 
-                  className="absolute w-full h-full max-h-[615px] object-cover rounded-md xl:max-h-max"
-                />
-              </Transition>
-            ))}
-
-              <div className="flex items-center absolute px-4 py-2 bottom-0 left-0 h-[180px] w-full backdrop-blur-sm bg-neutral-900/95 xs:h-[170px] xs:py-3 xs:px-6 lg:w-[60%] lg:-bottom-4 lg:-left-4 lg:rounded-lg">
-                <div className="flex flex-col gap-2">
-                  <h1 className="font-bold text-lg text-neutral-200 tracking-normal">Obra residencial</h1>
-
-                  <ul className="flex flex-col gap-[0.15rem]">
-                    <li className="text-neutral-400 font-medium">
-                      Economia anual: <span className="ml-2 tracking-normal text-sun-500">R$ 1200,00</span>
-                    </li>
-                    <li className="text-neutral-400 font-medium">
-                      Economia anual: <span className="ml-2 tracking-normal text-sun-500">R$ 1200,00</span>
-                    </li>
-                    <li className="flex flex-col text-neutral-400 font-medium sm:flex-row">Conta de luz: 
-                      <div className="flex itemx-center gap-3 mt-1 sm:ml-3 sm:mt-0">
-                        <span>Antes: <span className="text-sun-500">R$ 1200,00</span></span>
-                        <span>Hoje: <span className="text-sun-500">R$ 85,00</span></span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="relative w-full h-full grid grid-cols-1 gap-y-14 gap-x-10 lg:grid-cols-2 md:mx-auto md:max-w-[600px] lg:max-w-full">
+              <ProjectsCards />
             </div>
           </div>
         </div>
@@ -458,9 +321,9 @@ export default function Home() {
             {slide.map(image => ( <img key={image.id} src={image.source} className="h-[50px] w-[215px] px-7" /> ))}
           </div>
 
-          <div className="h-[100px] flex items-center flex-row-reverse animate-smReverseSlide md:animate-mdReverseSlide lg:animate-lgReverseSlide xl:animate-xlReverseSlide">
+          <div className="h-[100px] flex items-center animate-smSlide md:animate-mdSlide lg:animate-lgSlide xl:animate-xlSlide">
           {slide.map(image => ( <img key={image.id} src={image.source} className="h-[50px] w-[215px] px-7" /> ))}
-            {slide.map(image => ( <img key={image.id} src={image.source} className="h-[50px] w-[215px] px-7" /> ))}
+          {slide.map(image => ( <img key={image.id} src={image.source} className="h-[50px] w-[215px] px-7" /> ))}
           </div>
         </div>
       </div>
@@ -476,141 +339,13 @@ export default function Home() {
           </div>
 
           <div>
-            <form onSubmit={e => createLead(e)} className="w-full max-w-[750px] flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
-                <div className="w-full">
-                  <div className="flex flex-col gap-8">
-                    <div className="">
-                      <Listbox value={selected} onChange={setSelected}>
-                        {({ open }) => (
-                          <>
-                            <Listbox.Label className="block text-sm font-semibold text-neutral-200">Assigned to</Listbox.Label>
-                            <div className="mt-2 relative">
-                              <Listbox.Button className="relative w-full bg-neutral-700 border border-neutral-500 text-neutral-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-sun-500 focus:border-sun-500 sm:text-sm">
-                                <span className="flex items-center">
-                                  <img src={selected.avatar} alt="" className="flex-shrink-0 h-6 w-6 rounded-full" />
-                                  <span className="ml-3 block truncate">{selected.name}</span>
-                                </span>
-                                <span className="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                                  <SelectorIcon className="h-5 w-5 text-gray-300" aria-hidden="true" />
-                                </span>
-                              </Listbox.Button>
-
-                              <Transition
-                                show={open}
-                                as={Fragment}
-                                leave="transition ease-in duration-100"
-                                leaveFrom="opacity-100"
-                                leaveTo="opacity-0"
-                              >
-                                <Listbox.Options className="absolute z-10 mt-1 w-full bg-neutral-600 shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-neutral-900 ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
-                                  {people.map((person) => (
-                                    <Listbox.Option
-                                      key={person.id}
-                                      className={({ active }) =>
-                                        classNames(
-                                          active ? 'text-white bg-sun-500' : 'text-neutral-300',
-                                          'cursor-default select-none relative py-2 pl-3 pr-9'
-                                        )
-                                      }
-                                      value={person}
-                                    >
-                                      {({ selected, active }) => (
-                                        <>
-                                          <div className="flex items-center">
-                                            <img src={person.avatar} alt="" className="flex-shrink-0 h-6 w-6 rounded-full" />
-                                            <span
-                                              className={classNames(selected ? 'font-semibold' : 'font-normal', 'ml-3 block truncate')}
-                                            >
-                                              {person.name}
-                                            </span>
-                                          </div>
-
-                                          {selected ? (
-                                            <span
-                                              className={classNames(
-                                                active ? 'text-white' : 'text-sun-500',
-                                                'absolute inset-y-0 right-0 flex items-center pr-4'
-                                              )}
-                                            >
-                                              <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                                            </span>
-                                          ) : null}
-                                        </>
-                                      )}
-                                    </Listbox.Option>
-                                  ))}
-                                </Listbox.Options>
-                              </Transition>
-                            </div>
-                          </>
-                        )}
-                      </Listbox>
-                    </div>
-
-                    <div className="">
-                      <label htmlFor="first-name" className="block text-sm font-semibold text-neutral-200 ml-1">
-                        First name
-                      </label>
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autoComplete="given-name"
-                        className="mt-2 relative w-full bg-neutral-700 border border-neutral-500 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-sun-500 focus:border-sun-500 sm:text-sm"
-                      />
-                    </div>
-                    
-                    <div className="">
-                      <label htmlFor="first-name" className="block text-sm font-semibold text-neutral-200 ml-1">
-                        First name
-                      </label>
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autoComplete="given-name"
-                        className="mt-2 relative w-full bg-neutral-700 border border-neutral-500 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-sun-500 focus:border-sun-500 sm:text-sm"
-                      />
-                    </div>
-
-                    <div className="">
-                      <label htmlFor="first-name" className="block text-sm font-semibold text-neutral-200 ml-1">
-                        First name
-                      </label>
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autoComplete="given-name"
-                        className="mt-2 relative w-full bg-neutral-700 border border-neutral-500 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-sun-500 focus:border-sun-500 sm:text-sm"
-                      />
-                    </div>
-
-                    <div className="">
-                      <label htmlFor="first-name" className="block text-sm font-semibold text-neutral-200 ml-1">
-                        First name
-                      </label>
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autoComplete="given-name"
-                        className="mt-2 relative w-full bg-neutral-700 border border-neutral-500 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-sun-500 focus:border-sun-500 sm:text-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="w-full flex items-center justify-center">
-                  <Button type="submit">Simular sistema</Button>
-                </div>
-            </form>
+            <Form />
           </div>
 
         </div>
       </div>
 
-      <footer className="w-full flex items-center justify-center py-12 px-6 md:px-4 md:py-14 bg-[#111111]">
+      <footer className="w-full flex items-center justify-center py-12 px-6 md:px-4 md:py-14 bg-[#131313]">
         <div className="w-full max-w-[1200px] flex flex-col items-start p-2">
           <div className="w-full flex flex-col items-start gap-8 justify-between sm:items-center lg:flex-row">
             <div>
@@ -627,16 +362,16 @@ export default function Home() {
           <div className="w-full flex items-start justify-between flex-col gap-8 py-6 mt-8 border-t-2 border-t-neutral-800 sm:items-center md:gap-0 md:flex-row">
             <span className="text-neutral-200 font-bold text-sm">© 2022 GESOLAR, Inc. All rights reserved.</span>
             <div className="flex items-center gap-4">
-              <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-900 rounded-2xl">
-                <FacebookLogo weight='bold' size={22} className="text-sun-500" />
+              <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
+                <BsFacebook className="text-sun-500 w-5 h-5" />
               </a>
 
               <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-                <InstagramLogo weight='bold' size={22} className="text-sun-500"/>
+                <BsInstagram className="text-sun-500 w-5 h-5"/>
               </a>
 
               <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-                <LinkedinLogo weight='bold' size={22} className="text-sun-500"/>
+                <BsLinkedin className="text-sun-500 w-5 h-5"/>
               </a>
             </div>
           </div>

@@ -49,15 +49,15 @@ module.exports = {
         },
       },
       animation: {
-        smSlide: 'smSlide 15s linear infinite',
-        mdSlide: 'mdSlide 15s linear infinite',
-        lgSlide: 'lgSlide 15s linear infinite',
-        xlSlide: 'xlSlide 15s linear infinite',
+        smSlide: 'smSlide 60s linear infinite',
+        mdSlide: 'mdSlide 60s linear infinite',
+        lgSlide: 'lgSlide 60s linear infinite',
+        xlSlide: 'xlSlide 60s linear infinite',
 
-        smReverseSlide: 'smReverseSlide 15s linear infinite',
-        mdReverseSlide: 'mdReverseSlide 15s linear infinite',
-        lgReverseSlide: 'lgReverseSlide 15s linear infinite',
-        xlReverseSlide: 'xlReverseSlide 15s linear infinite',
+        smReverseSlide: 'smReverseSlide 60s linear infinite',
+        mdReverseSlide: 'mdReverseSlide 60s linear infinite',
+        lgReverseSlide: 'lgReverseSlide 60s linear infinite',
+        xlReverseSlide: 'xlReverseSlide 60s linear infinite',
 
       }
     },
