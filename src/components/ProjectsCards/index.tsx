@@ -29,7 +29,7 @@ export function ProjectsCards () {
           }
         },
         {
-          id: 1,
+          id: 2,
           image: {
             src: '',
             alt: ''
@@ -45,7 +45,7 @@ export function ProjectsCards () {
           }
         },
         {
-          id: 1,
+          id: 3,
           image: {
             src: '',
             alt: ''
@@ -61,7 +61,7 @@ export function ProjectsCards () {
           }
         },
         {
-          id: 1,
+          id: 4,
           image: {
             src: '',
             alt: ''

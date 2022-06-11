@@ -296,7 +296,7 @@ export default function Home() {
         <div className="max-w-[1450px] h-full mx-auto py-20 px-4 lg:py-24">
           <div className="flex flex-col items-center h-full gap-20 lg:gap-32">
             <div className="w-full flex flex-col items-start justify-center md:items-center">
-              <div className='flex flex-col gap-2'>
+              <div className='flex flex-col gap-2 md:text-center'>
                 <h1 className="text-3xl font-bold text-neutral-200 tracking-tight md:text-4xl">
                   Nossos projetos
                 </h1>
