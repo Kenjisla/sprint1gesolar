@@ -13,7 +13,7 @@ interface SelectProps {
     error?: FieldError;
 }
 
-const SelectBaseComponent: ForwardRefRenderFunction<HTMLInputElement, SelectProps> = ({ selectValue, setSelectValue, error, ...rest }, ref) => {
+export function Select({ selectValue, setSelectValue, error, ...rest }: SelectProps) {
     const selectData = [
         {
           id: 1,
@@ -79,7 +79,6 @@ const SelectBaseComponent: ForwardRefRenderFunction<HTMLInputElement, SelectProp
                                                 )
                                             }
                                             value={person}
-                                            ref={ref}
                                             {...rest}
                                         >
                                             <div className="flex items-center">
@@ -109,5 +108,3 @@ const SelectBaseComponent: ForwardRefRenderFunction<HTMLInputElement, SelectProp
         </div>
     );
 }
-
-export const Select = forwardRef(SelectBaseComponent)
