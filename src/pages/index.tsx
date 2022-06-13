@@ -159,7 +159,9 @@ export default function Home() {
 
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                span
+                <strong className="text-xl font-bold">
+                  2
+                </strong>
               </div>
 
               <div className="flex flex-col gap-2">
@@ -175,7 +177,9 @@ export default function Home() {
             
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                span
+                <strong className="text-xl font-bold">
+                  3
+                </strong>
               </div>
 
               <div className="flex flex-col gap-2">
@@ -191,7 +195,9 @@ export default function Home() {
 
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                span
+                <strong className="text-xl font-bold">
+                  4
+                </strong>
               </div>
 
               <div className="flex flex-col gap-2">
@@ -207,7 +213,9 @@ export default function Home() {
 
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                span
+                <strong className="text-xl font-bold">
+                  5
+                </strong>
               </div>
 
               <div className="flex flex-col gap-2">
