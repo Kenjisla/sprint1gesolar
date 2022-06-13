@@ -147,10 +147,10 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-[20px] font-bold text-neutral-200 tracking-tight">
+                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
                   Compra certa
                 </h3>
-                <p className="text-[14px] font-medium text-neutral-400 tracking-tight">
+                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -163,10 +163,10 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-[20px] font-bold text-neutral-200 tracking-tight">
+                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
                   Compra certa
                 </h3>
-                <p className="text-[14px] font-medium text-neutral-400 tracking-tight">
+                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -179,10 +179,10 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-[20px] font-bold text-neutral-200 tracking-tight">
+                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
                   Compra certa
                 </h3>
-                <p className="text-[14px] font-medium text-neutral-400 tracking-tight">
+                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -195,10 +195,10 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-[20px] font-bold text-neutral-200 tracking-tight">
+                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
                   Compra certa
                 </h3>
-                <p className="text-[14px] font-medium text-neutral-400 tracking-tight">
+                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -211,10 +211,10 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-[20px] font-bold text-neutral-200 tracking-tight">
+                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
                   Compra certa
                 </h3>
-                <p className="text-[14px] font-medium text-neutral-400 tracking-tight">
+                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
