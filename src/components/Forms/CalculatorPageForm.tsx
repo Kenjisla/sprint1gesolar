@@ -4,8 +4,8 @@ import axios from 'axios';
 import { useForm, RegisterOptions } from 'react-hook-form'
 
 import { Button } from '../Button';
-import { Select } from './Select';
-import { Input } from './Input';
+import { Select } from './components/Select';
+import { Input } from './components/Input';
 
 
 type FormValidationProps = {
@@ -17,13 +17,13 @@ type FormValidationProps = {
   
 }
 
-export type SelectData = {
+type SelectData = {
   id: number,
   amount: string;
   defaultValue?: boolean;
 }
 
-export function Form() {
+export function CalculatorPageForm() {
   const [selectValue, setSelectValue] = useState<SelectData>({
     id: 0,
     amount: 'Selecione o valor da sua conta de luz',
@@ -113,7 +113,7 @@ export function Form() {
       <form onSubmit={handleSubmit(onSubmit, onError)} className="w-full max-w-[750px] flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
           <div className="w-full">
               <div className="flex flex-col gap-8">
-                  <Select setSelectValue={updaterSelectValue} selectValue={selectValue} error={errors.select} {...register('select', formValidation.selectInputFieldOptions)}/>
+                  <Select onChangeSelectValue={updaterSelectValue} selectValue={selectValue} error={errors.select} {...register('select', formValidation.selectInputFieldOptions)}/>
 
                   <Input label="Nome" error={errors.name} {...register("name", formValidation.nameInputFieldOptions)} />
 
@@ -126,7 +126,7 @@ export function Form() {
           </div>
           
           <div className="w-full flex items-center justify-center">
-          <Button type="submit">Simular sistema</Button>
+            <Button type="submit">Simular sistema</Button>
           </div>
       </form>
   );

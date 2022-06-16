@@ -1,12 +1,11 @@
 import { Button } from "../components/Button";
-import { Navbar } from "../components/Navbar";
 import { Logo } from "../components/Logo";
 import { ProjectsCards } from '../components/ProjectsCards';
-import { Form } from '../components/Form';
 
 import { BsCheck2Circle, BsFacebook, BsInstagram, BsLinkedin} from 'react-icons/bs'
-import { SectionTitle } from "../components/SectionTitle";
-import { SectionSubtitle } from "../components/SectionSubtitle";
+import { Title } from "../components/Title";
+import { Subtitle } from "../components/Subtitle";
+import { WebsiteForm } from "../components/Forms/WebsiteForm";
 
 const slide = [
   { id: 1, source: './logos/leverosSolar.png', alt: 'Logo da leveros' },
@@ -36,9 +35,7 @@ export default function Home() {
 
 
   return (
-    <div className="bg-neutral-900 min-h-screen">
-      <Navbar />
-
+    <>
       <div className="relative h-full w-full">
         <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-[#0a0a0a]/50 top-0 left-0" />
 
@@ -65,7 +62,7 @@ export default function Home() {
         </div>
         <div className="h-[90vh]">
           <img 
-            src="house.png" 
+            src="hero-image.png" 
             alt="" 
             className=" h-full w-full object-cover"
           />
@@ -108,12 +105,12 @@ export default function Home() {
       <div className="max-w-[1450px] mx-auto py-24 px-6 md:px-4 md:py-32">
         <div className="w-full h-full flex flex-col gap-12 xs:gap-36">
           <div className="flex flex-col items-start justify-center gap-6 md:items-center md:text-center xl:gap-4">
-            <SectionTitle>Acompanhe a geração de energia na palma da sua mão</SectionTitle>
+            <Title>Acompanhe a geração de energia na palma da sua mão</Title>
 
-            <SectionSubtitle>
+            <Subtitle>
               Experimente a sensação da independência energética, deixando de pagar a conta 
               de energia. E acompanhe em tempo real, a sua geração e quanto esta economizando
-            </SectionSubtitle>
+            </Subtitle>
           </div>  
 
           <div className="w-full h-full flex items-center justify-center">
@@ -131,11 +128,11 @@ export default function Home() {
       <div className="max-w-[1450px] mx-auto py-24 px-6 flex items-center border-y-2 border-y-neutral-800 md:px-4">
         <div className="flex flex-col justify-between h-full w-full gap-20">
           <div className="flex flex-col items-start justify-center gap-6 lg:items-center lg:text-center xl:gap-4">
-            <SectionTitle>Como funciona o processo de homologação</SectionTitle>
+            <Title>Como funciona o processo de homologação</Title>
 
-            <SectionSubtitle>
+            <Subtitle>
               Nós cuidaremos de todo o processo para sua comodidade e conforto, desde a parte de pagamento até a homologação
-            </SectionSubtitle>
+            </Subtitle>
           </div>
 
           <div className="grid grid-cols-1 grid-rows-auto gap-16 lg:grid-cols-3 lg:grid-rows-2 lg:gap-8">
@@ -238,7 +235,7 @@ export default function Home() {
             <div className="flex flex-col items-start justify-center gap-12 h-full max-w-[90%]">
                 <div className="flex flex-col gap-3 xl:gap-6">
                   <div className="flex flex-col gap-2 xl:gap-4">
-                    <SectionTitle>Instale a energia solar e tenha rendimento em torno de 15% ao ano</SectionTitle>
+                    <Title>Instale a energia solar e tenha rendimento em torno de 15% ao ano</Title>
                   </div>
 
                   <ul className="flex flex-col gap-6 border-t-2 border-t-neutral-800 pt-8 mt-8">
@@ -298,12 +295,12 @@ export default function Home() {
             <div className="flex flex-col items-start justify-center gap-12 h-full max-w-[90%]">
                 <div className="flex flex-col gap-3 xl:gap-6">
                   <div className="flex flex-col gap-2 xl:gap-4">
-                    <SectionTitle>Indique um amigo e receba <span className="text-sun-500">CASHBACK</span></SectionTitle>
+                    <Title>Indique um amigo e receba <span className="text-sun-500">CASHBACK</span></Title>
 
-                    <SectionSubtitle>
+                    <Subtitle>
                       Você sabia que indicando um amigo e ele instalando o sistema, 
                       você pode ganhar R$500,00 de bônus?
-                    </SectionSubtitle>
+                    </Subtitle>
                   </div>
                 </div>
             </div>
@@ -316,13 +313,13 @@ export default function Home() {
           <div className="flex flex-col items-center h-full gap-20 lg:gap-32">
             <div className="w-full flex flex-col items-start justify-center md:items-center">
               <div className='flex flex-col gap-2 md:text-center'>
-                <SectionTitle>
+                <Title>
                   Nossos projetos
-                </SectionTitle>
+                </Title>
 
-                <SectionSubtitle>
+                <Subtitle>
                   Veja a seguir alguns dos projetos de nossos clientes
-                </SectionSubtitle>
+                </Subtitle>
               </div>
             </div>
 
@@ -358,7 +355,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Form />
+            <WebsiteForm />
           </div>
 
         </div>
@@ -396,6 +393,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }

@@ -7,6 +7,7 @@ import { Logo } from '../Logo'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import { MdClose } from 'react-icons/md'
 import { FaHome } from 'react-icons/fa'
+import Link from 'next/link'
 
 const solutions = [
   {
@@ -47,7 +48,7 @@ export function Navbar() {
 
           <nav className="hidden lg:flex space-x-10">
 
-            <Navlink href="#">Home</Navlink>
+            <Navlink href="/">Home</Navlink>
             <Navlink href="#">Investir em solar</Navlink>
             <Navlink href="#">Afiliados</Navlink>
             <Navlink href="#">Plataforma</Navlink>
@@ -55,15 +56,13 @@ export function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-nowrap text-base font-medium text-neutral-200 hover:text-sun-500 focus:outline-none focus:text-sun-500 focus:underline focus:underline-offset-2">
-              Sign in
-            </a>
-            <a
-              href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
-            >
-              Sign up
-            </a>
+            <Link href="calculadora">
+              <a
+                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
+              >
+                Fazer um orçamento
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -110,14 +109,14 @@ export function Navbar() {
               <div>
                 <a
                   href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
+                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
                 >
-                  Sign up
+                  Cadastrar
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-neutral-200">
-                  Existing customer?{' '}
+                  já possui uma conta?{' '}
                   <a href="#" className="text-sun-500 hover:text-amber-500 focus:outline-none focus:text-sun-500 focus:underline focus:underline-offset-2">
-                    Sign in
+                    Login
                   </a>
                 </p>
               </div>

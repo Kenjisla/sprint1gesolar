@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         sun: {
-          500: '#f9a826'
+          500: '#f9a826',
         }
       },
       screens: {

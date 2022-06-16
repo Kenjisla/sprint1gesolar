@@ -1,19 +1,23 @@
-import { forwardRef, ForwardRefRenderFunction, Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
 import { Listbox, Transition } from '@headlessui/react';
 import { BsCheck } from 'react-icons/bs'
 import { MdOutlineKeyboardArrowDown, MdAttachMoney } from 'react-icons/md'
-import { SelectData } from '.';
-import { ChangeHandler, FieldError } from 'react-hook-form';
+import { FieldError } from 'react-hook-form';
 
+type SelectData = {
+    id: number,
+    amount: string;
+    defaultValue?: boolean;
+}
 
 interface SelectProps {
     selectValue: SelectData;
-    setSelectValue: (value: SelectData) => void;
+    onChangeSelectValue: (value: SelectData) => void;
     error?: FieldError;
 }
 
-export function Select({ selectValue, setSelectValue, error, ...rest }: SelectProps) {
+export function Select({ selectValue, onChangeSelectValue, error, ...rest }: SelectProps) {
     const selectData = [
         {
           id: 1,
@@ -43,12 +47,12 @@ export function Select({ selectValue, setSelectValue, error, ...rest }: SelectPr
 
     return (
         <div className="flex flex-col gap-2">
-            <Listbox value={selectValue} onChange={(value) => setSelectValue(value)}>
+            <Listbox value={selectValue} onChange={(value) => onChangeSelectValue(value)}>
                 {({ open }) => (
                     <>
                         <Listbox.Label className="block text-sm font-semibold text-neutral-200">Valor da conta de luz</Listbox.Label>
                         <div className="mt-[0.6rem] relative">
-                            <Listbox.Button className={classNames(error ? "border border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500" : "border-neutral-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500", "relative w-full border bg-neutral-700 text-neutral-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default  sm:text-sm")}>
+                            <Listbox.Button className={classNames(error ? "border border-red-500 focus:outline-none focus:ring-2 ring-offonChage-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500" : "border-neutral-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500", "relative w-full border bg-neutral-700 text-neutral-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default  sm:text-sm")}>
                                 <span className="flex items-center">
                                     <span className="flex items-center justify-center flex-shrink-0 h-6 w-6 rounded-full bg-neutral-400">
                                         <MdAttachMoney className="w-5 h-5 text-white"/>
