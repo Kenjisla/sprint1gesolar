@@ -1,23 +1,10 @@
 import Image from "next/image";
-import { useState } from "react";
-import { Select } from "../components/Forms/components/Select";
 import { Subtitle } from "../components/Subtitle";
 import { Title } from "../components/Title";
 
-import type { SelectData } from "../components/Forms/WebsiteForm";
-import { Input } from "../components/Forms/components/Input";
-import { Button } from "../components/Button";
+import { CalculatorPageForm } from "../components/Forms/CalculatorPageForm";
 
 export default function Calculadora() {
-    const [selectValue, setSelectValue] = useState<SelectData>({
-        id: 0,
-        amount: 'Selecione o valor da sua conta de luz',
-        defaultValue: true
-      })
-
-    function updateSelectValue(value: SelectData) {
-        setSelectValue(value)
-    }
 
     return (
         <div className="flex flex-col xl:flex-row">
@@ -38,7 +25,7 @@ export default function Calculadora() {
                 </div>
             </div>
 
-            <div className="w-full h-full px-6 py-12 flex flex-col items-center gap-12 md:gap-16 xl:py-0 xl:min-h-[calc(100vh-92px)] bg-neutral-900">
+            <div className="w-full h-full px-6 py-12 flex flex-col items-center justify-center gap-12 md:gap-16 xl:py-0 xl:min-h-[calc(100vh-92px)] bg-neutral-900">
                 <div className="h-full mx-auto flex flex-col items-start justify-center gap-1 xl:gap-2 sm:items-center sm:text-center">
                     <Title>Calcule seu sistema</Title>
 
@@ -47,24 +34,7 @@ export default function Calculadora() {
                     </Subtitle>
                 </div>
 
-
-                <form className="w-full max-w-lg flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
-                    <div className=" flex flex-col gap-8">
-                        <Select selectValue={selectValue} onChangeSelectValue={updateSelectValue}/>
-
-                        <Input label="Endereço de email" name='' />
-
-                        <Input label="Endereço de email" name='' />
-
-                        <Input label="Endereço de email" name='' />
-
-                        <Input label="Endereço de email" name='' />
-                    </div>
-
-                    <div className="">
-                        <Button>Simular online</Button>
-                    </div>
-                </form>
+                <CalculatorPageForm />
             </div>
         </div>
     )

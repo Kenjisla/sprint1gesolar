@@ -104,30 +104,28 @@ export function CalculatorPageForm() {
     
   }
 
-  function updaterSelectValue(value: SelectData) {
+  function updateSelectValue(value: SelectData) {
     setValue("select", value.amount)
     setSelectValue(value)
   }
 
   return (
-      <form onSubmit={handleSubmit(onSubmit, onError)} className="w-full max-w-[750px] flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
-          <div className="w-full">
-              <div className="flex flex-col gap-8">
-                  <Select onChangeSelectValue={updaterSelectValue} selectValue={selectValue} error={errors.select} {...register('select', formValidation.selectInputFieldOptions)}/>
+    <form className="w-full max-w-lg flex flex-col gap-12">
+      <div className=" flex flex-col gap-8">
+          <Select selectValue={selectValue} onChangeSelectValue={updateSelectValue}/>
 
-                  <Input label="Nome" error={errors.name} {...register("name", formValidation.nameInputFieldOptions)} />
+          <Input label="Endereço de email" name='' />
 
-                  <Input label="Endereço de email" error={errors.email} {...register("email", formValidation.emailInputFieldOptions)} />
+          <Input label="Endereço de email" name='' />
 
-                  <Input label="Numero de celular" error={errors.phone_number} {...register("phone_number", formValidation.phoneNumberInputFieldOptions)} onKeyUp={formaterPhoneNumberInputValue} inputLength={16}/>
-                
-                  <Input label="CEP" error={errors.zip_code} {...register('zip_code', formValidation.zipCodeInputFieldOptions)} onKeyUp={formaterZipCodeInputValue} inputLength={9}/>
-              </div>
-          </div>
-          
-          <div className="w-full flex items-center justify-center">
-            <Button type="submit">Simular sistema</Button>
-          </div>
-      </form>
+          <Input label="Endereço de email" name='' />
+
+          <Input label="Endereço de email" name='' />
+      </div>
+
+      <div className="flex items-center justify-center">
+          <Button>Simular online</Button>
+      </div>
+  </form>
   );
 }

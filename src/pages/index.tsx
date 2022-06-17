@@ -37,16 +37,17 @@ export default function Home() {
   return (
     <>
       <div className="relative h-full w-full">
-        <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-[#0a0a0a]/50 top-0 left-0" />
+        <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-neutral-900/60 inset-x-0 inset-bottom-0" />
 
         <div className="w-full h-full flex flex-col items-center gap-16 xl:gap-8">
           <div className="absolute w-full max-w-[1450px] h-full">
-            <div className="flex flex-col items-start justify-end gap-12 h-full px-6 pb-24 md:pb-36">
-              <div className="flex flex-col gap-1">
-                <h1 className="text-4xl font-bold text-neutral-200 leading-snug md:text-5xl">
+            <div className="flex flex-col items-start justify-end gap-6 h-full px-6 pb-24 md:pb-36">
+              <div className="flex flex-col gap-3 sm:gap-1">
+                <h1 className="text-4xl font-bold text-neutral-200 tracking-tight leading-10 md:text-5xl md:leading-tight">
                   Energia solar para todos
                 </h1>
-                <h2 className="text-md font-medium text-neutral-300 tracking-tight md:text-md">
+
+                <h2 className="text-md font-medium text-neutral-300 tracking-tight max-w-2xl">
                   Produza sua própria energia trocando o custo da sua conta 
                   de luz para pagar o investimento no sistema.
                 </h2>
@@ -294,7 +295,7 @@ export default function Home() {
           <div className="col-span-4 row-span-2 xl:col-span-3 xl:row-span-4">
             <div className="flex flex-col items-start justify-center gap-12 h-full max-w-[90%]">
                 <div className="flex flex-col gap-3 xl:gap-6">
-                  <div className="flex flex-col gap-2 xl:gap-4">
+                  <div className="flex flex-col gap-4 xl:gap-6">
                     <Title>Indique um amigo e receba <span className="text-sun-500">CASHBACK</span></Title>
 
                     <Subtitle>
