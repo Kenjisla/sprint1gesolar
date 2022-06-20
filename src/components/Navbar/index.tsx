@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
             <Link href="calculadora">
               <a
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
+                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-md shadow-sm text-base font-medium text-neutral-200 bg-neutral-900 border border-sun-500/75 hover:bg-amber-500 hover:text-neutral-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors duration-200"
               >
                 Fazer um orçamento
               </a>

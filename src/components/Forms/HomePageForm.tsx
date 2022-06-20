@@ -23,7 +23,7 @@ export type SelectData = {
   defaultValue?: boolean;
 }
 
-export function WebsiteForm() {
+export function HomePageForm() {
   const [selectValue, setSelectValue] = useState<SelectData>({
     id: 0,
     amount: 'Selecione o valor da sua conta de luz',

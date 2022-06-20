@@ -5,7 +5,7 @@ import { ProjectsCards } from '../components/ProjectsCards';
 import { BsCheck2Circle, BsFacebook, BsInstagram, BsLinkedin} from 'react-icons/bs'
 import { Title } from "../components/Title";
 import { Subtitle } from "../components/Subtitle";
-import { WebsiteForm } from "../components/Forms/WebsiteForm";
+import { HomePageForm } from "../components/Forms/HomePageForm";
 
 const slide = [
   { id: 1, source: './logos/leverosSolar.png', alt: 'Logo da leveros' },
@@ -356,7 +356,7 @@ export default function Home() {
           </div>
 
           <div>
-            <WebsiteForm />
+            <HomePageForm />
           </div>
 
         </div>
