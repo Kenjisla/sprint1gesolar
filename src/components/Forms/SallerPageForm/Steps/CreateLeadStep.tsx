@@ -8,7 +8,7 @@ interface CreateLeadStepProps {
 
 export function CreateLeadStep({ saller }: CreateLeadStepProps) {
     return (
-        <div className="flex flex-col gap-11 max-h-[65vh] overflow-y-scroll sm:max-h-[550px]">
+        <div className="flex flex-col gap-11 max-h-[50vh] overflow-y-scroll sm:max-h-[550px]">
             <fieldset className="flex flex-col">
                 <div className="max-w-2xl flex flex-col gap-3 py-3 border-b border-neutral-600">
                     <div className="flex items-center gap-3">
