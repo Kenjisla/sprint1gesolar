@@ -1,22 +1,9 @@
-import { useState } from "react";
-
 import { BsCheck2Circle } from "react-icons/bs";
 import { Button } from "../components/Button";
 import { Subtitle } from "../components/Subtitle";
 import { Title } from "../components/Title";
 
 export default function Servicing() {
-    const [slideValue, setSlideValue] = useState(50)
-
-    function slideImageComparasion(e: any) {
-        const imageOnTop = document?.getElementById("image_on_top");
-        
-        if (imageOnTop != null) {
-            imageOnTop.style.clipPath = `polygon(0 0, ${e.target.value}% 0, ${e.target.value}% 100%, 0 100%)`
-        }
-            
-        setSlideValue(e.target.value)
-    }
 
     return (
         <>
@@ -120,36 +107,12 @@ export default function Servicing() {
                         <Subtitle>Arraste a bolinha laranja e veja o antes e o depois</Subtitle>
                     </div>
 
-                    <div className="flex flex-col gap-3">
-                        <div className="relative w-full h-[60vh] flex items-center justify-center px-6">
-                            <img
-                                className="absolute w-full h-full object-cover"
-                                src="/image1-slider-comparasion.png" 
-                                alt="" 
-                            />
-
-                            <img
-                                className="absolute w-full h-full object-cover clip"
-                                src="/image2-slider-comparasion.png" 
-                                alt=""
-                                id="image_on_top"
-                            />
-
-                            <input
-                                id="slider-comparasion"
-                                type="range" 
-                                className="relative w-full h-2 outline-none rounded-lg appearance-none cursor-pointer bg-transparent"
-                                onInput={e => slideImageComparasion(e)}
-                                min="0" 
-                                max="100" 
-                                value={slideValue}
-                            />
-                        </div>
-
-                        <div className="flex justify-between text-neutral-200 font-medium text-md">
-                            <span>Antes</span>
-                            <span>Depois</span>
-                        </div>
+                    <div className="relative w-full h-[60vh] flex items-center justify-center">
+                        <img
+                            className="w-full h-full object-cover"
+                            src="/afterAndBefore.png" 
+                            alt="" 
+                        />
                     </div>
                 </div>
             </div>

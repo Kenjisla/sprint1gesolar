@@ -1,38 +1,119 @@
 import { Button } from "../components/Button";
 import { Logo } from "../components/Logo";
-import { ProjectsCards } from '../components/ProjectsCards';
 
 import { BsCheck2Circle, BsFacebook, BsInstagram, BsLinkedin} from 'react-icons/bs'
 import { Title } from "../components/Title";
 import { Subtitle } from "../components/Subtitle";
 import { HomePageForm } from "../components/Forms/HomePageForm";
-
-const slide = [
-  { id: 1, source: './logos/leverosSolar.png', alt: 'Logo da leveros' },
-  { id: 2, source: './logos/adiasSolar.png', alt: 'Logo da adias' },
-  { id: 3, source: './logos/apSystems.png', alt: 'Logo da APsystems' },  
-  { id: 4, source: './logos/aeSolar.png', alt: 'Logo da adias' },  
-  { id: 5, source: './logos/abb.png', alt: 'Logo da adias' },  
-  { id: 6, source: './logos/deye.png', alt: 'Logo da adias' },  
-  { id: 7, source: './logos/elgin.png', alt: 'Logo da adias' },  
-  { id: 8, source: './logos/jinkoSolar.png', alt: 'Logo da adias' },  
-  { id: 9, source: './logos/renovigi.png', alt: 'Logo da adias' },
-]
-
-const reverseSlide = [
-  { id: 1, source: './logos/canadian.png', alt: 'Logo da Canadian' },
-  { id: 2, source: './logos/growatt.png', alt: 'Logo da Growatt' },
-  { id: 3, source: './logos/hypontec.png', alt: 'Logo da Hypontec' },  
-  { id: 4, source: './logos/znshineSolar.png', alt: 'Logo da Leveros' },  
-  { id: 5, source: './logos/longiSolar.png', alt: 'Logo da Longi Solar' },  
-  { id: 6, source: './logos/risen.png', alt: 'Logo da Risen' },  
-  { id: 7, source: './logos/solis.png', alt: 'Logo da Solis' },  
-  { id: 8, source: './logos/trinaSolar.png', alt: 'Logo da Trina Solar' },  
-  { id: 9, source: './logos/weg.png', alt: 'Logo da Weg' },
-]
+import { ProjectCard } from "../components/ProjectCard";
 
 export default function Home() {
+  const cardsData = [
+  {
+    id: 1,
+    image: {
+      src: '/projects-images/image1.png',
+      alt: 'Foto de uma das nossas obras',
+    },
+    values: {
+      typeOfWork: 'Obra Residencial',
+      annualSavings: 4200,
+      paybackTime: 4.9,
+      generalSavings: {
+        before: 550,
+        after: 69
+      }
+    }
+  },
+  {
+    id: 2,
+    image: {
+      src: '/projects-images/image2.png',
+      alt: 'Foto de uma das nossas obras',
+    },
+    values: {
+      typeOfWork: 'Obra Residencial',
+      annualSavings: 4600,
+      paybackTime: 4,
+      generalSavings: {
+        before: 535,
+        after: 80
+      }
+    }
+  },
+  {
+    id: 3,
+    image: {
+      src: '/projects-images/image3.png',
+      alt: 'Foto de uma das nossas obras',
+    },
+    values: {
+      typeOfWork: 'Obra Residencial',
+      annualSavings: 14000,
+      paybackTime: 3.9,
+      generalSavings: {
+        before: 1350,
+        after: 168
+      }
+    }
+  },
+  {
+    id: 4,
+    image: {
+      src: '/projects-images/image4.png',
+      alt: 'Foto de uma das nossas obras',
+    },
+    values: {
+      typeOfWork: 'Obra Residencial',
+      annualSavings: 3100,
+      paybackTime: 5.6,
+      generalSavings: {
+        before: 350,
+        after: 80
+      }
+    }
+  },
+  {
+    id: 5,
+    image: {
+      src: '/projects-images/image5.png',
+      alt: 'Foto de uma das nossas obras',
+    },
+    values: {
+      typeOfWork: 'Obra Residencial',
+      annualSavings: 14500,
+      paybackTime: 3.9,
+      generalSavings: {
+        before: 1400,
+        after: 140
+      }
+    }
+  },
+  ]
 
+  const slide = [
+    { id: 1, source: './logos/leverosSolar.png', alt: 'Logo da leveros' },
+    { id: 2, source: './logos/adiasSolar.png', alt: 'Logo da adias' },
+    { id: 3, source: './logos/apSystems.png', alt: 'Logo da APsystems' },  
+    { id: 4, source: './logos/aeSolar.png', alt: 'Logo da adias' },  
+    { id: 5, source: './logos/abb.png', alt: 'Logo da adias' },  
+    { id: 6, source: './logos/deye.png', alt: 'Logo da adias' },  
+    { id: 7, source: './logos/elgin.png', alt: 'Logo da adias' },  
+    { id: 8, source: './logos/jinkoSolar.png', alt: 'Logo da adias' },  
+    { id: 9, source: './logos/renovigi.png', alt: 'Logo da adias' },
+  ]
+  
+  const reverseSlide = [
+    { id: 1, source: './logos/canadian.png', alt: 'Logo da Canadian' },
+    { id: 2, source: './logos/growatt.png', alt: 'Logo da Growatt' },
+    { id: 3, source: './logos/hypontec.png', alt: 'Logo da Hypontec' },  
+    { id: 4, source: './logos/znshineSolar.png', alt: 'Logo da Leveros' },  
+    { id: 5, source: './logos/longiSolar.png', alt: 'Logo da Longi Solar' },  
+    { id: 6, source: './logos/risen.png', alt: 'Logo da Risen' },  
+    { id: 7, source: './logos/solis.png', alt: 'Logo da Solis' },  
+    { id: 8, source: './logos/trinaSolar.png', alt: 'Logo da Trina Solar' },  
+    { id: 9, source: './logos/weg.png', alt: 'Logo da Weg' },
+  ]
 
   return (
     <>
@@ -136,19 +217,19 @@ export default function Home() {
             </Subtitle>
           </div>
 
-          <div className="grid grid-cols-1 grid-rows-auto gap-16 lg:grid-cols-3 lg:grid-rows-2 lg:gap-8">
+          <div className="grid grid-cols-1 grid-rows-auto gap-16 place-items-center lg:grid-cols-3 lg:grid-rows-2 lg:gap-8">
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                <strong className="text-xl font-bold">
+                <span className="text-xl font-bold">
                   1
-                </strong>
+                </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
+                <strong className="text-lg font-bold text-neutral-200">
                   Compra certa
-                </h3>
-                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
+                </strong>
+                <p className="text-sm font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -157,16 +238,16 @@ export default function Home() {
 
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                <strong className="text-xl font-bold">
+                <span className="text-xl font-bold">
                   2
-                </strong>
+                </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
+                <strong className="text-lg font-bold text-neutral-200">
                   Compra certa
-                </h3>
-                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
+                </strong>
+                <p className="text-sm font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -175,16 +256,16 @@ export default function Home() {
             
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                <strong className="text-xl font-bold">
+                <span className="text-xl font-bold">
                   3
-                </strong>
+                </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
+                <strong className="text-lg font-bold text-neutral-200">
                   Compra certa
-                </h3>
-                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
+                </strong>
+                <p className="text-sm font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -193,16 +274,16 @@ export default function Home() {
 
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                <strong className="text-xl font-bold">
+                <span className="text-xl font-bold">
                   4
-                </strong>
+                </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
+                <strong className="text-lg font-bold text-neutral-200">
                   Compra certa
-                </h3>
-                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
+                </strong>
+                <p className="text-sm font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -211,16 +292,16 @@ export default function Home() {
 
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
               <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                <strong className="text-xl font-bold">
+                <span className="text-xl font-bold">
                   5
-                </strong>
+                </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-bold text-neutral-200 tracking-tight">
+                <strong className="text-lg font-bold text-neutral-200">
                   Compra certa
-                </h3>
-                <p className="text-[0.875rem] font-medium text-neutral-400 tracking-tight">
+                </strong>
+                <p className="text-sm font-medium text-neutral-400 tracking-tight">
                   Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
                   prepara-se para economizar e valorizar o seu patrimônio
                 </p>
@@ -324,8 +405,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative w-full h-full grid grid-cols-1 gap-y-14 gap-x-10 lg:grid-cols-2 md:mx-auto md:max-w-[600px] lg:max-w-full">
-              <ProjectsCards />
+            <div className="relative w-full h-full grid grid-cols-1 gap-y-14 gap-x-10 place-items-center lg:grid-cols-2 md:max-w-[600px] lg:max-w-full">
+              {cardsData.map(data => (
+                <ProjectCard key={data.id} image={data.image} values={data.values}/>
+              ))}
             </div>
           </div>
         </div>

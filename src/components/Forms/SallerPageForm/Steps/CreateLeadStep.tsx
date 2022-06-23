@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BsClipboardPlus, BsFillPersonFill } from "react-icons/bs";
 import { MdClose } from 'react-icons/md'
 import { Input } from "../../components/Input";
@@ -7,6 +8,8 @@ interface CreateLeadStepProps {
 }
 
 export function CreateLeadStep({ saller }: CreateLeadStepProps) {
+    const [image, setImage] = useState('')
+
     return (
         <div className="flex flex-col gap-11 max-h-[65vh] overflow-y-scroll sm:max-h-[550px]">
             <fieldset className="flex flex-col">
@@ -67,8 +70,8 @@ export function CreateLeadStep({ saller }: CreateLeadStepProps) {
                     
                     <div className="flex flex-col gap-2">
                         <label className="block text-sm font-semibold text-neutral-200 ml-1">Foto da conta de luz</label>
-                        <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                            <div className="space-y-1 text-center">
+                        <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-600 border-dashed rounded-md">
+                            <div className="text-center">
                                 <svg
                                     className="mx-auto h-12 w-12 text-gray-400"
                                     stroke="currentColor"
@@ -90,7 +93,13 @@ export function CreateLeadStep({ saller }: CreateLeadStepProps) {
                                     className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                                 >
                                     <span>Upload a file</span>
-                                    <input id="file-upload" name="file-upload" type="file" className="sr-only" />
+                                    <input 
+                                        id="file-upload" 
+                                        name="file-upload" 
+                                        type="file" 
+                                        className="sr-only"
+                                        onChange={value => console.log(value)}
+                                    />
                                 </label>
                                 <p className="pl-1">or drag and drop</p>
                                 </div>
