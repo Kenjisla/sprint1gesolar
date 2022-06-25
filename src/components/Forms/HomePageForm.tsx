@@ -56,32 +56,16 @@ export function HomePageForm() {
     },
   }
 
-  const onSubmit = (data: any) => {
-    console.log(data)
-    
-  }
-
-  const onError = (error: any) => {
-    console.log(error)
-  }
-  
-  async function createLead(e: FormEvent) {
-    e.preventDefault()
-
-    try {
-      const response = await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
-      {
-        value: 250,
-        zip_code: '123',
-        name: 'leonardo',
-        phone_number: '11972202384',
-        email: 'emailteste@teste.com'
-      })
-
-      console.log(response)
-    } catch (err) {
-      console.log(err)
-    }
+  function createLead() {
+    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
+    {
+      value: 250,
+      zip_code: '123',
+      name: 'leonardo',
+      phone_number: '11972202384',
+      email: 'emailteste@teste.com',
+      lp: 'primary'
+    })
   }
 
   function formaterZipCodeInputValue() {
@@ -104,15 +88,20 @@ export function HomePageForm() {
     
   }
 
-  function updaterSelectValue(value: SelectData) {
+  function updateSelectValue(value: SelectData) {
     setValue("select", value.amount)
     setSelectValue(value)
   }
 
   return (
-      <form onSubmit={handleSubmit(onSubmit, onError)} className="w-full max-w-2xl flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
+      <form onSubmit={handleSubmit(createLead)} className="w-full max-w-2xl flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
           <div className="w-full flex flex-col gap-8">
-            <Select onChangeSelectValue={updaterSelectValue} selectValue={selectValue} error={errors.select} {...register('select', formValidation.selectInputFieldOptions)}/>
+            <Select
+              onChangeSelectValue={updateSelectValue} 
+              selectValue={selectValue} 
+              error={errors.select} 
+              {...register('select', formValidation.selectInputFieldOptions)}
+            />
 
             <Input label="Nome" error={errors.name} {...register("name", formValidation.nameInputFieldOptions)} />
 

@@ -7,7 +7,7 @@ import { CalculatorPageForm } from "../components/Forms/CalculatorPageForm";
 export default function Calculadora() {
 
     return (
-        <div className="flex flex-col xl:flex-row">
+        <div className="w-full h-full flex flex-col xl:flex-row xl:max-h-100vh">
             <div className="relative">
                 <img
                     className="w-full h-[50vh] xl:w-[calc(100vw-500px)] xl:h-[calc(100vh-92px)] object-cover"

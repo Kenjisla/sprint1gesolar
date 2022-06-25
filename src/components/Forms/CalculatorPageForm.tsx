@@ -65,23 +65,16 @@ export function CalculatorPageForm() {
     console.log(error)
   }
   
-  async function createLead(e: FormEvent) {
-    e.preventDefault()
-
-    try {
-      const response = await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
-      {
+  function createLead() {
+    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
+    {
         value: 250,
         zip_code: '123',
-        name: 'leonardo',
+        name: 'leonardo pagina da calculadora',
         phone_number: '11972202384',
-        email: 'emailteste@teste.com'
-      })
-
-      console.log(response)
-    } catch (err) {
-      console.log(err)
-    }
+        email: 'paginaDaCalculadora@teste.com',
+        lp: 'calculator'
+    })
   }
 
   function formaterZipCodeInputValue() {
@@ -110,21 +103,33 @@ export function CalculatorPageForm() {
   }
 
   return (
-    <form className="w-full max-w-lg flex flex-col gap-12">
-      <div className=" flex flex-col gap-8">
-          <Select selectValue={selectValue} onChangeSelectValue={updateSelectValue}/>
+    <form onSubmit={handleSubmit(createLead)} className="w-full max-w-lg flex flex-col gap-12">
+      <div className="grid grid-col-1 gap-8 md:grid-cols-6">
+          <div className="col-span-full">
+            <Select selectValue={selectValue} onChangeSelectValue={updateSelectValue}/>
+          </div>
 
-          <Input label="Endereço de email" name='' />
+          <div className="col-span-full md:col-span-2">
+            <Input label="Endereço de email" name='' />
+          </div>
 
-          <Input label="Endereço de email" name='' />
+          <div className="col-span-full md:col-span-4">
+            <Input label="Endereço de email" name='' />
+          </div>
 
-          <Input label="Endereço de email" name='' />
+          <div className="col-span-full md:col-span-4">
+            <Input label="Endereço de email" name='' />
+          </div>
 
-          <Input label="Endereço de email" name='' />
+          <div className="col-span-full md:col-span-2">
+            <Input label="Endereço de email" name='' />
+          </div>
       </div>
 
       <div className="flex items-center justify-center">
-          <Button>Simular online</Button>
+          <Button type="submit">
+            Simular online
+          </Button>
       </div>
   </form>
   );

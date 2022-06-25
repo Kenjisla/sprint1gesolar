@@ -1,5 +1,7 @@
 import { forwardRef, ForwardRefRenderFunction, HTMLAttributes } from "react";
-import { ChangeHandler, FieldError } from "react-hook-form";
+import { FieldError } from "react-hook-form";
+
+import classNames from "classnames";
 
 interface InputProps extends HTMLAttributes<HTMLInputElement> {
     name: string;
@@ -9,9 +11,7 @@ interface InputProps extends HTMLAttributes<HTMLInputElement> {
 }
 
 const InputTextBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({ name, inputLength, label, error, ...rest }, ref) => {
-    function extendsClassName(...classes: string[]) {
-        return classes.filter(Boolean).join(' ')
-    }
+    const hasError = error !== undefined
 
     return (
         <div className="flex flex-col gap-2">
@@ -20,7 +20,10 @@ const InputTextBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
             </label>
             <input
                 type="text"
-                className={extendsClassName(!!error ? "border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500" : "border-neutral-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500", "mt-1 relative w-full border bg-neutral-700 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default sm:text-sm")}
+                className={classNames('mt-1 relative w-full border bg-neutral-700 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default sm:text-sm', {
+                    'border-neutral-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !hasError,
+                    'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : hasError,
+                })}
                 ref={ref}
                 name={name}
                 aria-label={name}

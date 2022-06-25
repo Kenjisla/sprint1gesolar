@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply min-w-[320px] bg-neutral-900;
+    @apply w-full min-w-[320px] bg-neutral-900;
     -webkit-font-smoothing: antialiased;
-
+    scroll-behavior: smooth;
 }

@@ -3,15 +3,20 @@ import { Navbar } from "../components/Navbar";
 import "../styles/globals.css"
 
 import type { AppProps } from 'next/app'
+import { Footer } from "../components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className="bg-neutral-900 min-h-screen">
+      <header>
         <Navbar />
-        
+      </header>      
+      
+      <main>
         <Component {...pageProps} />
-      </div>
+      </main>
+
+      <Footer />
     </>
   )
 }

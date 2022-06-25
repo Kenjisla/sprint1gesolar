@@ -1,11 +1,11 @@
-import { Button } from "../components/Button";
-import { Logo } from "../components/Logo";
-
-import { BsCheck2Circle, BsFacebook, BsInstagram, BsLinkedin} from 'react-icons/bs'
 import { Title } from "../components/Title";
 import { Subtitle } from "../components/Subtitle";
 import { HomePageForm } from "../components/Forms/HomePageForm";
 import { ProjectCard } from "../components/ProjectCard";
+import { HeroSection } from "../components/HeroSection";
+
+import { BsCheck2Circle } from 'react-icons/bs'
+import { Button } from "../components/Button";
 
 export default function Home() {
   const cardsData = [
@@ -117,90 +117,94 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative h-full w-full">
-        <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-neutral-900/60 inset-x-0 inset-bottom-0" />
+      <HeroSection 
+        title="Energia solar para todos"
+        subtitle="Produza sua própria energia trocando o custo da sua conta 
+        de luz para pagar o investimento no sistema."
+        buttonLabel="Começar agora"
+        imgSrc="/hero-image.jpg"
+      />
 
-        <div className="w-full h-full flex flex-col items-center gap-16 xl:gap-8">
-          <div className="absolute w-full max-w-[1450px] h-full">
-            <div className="flex flex-col items-start justify-end gap-6 h-full px-6 pb-24 md:pb-36">
-              <div className="flex flex-col gap-3 sm:gap-1">
-                <h1 className="text-4xl font-bold text-neutral-200 tracking-tight leading-10 md:text-5xl md:leading-tight">
-                  Energia solar para todos
-                </h1>
+        <div className="w-full h-full min-h-[65vh] flex items-center justify-center">
+          <div className="w-full max-w-[1450px] flex flex-col items-center justify-center px-6 py-24 gap-16 md:px-8 xl:gap-28">
+            <div className="w-full flex flex-col items-center gap-16 xl:flex-row">
 
-                <h2 className="text-md font-medium text-neutral-300 tracking-tight max-w-2xl">
-                  Produza sua própria energia trocando o custo da sua conta 
-                  de luz para pagar o investimento no sistema.
-                </h2>
+              <div className="flex flex-col gap-12 w-full bg-neutral-200 rounded-2xl py-8 overflow-hidden xl:px-12">
+                <div>
+                    <img
+                      className="h-36 w-full"
+                      src="pig-savings.svg" 
+                      alt="" 
+                    />
+                </div>
+
+                  <div className="flex flex-col items-center justify-center gap-3">
+                    <strong className="text-lg font-medium text-neutral-500">
+                      Reduza da conta de energia em
+                    </strong>
+                  <span className="text-2xl font-semibold text-sun-500 md:text-4xl">95%</span>
+                  </div>
               </div>
 
-              <div>
-                <Button>
-                  Começar agora
-                </Button>
+              <div className="flex flex-col gap-12 w-full bg-neutral-200 rounded-2xl py-8 overflow-hidden xl:px-12">
+                <div>
+                    <img
+                      className="h-36 w-full"
+                      src="pig-savings.svg" 
+                      alt="" 
+                    />
+                </div>
+
+                  <div className="flex flex-col items-center justify-center gap-3">
+                    <strong className="text-lg font-medium text-neutral-500">
+                      Reduza da conta de energia em
+                    </strong>
+                  <span className="text-2xl font-semibold text-sun-500 md:text-4xl">95%</span>
+                  </div>
               </div>
+
+              <div className="flex flex-col gap-12 w-full bg-neutral-200 rounded-2xl py-8 overflow-hidden xl:px-12">
+                <div>
+                    <img
+                      className="h-36 w-full"
+                      src="pig-savings.svg" 
+                      alt="" 
+                    />
+                </div>
+
+                  <div className="flex flex-col items-center justify-center gap-3">
+                    <strong className="text-lg font-medium text-neutral-500">
+                      Reduza da conta de energia em
+                    </strong>
+                  <span className="text-2xl font-semibold text-sun-500 md:text-4xl">95%</span>
+                  </div>
+              </div>
+
             </div>
-          </div>
+          </div>          
         </div>
-        <div className="h-[90vh]">
-          <img 
-            src="hero-image.png" 
-            alt="" 
-            className=" h-full w-full object-cover"
-          />
-        </div>
-      </div>
 
-      <div className="flex items-center justify-center max-w-[1450px] h-full min-h-[350px] mx-auto px-6 md:px-4">
-        <div className="flex flex-col bg-gradient-to-r from-neutral-900 to-neutral-800 items-center justify-center gap-16 py-16 pl-4 pr-12 sm:pr-12 mb-8 mt-24 rounded-xl h-full min-h-215 xl:flex-row md:px-8 xl:gap-24">
-          <div className="flex flex-col gap-2 xl:gap-4">
-            <h3 className="max-w-xl text-xl font-bold text-neutral-200 tracking-tight md:text-2xl">
-              Instale hoje e em até 60 dias veja os benefícios de obter a sua usina
-            </h3>
-          </div>
-
-          <div className="w-full flex flex-col items-center gap-16 xl:flex-row">
-            <div className="w-full xl:w-[180px]">
-              <p className="text-sm font-medium text-neutral-200 md:text-base">
-                Reduza da conta de energia em
-              </p>
-              <span className="text-2xl font-bold text-sun-500 md:text-4xl">95%</span>
-            </div>
-
-            <div className="w-full xl:w-[180px]">
-              <p className="text-sm font-medium text-neutral-200 md:text-base">
-                Valorize o seu imóvel em até
-              </p>
-              <span className="text-3xl font-bold text-sun-500 md:text-4xl">10%</span>
-            </div>
-
-            <div className="w-full xl:w-[180px]">
-              <p className="text-sm font-medium text-neutral-200 md:text-base">
-                Tenha o retorno do investimento em
-              </p>
-              <span className="text-3xl font-bold text-sun-500 md:text-4xl">5 anos</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-[1450px] mx-auto py-24 px-6 md:px-4 md:py-32">
-        <div className="w-full h-full flex flex-col gap-12 xs:gap-36">
-          <div className="flex flex-col items-start justify-center gap-6 md:items-center md:text-center xl:gap-4">
+      <div className="max-w-[1450px] mx-auto py-24 px-6">
+        <div className="w-full h-full flex flex-col gap-14 xs:gap-24 lg:max-w-full lg:flex-row">
+          <div className="flex flex-col items-start justify-center gap-6 lg:max-w-full">
             <Title>Acompanhe a geração de energia na palma da sua mão</Title>
 
             <Subtitle>
               Experimente a sensação da independência energética, deixando de pagar a conta 
               de energia. E acompanhe em tempo real, a sua geração e quanto esta economizando
             </Subtitle>
+
+            <div>
+              <Button>Eu quero</Button>
+            </div>
           </div>  
 
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="flex items-center justify-center w-[500px] h-[510px] md:h-[480px]">
+          <div className="flex items-start w-full h-full md:items-center">
+            <div className="h-[550px] sm:h-[610px] md:h-[710px] sm:w-full">
               <img  
-                src="iphone.svg" 
+                src="iphone.png" 
                 alt="Image do nosso aplicativo" 
-                className="w-full h-[full] object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -217,16 +221,16 @@ export default function Home() {
             </Subtitle>
           </div>
 
-          <div className="grid grid-cols-1 grid-rows-auto gap-16 place-items-center lg:grid-cols-3 lg:grid-rows-2 lg:gap-8">
+          <div className="grid grid-cols-1 grid-rows-auto gap-16 place-items-center lg:grid-cols-3 lg:grid-rows-1 lg:gap-8">
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
-              <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
+              <div className="flex items-center justify-center w-14 h-14 text-neutral-300 bg-gradient-to-r from-neutral-800 to-neutral-700 rounded-full">
                 <span className="text-xl font-bold">
                   1
                 </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <strong className="text-lg font-bold text-neutral-200">
+                <strong className="text-lg font-semibold text-sun-500">
                   Compra certa
                 </strong>
                 <p className="text-sm font-medium text-neutral-400 tracking-tight">
@@ -237,73 +241,35 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
-              <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
+              <div className="flex items-center justify-center w-14 h-14 text-neutral-300 bg-gradient-to-r from-neutral-800 to-neutral-700 rounded-full">
                 <span className="text-xl font-bold">
                   2
                 </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <strong className="text-lg font-bold text-neutral-200">
-                  Compra certa
+                <strong className="text-lg font-semibold text-sun-500">
+                  Fique Tranquilo
                 </strong>
                 <p className="text-sm font-medium text-neutral-400 tracking-tight">
-                  Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
-                  prepara-se para economizar e valorizar o seu patrimônio
+                  Para sua comodidade, nós executaremos o serviço de instalação e cuidaremos de todo o processo desde o projeto até a homologação junto à concessionária de energia.
                 </p>
               </div>
             </div>
             
             <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
-              <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
+              <div className="flex items-center justify-center w-14 h-14 text-neutral-300 bg-gradient-to-r from-neutral-800 to-neutral-700 rounded-full">
                 <span className="text-xl font-bold">
                   3
                 </span>
               </div>
 
               <div className="flex flex-col gap-2">
-                <strong className="text-lg font-bold text-neutral-200">
-                  Compra certa
+                <strong className="text-lg font-semibold text-sun-500">
+                  Bônus Especial
                 </strong>
                 <p className="text-sm font-medium text-neutral-400 tracking-tight">
-                  Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
-                  prepara-se para economizar e valorizar o seu patrimônio
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
-              <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                <span className="text-xl font-bold">
-                  4
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <strong className="text-lg font-bold text-neutral-200">
-                  Compra certa
-                </strong>
-                <p className="text-sm font-medium text-neutral-400 tracking-tight">
-                  Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
-                  prepara-se para economizar e valorizar o seu patrimônio
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-between bg-neutral-800 py-6 px-5 rounded-md text-neutral-200 w-full max-w-[900px] h-[260px] xl:w-[360px]">
-              <div className="flex items-center justify-center w-14 h-14 bg-sun-500 rounded-full">
-                <span className="text-xl font-bold">
-                  5
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <strong className="text-lg font-bold text-neutral-200">
-                  Compra certa
-                </strong>
-                <p className="text-sm font-medium text-neutral-400 tracking-tight">
-                  Faça a simulação de parcelas que encaixe no valor atual da sua conta de energia e 
-                  prepara-se para economizar e valorizar o seu patrimônio
+                  Olha que legal, instalamos o sistema de energia solar e você poderá começar a pagar com o financiamento após 150 dias.
                 </p>
               </div>
             </div>
@@ -312,12 +278,12 @@ export default function Home() {
       </div>
 
       <div className="max-w-[1450px] h-full min-h-[800px] mx-auto py-6 px-6 md:px-4">
-        <div className=" w-full min-h-[70vh] h-full gap-8 flex flex-col justify-between py-12 xl:grid xl:grid-cols-6 xl:grid-row-6 xl:gap-16">
+        <div id="investiment" className=" w-full min-h-[70vh] h-full gap-8 flex flex-col justify-between py-12 xl:grid xl:grid-cols-6 xl:grid-row-6 xl:gap-16">
           <div className="col-span-4 row-span-2 xl:col-span-3 xl:row-span-4">
             <div className="flex flex-col items-start justify-center gap-12 h-full max-w-[90%]">
                 <div className="flex flex-col gap-3 xl:gap-6">
                   <div className="flex flex-col gap-2 xl:gap-4">
-                    <Title>Instale a energia solar e tenha rendimento em torno de 15% ao ano</Title>
+                    <Title>Instale a energia solar e tenha um <span className="text-sun-500">rendimento em torno de 15%</span> ao ano</Title>
                   </div>
 
                   <ul className="flex flex-col gap-6 border-t-2 border-t-neutral-800 pt-8 mt-8">
@@ -351,24 +317,24 @@ export default function Home() {
                 </div>
             </div>
           </div>
-          <div className="col-span-3 row-span-4">
+          <div className="col-span-3 row-span-4 bg-gradient-to-r from-neutral-900 to-neutral-800 px-8 py-16 rounded-2xl">
             <div className="flex items-center justify-center w-full h-full">
               <img 
-                src="payback_pig.png" 
+                src="investiment.svg" 
                 alt="Imagem de um cofrinho"
-                className="w-full max-h-[350px] object-cover xl:max-h-[450px]"
+                className="max-h-[450px] object-cover xl:max-h-[450px]"
               />
             </div>
           </div>
         </div>
 
-        <div className="w-full min-h-[70vh] h-full gap-8 flex flex-col-reverse justify-between py-12 xl:grid xl:grid-cols-6 xl:grid-row-6 xl:gap-16">
-          <div className="col-span-3 row-span-4">
+        <div id="cashback" className="w-full min-h-[70vh] h-full gap-8 flex flex-col-reverse justify-between py-12 xl:grid xl:grid-cols-6 xl:grid-row-6 xl:gap-16">
+          <div className="col-span-3 row-span-4 bg-gradient-to-l from-neutral-900 to-neutral-800 px-8 py-16 rounded-2xl">
             <div className="flex items-center justify-center w-full h-full">
               <img 
-                src="cashback.png" 
+                src="cashback.svg" 
                 alt=""
-                className="w-full max-h-[350px] object-cover xl:max-h-[450px]"
+                className="max-h-[450px] object-cover"
               />
             </div>
           </div>
@@ -389,7 +355,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
 
+      {/* falar com o tiago sobre essa section aqui */}
       <div className="bg-[#131313] w-full">
         <div className="max-w-[1450px] h-full mx-auto py-20 px-4 lg:py-24">
           <div className="flex flex-col items-center h-full gap-20 lg:gap-32">
@@ -413,8 +381,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* falar com o tiago sobre essa section aqui */}
 
-      <div className="w-[full] flex flex-col items-center justify-center py-12 px-6 md:px-4 bg-gradient-to-b from-[#131313] to-neutral-900">
+
+      <div className="w-[full] flex flex-col items-center justify-center py-12 px-6 md:px-4 bg-neutral-900">
         <div className="w-full max-w-[1450px] relative flex flex-col gap-8 overflow-x-hidden">
           <div className="h-[100px] flex items-center animate-smSlide md:animate-mdSlide lg:animate-lgSlide xl:animate-xlSlide">
             {slide.map(image => ( <img key={image.id} src={image.source} className="h-[50px] w-[215px] px-7" /> ))}
@@ -444,39 +414,6 @@ export default function Home() {
 
         </div>
       </div>
-
-      <footer className="w-full flex items-center justify-center py-12 px-6 md:px-4 md:py-14 bg-[#131313]">
-        <div className="w-full max-w-[1200px] flex flex-col items-start p-2">
-          <div className="w-full flex flex-col items-start gap-8 justify-between sm:items-center lg:flex-row">
-            <div>
-              <Logo />
-            </div>
-          
-
-            <div className="flex flex-col items-start justify-center gap-1 sm:items-center">
-              <h2 className="text-neutral-200 font-semibold text-sm md:text-base">GESOLAR TECNOLOGIA E SOLUÇÕES EM ENERGIA SOLAR</h2>
-              <span className="text-neutral-400 font-medium text-xs md:text-sm">Av. Paulista, 1842 - conjunto 155 - CEP 01310-200 - Bela Vista - Sao Paulo/Sp www.conteud.com.br</span>
-            </div>
-          </div>
-
-          <div className="w-full flex items-start justify-between flex-col gap-8 py-6 mt-8 border-t-2 border-t-neutral-800 sm:items-center md:gap-0 md:flex-row">
-            <span className="text-neutral-200 font-bold text-sm">© 2022 GESOLAR, Inc. All rights reserved.</span>
-            <div className="flex items-center gap-4">
-              <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-                <BsFacebook className="text-sun-500 w-6 h-6" />
-              </a>
-
-              <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-                <BsInstagram className="text-sun-500 w-5 h-5"/>
-              </a>
-
-              <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-                <BsLinkedin className="text-sun-500 w-5 h-5"/>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

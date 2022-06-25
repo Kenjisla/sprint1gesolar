@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        sans: 'Poppins, sans-serif',
+      },
       colors: {
         sun: {
           500: '#f9a826',

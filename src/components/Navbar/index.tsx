@@ -1,4 +1,6 @@
 import { Fragment } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Popover, Transition } from '@headlessui/react'
 
 import { Navlink } from './Navlink'
@@ -7,7 +9,8 @@ import { Logo } from '../Logo'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import { MdClose } from 'react-icons/md'
 import { FaHome } from 'react-icons/fa'
-import Link from 'next/link'
+import classNames from 'classnames'
+
 
 const solutions = [
   {
@@ -32,6 +35,8 @@ const solutions = [
 ]
 
 export function Navbar() {
+  const { asPath } = useRouter()
+
   return (
     <Popover className="relative">
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6">
@@ -49,18 +54,21 @@ export function Navbar() {
           <nav className="hidden lg:flex space-x-10">
 
             <Navlink href="/">Home</Navlink>
-            <Navlink href="#">Investir em solar</Navlink>
-            <Navlink href="#">Afiliados</Navlink>
-            <Navlink href="#">Plataforma</Navlink>
+            <Navlink href="/#investiment">Investir em solar</Navlink>
+            <Navlink href="/#cashback">Cashback</Navlink>
+            <Navlink href="/manutencao-de-energia-solar">Manutenções</Navlink>
 
           </nav>
 
           <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
-            <Link href="calculadora">
+            <Link href="/calculadora-de-energia-solar">
               <a
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-md shadow-sm text-base font-medium text-neutral-200 bg-neutral-900 border border-sun-500/75 hover:bg-amber-500 hover:text-neutral-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors duration-200"
+                className={classNames('ml-8 whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-md shadow-sm text-base font-medium text-neutral-200  border border-sun-500/75 hover:bg-amber-500 hover:text-neutral-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors duration-200', {
+                  'bg-sun-500' : asPath === "/calculadora-de-energia-solar",
+                  'bg-neutral-900' : !(asPath === "/calculadora-de-energia-solar")
+                })}
               >
-                Fazer um orçamento
+                Simule seu sistema
               </a>
             </Link>
           </div>
