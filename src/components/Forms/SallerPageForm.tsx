@@ -9,14 +9,22 @@ import { useForm } from "react-hook-form";
 import { Button } from "../Button";
 import axios from "axios";
 
+interface FormData {
+    amount: string;
+    email: string;
+    fileUpload: string;
+    name: string;
+    phoneNumber: string;
+}
+
 export function SallerPageForm() {
     const [currentSaller, setCurrentSaller] = useState('')
+    const [fileToUpload, setFileToUpload] = useState('')
 
     const {
         register,
         handleSubmit
     } = useForm();
-    const { onChange, onBlur, name, ref } = register('file-upload'); 
 
     const sallers = [
         { id: 'eliano-radio', name: 'saller', label: 'Eliano Santana', value: 'Eliano'},
@@ -30,16 +38,21 @@ export function SallerPageForm() {
         setCurrentSaller(event.target.value);
     }
 
-    function onSubmit() {
-        axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
-        {
-            value: 250,
-            zip_code: '123',
-            name: 'leonardo pagina de vendedor',
-            phone_number: '11972202384',
-            email: 'paginaDeVendedor@teste.com',
+    function onSubmit(formData: any) {
+
+        const formatedFormdata = {
+            saller: currentSaller,
+            amount: formData.amount,
+            name: formData.name,
+            email: formData.email,
+            phoneNumber: formData.phoneNumber,
+            file: formData.fileToUpload[0],
             lp: 'saller'
-        })
+        }
+
+        axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
+
+        console.log(formatedFormdata)
     };
 
     return (
@@ -119,14 +132,15 @@ export function SallerPageForm() {
                                 <div className="w-full flex flex-col gap-8">
                                     <Input label="Endereço de email" {...register("email")}/>
 
-                                    <Input label="Nome do cliente" {...register("nome")}/>
+                                    <Input label="Nome do cliente" {...register("name")}/>
 
-                                    <Input label="Numero de telefone" {...register("phone-number")}/>
+                                    <Input label="Numero de telefone" {...register("phoneNumber") }/>
 
-                                    <Input label="Valor da conta de luz" {...register("amount")}/>
+                                    <Input label="Valor da conta de luz" {...register("amount")} />
                                     
                                     <div className="flex flex-col gap-2 items-start">
                                         <label className="block text-sm font-semibold text-neutral-200 ml-1">Foto da conta de luz</label>
+
                                         <label
                                             className="relative cursor-pointer bg-neutral-600 rounded-md px-6 py-3 font-medium text-sun-500 hover:text-amber-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-sun-500 focus-within:ring-offset-neutral-800"
                                         >
@@ -135,11 +149,7 @@ export function SallerPageForm() {
                                                 id="file-upload"
                                                 type="file" 
                                                 className="sr-only"
-
-                                                onChange={onChange}
-                                                onBlur={onBlur}
-                                                name={name}
-                                                ref={ref}
+                                                {...register("fileToUpload")}
                                             />
                                         </label>
                                     </div>

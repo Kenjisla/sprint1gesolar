@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 
 import axios from 'axios';
 import { useForm, RegisterOptions } from 'react-hook-form'
@@ -6,6 +6,9 @@ import { useForm, RegisterOptions } from 'react-hook-form'
 import { Button } from '../Button';
 import { Select } from './components/Select';
 import { Input } from './components/Input';
+import { InputMaskComponent } from './components/InputMaskComponent';
+
+import classNames from 'classnames';
 
 
 type FormValidationProps = {
@@ -35,7 +38,7 @@ export function HomePageForm() {
     handleSubmit,
     formState: { errors },
     setValue,
-    getValues
+    clearErrors
   } = useForm();
   
   const formValidation: FormValidationProps = {
@@ -56,64 +59,68 @@ export function HomePageForm() {
     },
   }
 
-  function createLead() {
-    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
-    {
-      value: 250,
-      zip_code: '123',
-      name: 'leonardo',
-      phone_number: '11972202384',
-      email: 'emailteste@teste.com',
+  const { onChange, onBlur, name, ref } = register("phoneNumber", formValidation.phoneNumberInputFieldOptions)
+
+  function createLead(formData: any) {
+    console.log(formData)
+
+    const formatedFormData = {
+      amount: formData.select,
+      name: formData.name,
+      email: formData.email,
+      zipCode: formData.zipCode,
+      phoneNumber: formData.phoneNumber,
       lp: 'primary'
-    })
-  }
-
-  function formaterZipCodeInputValue() {
-    const zipCodeInputValue = getValues("zip_code")
-    const formatToString = zipCodeInputValue.toString()
-
-    const formatValue = formatToString.replace(/^(\d{5})(\d)/, "$1-$2")
-
-    setValue("zip_code", formatValue)
-    
-  }
-
-  function formaterPhoneNumberInputValue() {
-    const zipCodeInputValue = getValues("phone_number")
-    const formatToString = zipCodeInputValue.toString()
-
-    const formatValue = formatToString.replace(/^(\d{2})(\d{5})(\d{4})/, "$1 $2-$3")
-
-    setValue("phone_number", formatValue)
-    
+    }
   }
 
   function updateSelectValue(value: SelectData) {
-    setValue("select", value.amount)
     setSelectValue(value)
+    setValue("select", value.amount)
+    clearErrors("select")
+  }
+
+  function onChangePhoneNumberInputValue(value) {
+    console.log(value)
+  }
+
+  function onChangeZipCodeInputValue(value) {
+    console.log(value)
   }
 
   return (
       <form onSubmit={handleSubmit(createLead)} className="w-full max-w-2xl flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
           <div className="w-full flex flex-col gap-8">
-            <Select
-              onChangeSelectValue={updateSelectValue} 
-              selectValue={selectValue} 
-              error={errors.select} 
+            <Select 
+              selectValue={selectValue}
+              onChangeSelectValue={updateSelectValue}
+              error={errors.select}
               {...register('select', formValidation.selectInputFieldOptions)}
             />
 
             <Input label="Nome" error={errors.name} {...register("name", formValidation.nameInputFieldOptions)} />
 
             <Input label="Endereço de email" error={errors.email} {...register("email", formValidation.emailInputFieldOptions)} />
-
-            <Input label="Numero de celular" error={errors.phone_number} {...register("phone_number", formValidation.phoneNumberInputFieldOptions)} onKeyUp={formaterPhoneNumberInputValue} inputLength={16}/>
           
-            <Input label="CEP" error={errors.zip_code} {...register('zip_code', formValidation.zipCodeInputFieldOptions)} onKeyUp={formaterZipCodeInputValue} inputLength={9}/>
+            <InputMaskComponent 
+              label='Numero de celular'
+              mask="99 99999-9999"
+              error={errors.phoneNumber}
+              onChangeInputMaskValue={onChangePhoneNumberInputValue}
+            />
+
+            <InputMaskComponent 
+              label='CEP'
+              mask="99999-999"
+              error={errors.zipCode}
+              onChangeInputMaskValue={onChangePhoneNumberInputValue}
+            />
           </div>
           
           <div className="w-full flex items-center justify-center">
-            <Button type="submit">Simular sistema</Button>
+            <Button type="submit">
+              Simular sistema
+            </Button>
           </div>
       </form>
   );

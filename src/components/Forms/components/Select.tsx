@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { BsCheck } from 'react-icons/bs'
 import { MdOutlineKeyboardArrowDown, MdAttachMoney } from 'react-icons/md'
-import { FieldError } from 'react-hook-form';
+import { FieldError, RefCallBack } from 'react-hook-form';
 
 import classNames from 'classnames';
 
@@ -47,10 +47,14 @@ export function Select({ selectValue, onChangeSelectValue, error, ...rest }: Sel
 
     return (
         <div className="flex flex-col gap-2">
-            <Listbox value={selectValue} onChange={(value) => onChangeSelectValue(value)}>
+            <Listbox 
+                value={selectValue} 
+                onChange={onChangeSelectValue}
+            >
                 {({ open }) => (
                     <>
                         <Listbox.Label className="block text-sm font-semibold text-neutral-200">Valor da conta de luz</Listbox.Label>
+
                         <div className="mt-[0.6rem] relative">
                             <Listbox.Button 
                                 className={classNames('relative w-full border bg-neutral-700 text-neutral-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default sm:text-sm', {
@@ -96,9 +100,9 @@ export function Select({ selectValue, onChangeSelectValue, error, ...rest }: Sel
                                             {...rest}
                                         >
                                             <div className="flex items-center">
-                                            <span className="flex items-center justify-center flex-shrink-0 h-6 w-6 rounded-full bg-neutral-400">
-                                                <MdAttachMoney className="w-5 h-5 text-white"/>
-                                            </span>
+                                                <span className="flex items-center justify-center flex-shrink-0 h-6 w-6 rounded-full bg-neutral-400">
+                                                    <MdAttachMoney className="w-5 h-5 text-white"/>
+                                                </span>
                                                 <span className={classNames('ml-3 block truncate', {
                                                     'font-semibold' : selectValue.id === value.id,
                                                     'font-medium' : !(selectValue.id === value.id)

@@ -55,28 +55,20 @@ export function CalculatorPageForm() {
       required: "Este campo é obrigatorio. ",
     },
   }
-
-  const onSubmit = (data: any) => {
-    console.log(data)
-    
-  }
-
-  const onError = (error: any) => {
-    console.log(error)
-  }
   
-  function createLead() {
-    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', 
-    {
-        value: 250,
-        zip_code: '123',
-        name: 'leonardo pagina da calculadora',
-        phone_number: '11972202384',
-        email: 'paginaDaCalculadora@teste.com',
-        lp: 'calculator'
-    })
-  }
+  function createLead(formData: any) {
 
+    const formatedFormData = {
+      amount: formData.select,
+      name: formData.name,
+      email: formData.email,
+      zipCode: formData.zipCode,
+      phoneNumber: formData.phoneNumber,
+      lp: 'primary'
+    }
+
+    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormData)
+  }
   function formaterZipCodeInputValue() {
     const zipCodeInputValue = getValues("zip_code")
     const formatToString = zipCodeInputValue.toString()
@@ -106,23 +98,23 @@ export function CalculatorPageForm() {
     <form onSubmit={handleSubmit(createLead)} className="w-full max-w-lg flex flex-col gap-12">
       <div className="grid grid-col-1 gap-8 md:grid-cols-6">
           <div className="col-span-full">
-            <Select selectValue={selectValue} onChangeSelectValue={updateSelectValue}/>
+            <Select selectValue={selectValue} onChangeSelectValue={updateSelectValue} {...register('select')}/>
           </div>
 
-          <div className="col-span-full md:col-span-2">
-            <Input label="Endereço de email" name='' />
+          <div className="col-span-full md:col-span-3">
+             <Input label="Nome" {...register("name")} />
+          </div>
+
+          <div className="col-span-full md:col-span-3">
+            <Input label="Endereço de email" {...register("email")} />
           </div>
 
           <div className="col-span-full md:col-span-4">
-            <Input label="Endereço de email" name='' />
-          </div>
-
-          <div className="col-span-full md:col-span-4">
-            <Input label="Endereço de email" name='' />
+            <Input label="Numero de celular" {...register("phoneNumber")} />
           </div>
 
           <div className="col-span-full md:col-span-2">
-            <Input label="Endereço de email" name='' />
+            <Input label="CEP" {...register('zipCode')}/>
           </div>
       </div>
 
