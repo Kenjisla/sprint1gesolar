@@ -80,11 +80,11 @@ export function HomePageForm() {
     clearErrors("select")
   }
 
-  function onChangePhoneNumberInputValue(value) {
+  function onChangePhoneNumberInputValue(value: any) {
     console.log(value)
   }
 
-  function onChangeZipCodeInputValue(value) {
+  function onChangeZipCodeInputValue(value: any) {
     console.log(value)
   }
 
