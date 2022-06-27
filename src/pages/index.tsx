@@ -60,12 +60,12 @@ export default function Home() {
 
       <div id='advantages' className="bg-neutral-100 h-full min-h-[75vh] w-full  flex items-center justify-center flex-col py-24 px-6">
         <div className="w-full max-w-[1450px]">
-          <h1 className="text-neutral-600 mb-24 text-xl leading-tight font-semibold md:text-center md:mb-28 md:text-2xl">
+          <h1 className="text-neutral-600 mb-24 text-2xl leading-tight font-semibold md:text-center md:mb-28 md:text-2xl">
             Beneficios ao gerar sua própria energia
           </h1>
 
           <div className="grid grid-col-1 grid-rows-auto gap-24 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
-            <div className="border-l border-sun-500 flex items-start justify-start flex-col px-4 md:py-2 md:px-4 md:border-b md:border-l-0 md:items-center md:justify-center">
+            <div className="border-l border-sun-500 flex items-start justify-start flex-col px-6 md:py-2 md:px-0 md:border-b md:border-l-0 md:items-center md:justify-center">
               <div className='mb-8 flex items-start justify-start w-full h-36 md:max-w-full md:items-start md:justify-start'>
                   <img
                     className="h-full md:w-full"
@@ -79,7 +79,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border-l border-sun-500 flex items-start justify-start flex-col px-4 md:py-2 md:px-4 md:border-b md:border-l-0 md:items-center md:justify-center">
+            <div className="border-l border-sun-500 flex items-start justify-start flex-col px-6 md:py-2 md:px-0 md:border-b md:border-l-0 md:items-center md:justify-center">
               <div className='mb-8 flex items-start justify-start w-full h-36 md:max-w-full md:items-start md:justify-start'>
                   <img
                     className="h-full md:w-full"
@@ -97,7 +97,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border-l border-sun-500 flex items-start justify-start flex-col px-4 md:py-2 md:px-4 md:border-b md:border-l-0 md:items-center md:justify-center">
+            <div className="border-l border-sun-500 flex items-start justify-start flex-col px-6 md:py-2 md:px-0 md:border-b md:border-l-0 md:items-center md:justify-center">
               <div className='mb-8 flex items-start justify-start w-full h-36 md:max-w-full md:items-start md:justify-start'>
                   <img
                     className="h-full md:w-full"
@@ -120,12 +120,12 @@ export default function Home() {
 
       <div id='advantages' className="bg-neutral-900 h-full min-h-[75vh] w-full flex items-center justify-center flex-col py-24 px-6">
         <div className="w-full max-w-[1450px]">
-          <h1 className="text-neutral-200 mb-24 text-xl leading-tight font-semibold md:text-center md:mb-28 md:text-2xl">
+          <h1 className="text-neutral-200 mb-24 text-2xl leading-tight font-semibold md:text-center md:mb-28 md:text-2xl">
               Confira o passo a passo para aquisição do seu sistema
           </h1>
 
           <div className="grid grid-col-1 grid-rows-auto gap-24 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
-            <div className="flex items-start justify-start flex-col px-4">
+            <div className="flex items-start justify-start flex-col">
               <div className="flex flex-col gap-8 w-full h-full bg-neutral-800 p-8 rounded-2xl">
                 <div>
                   <span className="text-lg bg-neutral-700 w-10 h-10 flex items-center justify-center text-neutral-200 rounded-full font-medium">
@@ -145,7 +145,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex items-start justify-start flex-col px-4">
+            <div className="flex items-start justify-start flex-col">
               <div className="flex flex-col gap-8 w-full h-full bg-neutral-800 p-8 rounded-2xl">
                 <div>
                   <span className="text-lg bg-neutral-700 w-10 h-10 flex items-center justify-center text-neutral-200 rounded-full font-medium">
@@ -165,7 +165,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex items-start justify-start flex-col px-4">
+            <div className="flex items-start justify-start flex-col">
               <div className="flex flex-col gap-8 w-full h-full bg-neutral-800 p-8 rounded-2xl">
                 <div>
                   <span className="text-lg bg-neutral-700 w-10 h-10 flex items-center justify-center text-neutral-200 rounded-full font-medium">
