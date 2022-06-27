@@ -59,8 +59,6 @@ export function HomePageForm() {
     },
   }
 
-  const { onChange, onBlur, name, ref } = register("phoneNumber", formValidation.phoneNumberInputFieldOptions)
-
   function createLead(formData: any) {
     console.log(formData)
 
