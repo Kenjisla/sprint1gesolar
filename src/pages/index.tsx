@@ -208,7 +208,9 @@ export default function Home() {
                 <select
                   className="appearance-none relative w-full overflow-hidden max-w-lg h-12 bg-neutral-300 text-neutral-600 font-medium rounded-lg px-4 focus:outline-none focus:border-sun-500 focus:ring-sun-500 focus:ring-1" 
                 >
-                  <option value="default">Clique e selecione o valor da sua conta de luz</option>
+                  <option className="w-full" value="default">
+                    Clique e selecione o valor da sua conta de luz
+                  </option>
                 </select>
               </div>
 
