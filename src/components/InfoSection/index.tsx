@@ -33,7 +33,7 @@ export default function InfoSection ({
             >
                 <div className="grid z-10 h-full min-h-[865px] w-full max-w-[1450px] mx-auto px-6 py-24">
                     <div className={classNames('w-full grid grid-cols-1 grid-rows-1 gap-auto items-center lg:grid-cols-2')}>
-                        <div className={classNames('mb-4 px-4', {
+                        <div className={classNames('mb-4 mx-auto px-4 lg:mx-0', {
                             'order-first lg:order-last' : imgStart
                         })}>
                             <div className="max-w-xl pb-14">
@@ -75,7 +75,7 @@ export default function InfoSection ({
                         </div>
 
                         <div>
-                            <div className={classNames('max-w-xl h-full flex justify-start md:justify-end')}>
+                            <div className={classNames('max-w-xl h-full flex mx-auto lg:mx-0')}>
                                 <img
                                     className="w-full mb-10"
                                     src={img} 

@@ -1,12 +1,13 @@
-import { FormEvent, useState } from 'react';
-
-import axios from 'axios';
-import { useForm, RegisterOptions } from 'react-hook-form'
+import { useState } from 'react';
 
 import { Button } from '../Button';
 import { Select } from './components/Select';
 import { Input } from './components/Input';
+import { InputMaskComponent } from './components/InputMask';
 
+import axios from 'axios';
+import { useForm, RegisterOptions } from 'react-hook-form'
+import classNames from 'classnames';
 
 type FormValidationProps = {
   selectInputFieldOptions: RegisterOptions;
@@ -33,9 +34,9 @@ export function CalculatorPageForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
     setValue,
-    getValues
+    clearErrors,
+    formState: { errors },
   } = useForm();
   
   const formValidation: FormValidationProps = {
@@ -46,7 +47,11 @@ export function CalculatorPageForm() {
       required: "Este campo é obrigatorio. "
     },
     emailInputFieldOptions: {
-      required: "Este campo é obrigatorio. "
+      required: "Este campo é obrigatorio. ",
+      pattern: {
+        value: /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/,
+        message: 'insira um formato de email valido' 
+      }
     },
     phoneNumberInputFieldOptions: {
       required: "Este campo é obrigatorio. ",
@@ -56,65 +61,63 @@ export function CalculatorPageForm() {
     },
   }
   
-  function createLead(formData: any) {
+  function onSubmit(data: any) {
+    const formData = {...data, lp: 'calculator'}
 
-    const formatedFormData = {
-      amount: formData.select,
-      name: formData.name,
-      email: formData.email,
-      zipCode: formData.zipCode,
-      phoneNumber: formData.phoneNumber,
-      lp: 'primary'
-    }
-
-    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormData)
-  }
-  function formaterZipCodeInputValue() {
-    const zipCodeInputValue = getValues("zip_code")
-    const formatToString = zipCodeInputValue.toString()
-
-    const formatValue = formatToString.replace(/^(\d{5})(\d)/, "$1-$2")
-
-    setValue("zip_code", formatValue)
-    
-  }
-
-  function formaterPhoneNumberInputValue() {
-    const zipCodeInputValue = getValues("phone_number")
-    const formatToString = zipCodeInputValue.toString()
-
-    const formatValue = formatToString.replace(/^(\d{2})(\d{5})(\d{4})/, "$1 $2-$3")
-
-    setValue("phone_number", formatValue)
-    
+    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formData)
   }
 
   function updateSelectValue(value: SelectData) {
+    console.log(value)
     setValue("select", value.amount)
     setSelectValue(value)
+    clearErrors("select")
   }
 
   return (
-    <form onSubmit={handleSubmit(createLead)} className="w-full max-w-lg flex flex-col gap-12">
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg flex flex-col gap-12">
       <div className="grid grid-col-1 gap-8 md:grid-cols-6">
           <div className="col-span-full">
-            <Select selectValue={selectValue} onChangeSelectValue={updateSelectValue} {...register('select')}/>
+            <Select 
+              selectValue={selectValue} 
+              onChangeSelectValue={updateSelectValue} 
+              error={errors.select}
+              {...register('select', formValidation.selectInputFieldOptions)}
+            />
           </div>
 
           <div className="col-span-full md:col-span-3">
-             <Input label="Nome" {...register("name")} />
+             <Input 
+              label="Nome" 
+              error={errors.name} 
+              {...register("name", formValidation.nameInputFieldOptions)} 
+            />
           </div>
 
           <div className="col-span-full md:col-span-3">
-            <Input label="Endereço de email" {...register("email")} />
+            <Input 
+              label="Endereço de email" 
+              error={errors.email} 
+              {...register("email", formValidation.emailInputFieldOptions)}
+            />
           </div>
 
           <div className="col-span-full md:col-span-4">
-            <Input label="Numero de celular" {...register("phoneNumber")} />
+            <InputMaskComponent 
+              label="Telefone celular"
+              mask="99 99999-9999"
+              error={errors.phoneNumber}
+              {...register("phoneNumber", formValidation.phoneNumberInputFieldOptions)}
+            />
           </div>
 
           <div className="col-span-full md:col-span-2">
-            <Input label="CEP" {...register('zipCode')}/>
+            <InputMaskComponent 
+              label="CEP"
+              mask="99999-999"
+              error={errors.zipCode}
+              {...register("zipCode", formValidation.zipCodeInputFieldOptions)}
+            />
           </div>
       </div>
 

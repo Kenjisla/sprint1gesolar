@@ -23,7 +23,9 @@ export function SallerPageForm() {
 
     const {
         register,
-        handleSubmit
+        handleSubmit,
+        setValue,
+        clearErrors
     } = useForm();
 
     const sallers = [
@@ -33,10 +35,6 @@ export function SallerPageForm() {
         { id: 'lucas-radio', name: 'saller', label: 'Lucas Guedes', value: 'Lucas'},
         { id: 'larrisa-radio', name: 'saller', label: 'Larissa', value: 'Larissa'},
     ]
-    
-    function handleChangeSaller(event: ChangeEvent<HTMLInputElement>) {
-        setCurrentSaller(event.target.value);
-    }
 
     function onSubmit(formData: any) {
 
@@ -46,7 +44,6 @@ export function SallerPageForm() {
             name: formData.name,
             email: formData.email,
             phoneNumber: formData.phoneNumber,
-            file: formData.fileToUpload[0],
             lp: 'saller'
         }
 
@@ -54,6 +51,12 @@ export function SallerPageForm() {
 
         console.log(formatedFormdata)
     };
+        
+    function handleChangeSaller(event: ChangeEvent<HTMLInputElement>) {
+        setValue("saller-radio", event.target.value)
+        setCurrentSaller(event.target.value);
+        clearErrors("saller-radio")
+    }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="w-full h-full flex gap-16 items-start">
@@ -80,12 +83,12 @@ export function SallerPageForm() {
                             return (
                                 <div key={saller.id} className="flex items-center">
                                     <input
+                                        className="hidden"
                                         type="radio"
                                         id={saller.id}
-                                        name={saller.name}
+                                        {...register("saller-radio")}
                                         value={saller.value}
-                                        onChange={event => handleChangeSaller(event)}
-                                        className="hidden"
+                                        onChange={e => handleChangeSaller(e)}
                                     />
 
                                     <label htmlFor={saller.id} className={classNames('flex items-center justify-between w-full max-w-[250px] px-6 py-3 border border-neutral-600 text-base font-medium text-neutral-500 rounded-lg', {
@@ -102,7 +105,6 @@ export function SallerPageForm() {
                 </fieldset>
             </div>
 
-            {currentSaller !== '' && (
                 <div className="w-full flex flex-col py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
                     <div className="flex flex-col gap-11">
                         <fieldset className="flex flex-col">
@@ -122,8 +124,8 @@ export function SallerPageForm() {
 
                         </fieldset>
 
-                        <div className="max-w-2xl flex flex-col gap-9">
-                            <div className="">
+                        <div className="relative max-w-2xl flex flex-col gap-9">
+                            <div className="flex flex-col gap-1">
                                 <h1 className="text-lg font-bold text-neutral-200 tracking-tight sm:text-xl md:leading-tight">Informações do lead</h1>
                                 <p className="text-neutral-400 font-medium">Preencha as informações abaixo</p>
                             </div>
@@ -164,7 +166,6 @@ export function SallerPageForm() {
                         </div>
                     </div>
                 </div>
-            )}
         </form>
     );
 }

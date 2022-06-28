@@ -10,8 +10,8 @@ interface InputProps extends HTMLAttributes<HTMLInputElement> {
     error?: FieldError;
 }
 
-const InputTextBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({ name, inputLength, label, error, ...rest }, ref) => {
-    const hasError = error !== undefined
+const InputTextBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({ name, label, error = null, ...rest }, ref) => {
+    const hasError = error !== null
 
     return (
         <div className="flex flex-col gap-2">
@@ -19,15 +19,14 @@ const InputTextBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
                 {label}
             </label>
             <input
+                ref={ref}
+                name={name}
+                aria-label={name}
                 type="text"
                 className={classNames('mt-1 relative w-full border bg-neutral-700 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default sm:text-sm', {
                     'border-neutral-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !hasError,
                     'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : hasError,
                 })}
-                ref={ref}
-                name={name}
-                aria-label={name}
-                maxLength={inputLength}
                 {...rest}
             />
 

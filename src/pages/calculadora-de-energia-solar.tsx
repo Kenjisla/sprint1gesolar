@@ -18,7 +18,7 @@ export default function Calculadora() {
                 <div className="absolute w-full h-full inset-0 z-0 bg-gradient-to-b from-neutral-900/25 to-neutral-900 xl:bg-gradient-to-r from-neutral-900/25 to-neutral-900"/>
             
                 <div className="absolute w-full h-full inset-0 z-1 flex items-center justify-center">
-                    <p className="max-w-lg px-6 text-xl text-neutral-200 font-medium text-start md:text-2xl xl:text-center">
+                    <p className="max-w-lg px-6 text-xl text-neutral-200 font-semibold text-start md:text-2xl xl:text-center">
                         Venha fazer parte da gereção de energia solar e economize 
                         mais de 80% na sua conta de luz
                     </p>

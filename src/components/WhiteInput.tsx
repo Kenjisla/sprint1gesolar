@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import { forwardRef, ForwardRefRenderFunction, HTMLAttributes, ReactNode } from "react";
 import { FieldError } from "react-hook-form";
-import { FaUser } from "react-icons/fa";
 
 interface WhiteInputProps extends HTMLAttributes<HTMLInputElement> {
     name: string;

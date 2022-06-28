@@ -1,9 +1,9 @@
-import { Fragment } from 'react';
+import { forwardRef, ForwardRefRenderFunction, Fragment } from 'react';
 
 import { Listbox, Transition } from '@headlessui/react';
 import { BsCheck } from 'react-icons/bs'
 import { MdOutlineKeyboardArrowDown, MdAttachMoney } from 'react-icons/md'
-import { FieldError, RefCallBack } from 'react-hook-form';
+import { FieldError } from 'react-hook-form';
 
 import classNames from 'classnames';
 
@@ -19,44 +19,28 @@ interface SelectProps {
     error?: FieldError;
 }
 
-export function Select({ selectValue, onChangeSelectValue, error, ...rest }: SelectProps) {
+const SelectBase: ForwardRefRenderFunction<HTMLInputElement, SelectProps> = ({ selectValue, onChangeSelectValue, error = null, ...rest }, ref) => {
     const selectData = [
         {
           id: 1,
-          amount: '200 - 299',
-        },
-        {
-            id: 2,
-            amount: '300 - 399',
-        },
-        {
-            id: 3,
-            amount: '400 - 499',
-        },
-        {
-            id: 4,
-            amount: '500 - 599',
-        },
-        {
-            id: 5,
-            amount: '600 - 699',
-        },
-    ]
+          amount: 'R$ 200,00 - R$ 299,00'
+        }
+      ]
 
     const hasError = error != undefined
 
     return (
         <div className="flex flex-col gap-2">
-            <Listbox 
+            <Listbox
                 value={selectValue} 
-                onChange={onChangeSelectValue}
+                onChange={event => onChangeSelectValue(event)}
             >
                 {({ open }) => (
                     <>
                         <Listbox.Label className="block text-sm font-semibold text-neutral-200">Valor da conta de luz</Listbox.Label>
 
                         <div className="mt-[0.6rem] relative">
-                            <Listbox.Button 
+                            <Listbox.Button
                                 className={classNames('relative w-full border bg-neutral-700 text-neutral-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default sm:text-sm', {
                                     'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500': hasError,
                                     'border-neutral-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !hasError
@@ -90,13 +74,13 @@ export function Select({ selectValue, onChangeSelectValue, error, ...rest }: Sel
                                     {selectData.map((value) => (
                                         <Listbox.Option
                                             key={value.id}
+                                            value={value}
                                             className={
                                                 classNames('cursor-default select-none relative py-2 pl-3 pr-9', {
                                                     'text-white bg-sun-500' : selectValue?.id === value.id,
                                                     'text-neutral-300' : !(selectValue?.id === value.id)
                                                 })
                                             }
-                                            value={value}
                                             {...rest}
                                         >
                                             <div className="flex items-center">
@@ -132,3 +116,5 @@ export function Select({ selectValue, onChangeSelectValue, error, ...rest }: Sel
         </div>
     );
 }
+
+export const Select = forwardRef(SelectBase)
