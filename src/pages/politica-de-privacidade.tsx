@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 export default function PoliticaDePrivacidade() {
     return (
-        <div className="max-w-[1450px] mx-auto px-6 pt-24 pb-32 flex flex-col gap-24">
+        <div className="max-w-[1450px] mx-auto px-6 pt-12 pb-24 flex flex-col gap-20">
 
-            <div className="text-start border-b border-neutral-600 pb-6 md:text-center">
+            <div className="text-start border-b border-neutral-600 pb-4 md:text-center">
                 <h1 className="text-4xl text-neutral-50 font-semibold">
                     Politica de privacidade
                 </h1>
@@ -257,8 +257,3 @@ export default function PoliticaDePrivacidade() {
         </div>
     );
 }
-
-
-
-
-
