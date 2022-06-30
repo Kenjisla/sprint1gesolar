@@ -39,4 +39,4 @@ const InputMaskBase: ForwardRefRenderFunction<HTMLInputElement, InputMaskBasePro
     )
 }
 
-export const InputMaskComponent = forwardRef(InputMaskBase);
+export const BlackInputMaskComponent = forwardRef(InputMaskBase);

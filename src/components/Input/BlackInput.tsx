@@ -35,4 +35,4 @@ const InputTextBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
     );
 }
 
-export const Input = forwardRef(InputTextBase);
+export const BlackInput = forwardRef(InputTextBase);

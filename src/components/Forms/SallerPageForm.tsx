@@ -1,14 +1,24 @@
 import classNames from "classnames";
 import { ChangeEvent,  useState } from "react";
 
-import { Input } from "./components/Input";
-import { FaCheck } from "react-icons/fa";
+import { BlackInputMaskComponent } from "../Input/InputMask/BlackInputMaskComponent";
+import { BlackInput } from "../Input/BlackInput";
+import { Button } from "../Button";
 
 import { BsClipboardPlus, BsFillPersonFill } from "react-icons/bs";
-import { useForm } from "react-hook-form";
-import { Button } from "../Button";
+import { RegisterOptions, useForm } from "react-hook-form";
+import { FaCheck } from "react-icons/fa";
+
 import axios from "axios";
 
+type FormValidationProps = {
+    radioInputFieldOptions: RegisterOptions;
+    nameInputFieldOptions: RegisterOptions;
+    emailInputFieldOptions: RegisterOptions;
+    phoneNumberInputFieldOptions: RegisterOptions;
+    zipCodeInputFieldOptions: RegisterOptions;
+}
+  
 interface FormData {
     amount: string;
     email: string;
@@ -19,14 +29,8 @@ interface FormData {
 
 export function SallerPageForm() {
     const [currentSaller, setCurrentSaller] = useState('')
+    const [amountFormatted, setAmountFormatted] = useState('')
     const [fileToUpload, setFileToUpload] = useState('')
-
-    const {
-        register,
-        handleSubmit,
-        setValue,
-        clearErrors
-    } = useForm();
 
     const sallers = [
         { id: 'eliano-radio', name: 'saller', label: 'Eliano Santana', value: 'Eliano'},
@@ -35,8 +39,53 @@ export function SallerPageForm() {
         { id: 'lucas-radio', name: 'saller', label: 'Lucas Guedes', value: 'Lucas'},
         { id: 'larrisa-radio', name: 'saller', label: 'Larissa', value: 'Larissa'},
     ]
+    
+    const {
+        register,
+        handleSubmit,
+        setValue,
+        clearErrors,
+        formState: { errors }
+    } = useForm();
 
-    function onSubmit(formData: any) {
+    const sallerIsEmpty = !!errors.saller_radio
+
+    const formValidation: FormValidationProps = {
+        radioInputFieldOptions: {
+          required: 'Selecione um vendedor para proseguir no cadastro',
+        },
+        nameInputFieldOptions: {
+          required: "Este campo é obrigatorio. "
+        },
+        emailInputFieldOptions: {
+          required: "Este campo é obrigatorio. ",
+          pattern: {
+            value: /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/,
+            message: 'insira um formato de email valido' 
+          }
+        },
+        phoneNumberInputFieldOptions: {
+          required: "Este campo é obrigatorio. ",
+        },
+        zipCodeInputFieldOptions: {
+          required: "Este campo é obrigatorio. ",
+        },
+    }
+
+    function handleChangeSaller(event: ChangeEvent<HTMLInputElement>) {
+        setValue("saller_radio", event.target.value)
+        setCurrentSaller(event.target.value);
+        clearErrors("saller_radio")
+    }
+
+    function formatAmount(event: any) {
+        const onChangeValue = Number(event.target.value)
+        const valueFormatted = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(onChangeValue)
+
+        setAmountFormatted(valueFormatted)
+    }
+
+    function onFormSubmit(formData: any) {
 
         const formatedFormdata = {
             saller: currentSaller,
@@ -51,15 +100,11 @@ export function SallerPageForm() {
 
         console.log(formatedFormdata)
     };
-        
-    function handleChangeSaller(event: ChangeEvent<HTMLInputElement>) {
-        setValue("saller-radio", event.target.value)
-        setCurrentSaller(event.target.value);
-        clearErrors("saller-radio")
-    }
+
+    const onError = (error: any) => console.log(error)
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="w-full h-full flex gap-16 items-start">
+        <form onSubmit={handleSubmit(onFormSubmit, onError)} className="w-full h-full flex gap-16 items-start">
            <div className="w-full max-w-md flex flex-col py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
                 <fieldset className="flex flex-col gap-12">
                     <div className="max-w-2xl flex flex-col gap-3 py-3 border-b border-neutral-600">
@@ -76,31 +121,42 @@ export function SallerPageForm() {
                         </p>
                     </div>
                     
-                    <div className="flex flex-col gap-4">
-                        {sallers.map(saller => {
-                            const isInCurrentSaller = saller.value === currentSaller
+                    <div className="flex flex-col gap-8">
+                        <div className="flex flex-col gap-4">
+                            {sallers.map(saller => {
+                                const isInCurrentSaller = saller.value === currentSaller
 
-                            return (
-                                <div key={saller.id} className="flex items-center">
-                                    <input
-                                        className="hidden"
-                                        type="radio"
-                                        id={saller.id}
-                                        {...register("saller-radio")}
-                                        value={saller.value}
-                                        onChange={e => handleChangeSaller(e)}
-                                    />
+                                return (
+                                    <div key={saller.id} className="flex items-center">
+                                        <input
+                                            className="hidden"
+                                            type="radio"
+                                            id={saller.id}
+                                            {...register("saller_radio", formValidation.radioInputFieldOptions)}
+                                            value={saller.value}
+                                            onChange={e => handleChangeSaller(e)}
+                                        />
 
-                                    <label htmlFor={saller.id} className={classNames('flex items-center justify-between w-full max-w-[250px] px-6 py-3 border border-neutral-600 text-base font-medium text-neutral-500 rounded-lg', {
-                                        'bg-sun-500 text-neutral-100' : isInCurrentSaller,
-                                    })}>
-                                        {saller.label}
+                                        <label htmlFor={saller.id} className={classNames('border-neutral-600 flex items-center justify-between w-full max-w-[250px] px-6 py-3 border text-base font-medium text-neutral-500 rounded-lg', {
+                                            'bg-sun-500 text-neutral-100' : isInCurrentSaller,
+                                            'border-red-400' : sallerIsEmpty
+                                        })}>
+                                            {saller.label}
 
-                                        {isInCurrentSaller && <FaCheck />}
-                                    </label>
-                                </div>
-                            )    
-                        })}
+                                            {isInCurrentSaller && <FaCheck />}
+                                        </label>
+                                    </div>
+                                )    
+                            })}
+                        </div>
+
+                        {sallerIsEmpty && (
+                            <div>
+                                <span className="block text-sm font-medium text-red-400">
+                                    {errors.saller_radio.message}
+                                </span>
+                            </div>
+                        )}
                     </div>
                 </fieldset>
             </div>
@@ -132,13 +188,29 @@ export function SallerPageForm() {
 
                             <div className="flex flex-col gap-12">
                                 <div className="w-full flex flex-col gap-8">
-                                    <Input label="Endereço de email" {...register("email")}/>
+                                    <BlackInput 
+                                        label="Endereço de email"
+                                        error={errors.email}
+                                        {...register("email", formValidation.emailInputFieldOptions)}
+                                    />
 
-                                    <Input label="Nome do cliente" {...register("name")}/>
+                                    <BlackInput 
+                                        label="Nome do cliente"
+                                        error={errors.name}
+                                        {...register("name", formValidation.nameInputFieldOptions)}
+                                    />
 
-                                    <Input label="Numero de telefone" {...register("phoneNumber") }/>
+                                    <BlackInputMaskComponent
+                                        label="Telefone celular"
+                                        mask="99 99999-9999"
+                                        error={errors.phoneNumber}
+                                        {...register("phoneNumber", formValidation.phoneNumberInputFieldOptions)}
+                                    />
 
-                                    <Input label="Valor da conta de luz" {...register("amount")} />
+                                    <BlackInput 
+                                        label="Valor da conta de luz"
+                                        {...register("amount")}
+                                    />
                                     
                                     <div className="flex flex-col gap-2 items-start">
                                         <label className="block text-sm font-semibold text-neutral-200 ml-1">Foto da conta de luz</label>

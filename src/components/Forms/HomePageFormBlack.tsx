@@ -4,11 +4,11 @@ import axios from 'axios';
 import { useForm, RegisterOptions } from 'react-hook-form'
 
 import { Button } from '../Button';
-import { Select } from './components/Select';
-import { Input } from './components/Input';
-import { InputMaskComponent } from './components/InputMaskComponent';
 
 import classNames from 'classnames';
+import { BlackSelect } from '../BlackSelect';
+import { BlackInput } from '../Input/BlackInput';
+import { BlackInputMaskComponent } from '../Input/InputMask/BlackInputMaskComponent';
 
 
 type FormValidationProps = {
@@ -59,7 +59,7 @@ export function HomePageForm() {
     },
   }
 
-  function createLead(formData: any) {
+  function onFormSubmit(formData: any) {
     console.log(formData)
 
     const formatedFormData = {
@@ -78,40 +78,30 @@ export function HomePageForm() {
     clearErrors("select")
   }
 
-  function onChangePhoneNumberInputValue(value: any) {
-    console.log(value)
-  }
-
-  function onChangeZipCodeInputValue(value: any) {
-    console.log(value)
-  }
-
   return (
-      <form onSubmit={handleSubmit(createLead)} className="w-full max-w-2xl flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
+      <form onSubmit={handleSubmit(onFormSubmit)} className="w-full max-w-2xl flex flex-col gap-12 py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
           <div className="w-full flex flex-col gap-8">
-            <Select 
+            <BlackSelect
               selectValue={selectValue}
               onChangeSelectValue={updateSelectValue}
               error={errors.select}
               {...register('select', formValidation.selectInputFieldOptions)}
             />
 
-            <Input label="Nome" error={errors.name} {...register("name", formValidation.nameInputFieldOptions)} />
+            <BlackInput label="Nome" error={errors.name} {...register("name", formValidation.nameInputFieldOptions)} />
 
-            <Input label="Endereço de email" error={errors.email} {...register("email", formValidation.emailInputFieldOptions)} />
+            <BlackInput label="Endereço de email" error={errors.email} {...register("email", formValidation.emailInputFieldOptions)} />
           
-            <InputMaskComponent 
+            <BlackInputMaskComponent 
               label='Numero de celular'
               mask="99 99999-9999"
               error={errors.phoneNumber}
-              onChangeInputMaskValue={onChangePhoneNumberInputValue}
             />
 
-            <InputMaskComponent 
+            <BlackInputMaskComponent 
               label='CEP'
               mask="99999-999"
               error={errors.zipCode}
-              onChangeInputMaskValue={onChangePhoneNumberInputValue}
             />
           </div>
           

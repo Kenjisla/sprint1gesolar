@@ -117,4 +117,4 @@ const SelectBase: ForwardRefRenderFunction<HTMLInputElement, SelectProps> = ({ s
     );
 }
 
-export const Select = forwardRef(SelectBase)
+export const BlackSelect = forwardRef(SelectBase)

@@ -1,13 +1,12 @@
 import { useState } from 'react';
 
 import { Button } from '../Button';
-import { Select } from './components/Select';
-import { Input } from './components/Input';
-import { InputMaskComponent } from './components/InputMask';
+import { BlackInput } from '../Input/BlackInput';
 
 import axios from 'axios';
 import { useForm, RegisterOptions } from 'react-hook-form'
-import classNames from 'classnames';
+import { BlackInputMaskComponent } from '../Input/InputMask/BlackInputMaskComponent';
+import { BlackSelect } from '../BlackSelect';
 
 type FormValidationProps = {
   selectInputFieldOptions: RegisterOptions;
@@ -61,7 +60,7 @@ export function CalculatorPageForm() {
     },
   }
   
-  function onSubmit(data: any) {
+  function onFormSubmit(data: any) {
     const formData = {...data, lp: 'calculator'}
 
     axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formData)
@@ -75,10 +74,10 @@ export function CalculatorPageForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg flex flex-col gap-12">
+    <form onSubmit={handleSubmit(onFormSubmit)} className="w-full max-w-lg flex flex-col gap-12">
       <div className="grid grid-col-1 gap-8 md:grid-cols-6">
           <div className="col-span-full">
-            <Select 
+            <BlackSelect
               selectValue={selectValue} 
               onChangeSelectValue={updateSelectValue} 
               error={errors.select}
@@ -87,7 +86,7 @@ export function CalculatorPageForm() {
           </div>
 
           <div className="col-span-full md:col-span-3">
-             <Input 
+             <BlackInput 
               label="Nome" 
               error={errors.name} 
               {...register("name", formValidation.nameInputFieldOptions)} 
@@ -95,7 +94,7 @@ export function CalculatorPageForm() {
           </div>
 
           <div className="col-span-full md:col-span-3">
-            <Input 
+            <BlackInput 
               label="Endereço de email" 
               error={errors.email} 
               {...register("email", formValidation.emailInputFieldOptions)}
@@ -103,7 +102,7 @@ export function CalculatorPageForm() {
           </div>
 
           <div className="col-span-full md:col-span-4">
-            <InputMaskComponent 
+            <BlackInputMaskComponent
               label="Telefone celular"
               mask="99 99999-9999"
               error={errors.phoneNumber}
@@ -112,7 +111,7 @@ export function CalculatorPageForm() {
           </div>
 
           <div className="col-span-full md:col-span-2">
-            <InputMaskComponent 
+            <BlackInputMaskComponent
               label="CEP"
               mask="99999-999"
               error={errors.zipCode}
