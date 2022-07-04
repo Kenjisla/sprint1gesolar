@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id='advantages' className="bg-neutral-900 h-full min-h-[75vh] w-full flex items-center justify-center flex-col py-24 px-6">
+      <div className="bg-neutral-900 h-full min-h-[75vh] w-full flex items-center justify-center flex-col py-24 px-6">
         <div className="w-full max-w-[1450px]">
           <h1 className="text-neutral-200 mb-24 text-2xl leading-tight font-semibold md:text-center md:mb-28 md:text-2xl">
               Confira o passo a passo para aquisição do seu sistema
@@ -146,8 +146,7 @@ export default function Home() {
         </div>
       </div>
 
-
-      <div className="w-full bg-neutral-200 min-h-[800px] flex items-center justify-center">
+      <div id="calculator" className="w-full bg-neutral-200 min-h-[800px] flex items-center justify-center">
         <div className="flex items-center justify-center flex-col w-full h-full px-6 md:py-24 md:px-4">
           <h1 className="text-neutral-600 mb-12 text-3xl leading-tight font-semibold md:text-center md:mb-16 md:text-4xl">
             Calcular sistema

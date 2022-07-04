@@ -1,5 +1,4 @@
 import { BsCheck2Circle } from "react-icons/bs";
-import { Button } from "../components/Button";
 import { MaintenancePageForm } from "../components/Forms/MaintenancePageForm";
 import { HeroSection } from "../components/HeroSection";
 import { Subtitle } from "../components/Subtitle";
@@ -11,9 +10,10 @@ export default function Servicing() {
         <>
             <HeroSection
                 title="Melhor eficiencia e limpeza maxima"
-                subtitle="Fazemos a manutenção das suas placas, pra voce ter sempre a 
-                melhor peformace e estética do seu sistema"
-                buttonLabel="Eu quero"
+                subtitle="Fazemos a limpeza dos painéis e verificação completa do sistema, 
+                    para proporcionar melhor desempenho e eficiência na captação solar e 
+                    maior produção de energia."
+                buttonLabel="Eu quero saber mais"
                 imgSrc="/manutencao-hero-image.jpg"
             />
             
@@ -29,10 +29,11 @@ export default function Servicing() {
 
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
-                            <Title>Devo fazer manutenção?</Title>
+                            <Title>Quando eu devo fazer a manutenção?</Title>
 
-                            <Subtitle>A partir de 6 meses ja é recomendado fazer algum tipo de limpeza ou manutenção,
-                                Veja alguns benefícios a seguir ao fazer realizar manutenção
+                            <Subtitle>
+                                A partir de 6 meses ja é recomendado fazer algum tipo de limpeza ou manutenção.
+                                Benefícios ao realizar a manutenção do sistema:
                             </Subtitle>
                         </div>
 
@@ -41,40 +42,21 @@ export default function Servicing() {
                                 <span className="text-sun-500">
                                     <BsCheck2Circle size={24}/>
                                 </span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
+                                <p>Melhora o desempenho da captação e aumenta a produção de energia</p>
                             </li>
 
                             <li className="flex items-center  gap-4 bg-neutral-800 p-4 rounded-lg text-neutral-500 font-medium">
                                 <span className="text-sun-500">
                                     <BsCheck2Circle size={24}/>
                                 </span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
+                                <p>Aumenta a vida útil do sistema</p>
                             </li>
 
                             <li className="flex items-center  gap-4 bg-neutral-800 p-4 rounded-lg text-neutral-500 font-medium">
                                 <span className="text-sun-500">
                                     <BsCheck2Circle size={24}/>
                                 </span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </li>
-
-                            <li className="flex items-center  gap-4 bg-neutral-800 p-4 rounded-lg text-neutral-500 font-medium">
-                                <span className="text-sun-500">
-                                    <BsCheck2Circle size={24}/>
-                                </span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
+                                <p>Garante que o investimento feito dá retorno e assegura que valeu a pena.</p>
                             </li>
                         </ul>
                     </div>
@@ -84,8 +66,7 @@ export default function Servicing() {
             <div className="w-full h-full max-w-[1450px] min-h-screen mx-auto">
                 <div className="w-full h-full py-24 px-6 flex flex-col gap-16">
                     <div className="w-full flex flex-col gap-4 md:text-center md:items-center md:justify-center">
-                        <Title>Veja a diferença de um dos nossos projetos após a manutenção</Title>
-                        <Subtitle>Arraste a bolinha laranja e veja o antes e o depois</Subtitle>
+                        <Title>Veja o resultado de uma boa manutenção</Title>
                     </div>
 
                     <div className="relative w-full h-[60vh] flex items-center justify-center">
@@ -104,12 +85,13 @@ export default function Servicing() {
                     <div className="w-full h-full flex flex-col gap-16">
                         <div className="text-2xl font-bold text-neutral-200 tracking-tight max-w-2xl md:text-3xl md:leading-tight">
                             <h1>
-                                Ficou interessado?
+                                Como estão os paineis do seu sistema?
                             </h1>
-                            <h1>
-                                coloque seu email abaixo 
-                                que entraremos em contato ou clique no botão do whatsapp
-                            </h1>
+
+                            <p className="text-xl">
+                                Informe seus dados de contato que nossa equipe 
+                                te ajudará a manter o seu sistema produzindo muita energia.
+                            </p>
                         </div>
 
                         <MaintenancePageForm />

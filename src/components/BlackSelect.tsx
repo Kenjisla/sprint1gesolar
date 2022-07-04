@@ -6,10 +6,11 @@ import { MdOutlineKeyboardArrowDown, MdAttachMoney } from 'react-icons/md'
 import { FieldError } from 'react-hook-form';
 
 import classNames from 'classnames';
+import { useCalculator } from '../hooks/useCalculator';
 
 type SelectData = {
     id: number,
-    amount: string;
+    range: string;
     defaultValue?: boolean;
 }
 
@@ -20,12 +21,13 @@ interface SelectProps {
 }
 
 const SelectBase: ForwardRefRenderFunction<HTMLInputElement, SelectProps> = ({ selectValue, onChangeSelectValue, error = null, ...rest }, ref) => {
-    const selectData = [
-        {
-          id: 1,
-          amount: 'R$ 200,00 - R$ 299,00'
+    const { selectRange } = useCalculator()
+    const selectRangeFormated = selectRange.map((range, index) => {
+        return {
+            id: index,
+            range,
         }
-      ]
+    })
 
     const hasError = error != undefined
 
@@ -51,7 +53,7 @@ const SelectBase: ForwardRefRenderFunction<HTMLInputElement, SelectProps> = ({ s
                                         <MdAttachMoney className="w-5 h-5 text-white"/>
                                     </span>
                                     <span className="ml-3 w-full text-ellipsis overflow-hidden">
-                                        {selectValue.amount}
+                                        {selectValue.range}
                                     </span>
                                 </span>
 
@@ -71,7 +73,7 @@ const SelectBase: ForwardRefRenderFunction<HTMLInputElement, SelectProps> = ({ s
                                 leaveTo="opacity-0"
                             >
                                 <Listbox.Options className="absolute z-10 mt-1 w-full bg-neutral-600 shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-neutral-900 ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
-                                    {selectData.map((value) => (
+                                    {selectRangeFormated.map((value) => (
                                         <Listbox.Option
                                             key={value.id}
                                             value={value}
@@ -91,7 +93,7 @@ const SelectBase: ForwardRefRenderFunction<HTMLInputElement, SelectProps> = ({ s
                                                     'font-semibold' : selectValue.id === value.id,
                                                     'font-medium' : !(selectValue.id === value.id)
                                                 })}>
-                                                    {value.amount}
+                                                    {value.range}
                                                 </span>
                                             </div>
 

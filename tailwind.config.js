@@ -62,6 +62,9 @@ module.exports = {
         lgReverseSlide: 'lgReverseSlide 60s linear infinite',
         xlReverseSlide: 'xlReverseSlide 60s linear infinite',
 
+      },
+      backgroundImage: {
+        result_hero_image: 'url(/result-hero-image.jpeg)'
       }
     },
   },

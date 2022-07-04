@@ -19,8 +19,7 @@ export default function Calculadora() {
             
                 <div className="absolute w-full h-full inset-0 z-1 flex items-center justify-center">
                     <p className="max-w-lg px-6 text-xl text-neutral-200 font-semibold text-start md:text-2xl xl:text-center">
-                        Venha fazer parte da gereção de energia solar e economize 
-                        mais de 80% na sua conta de luz
+                        Inicie agora o projeto para ter a energia solar e economizar até 95% na sua conta de luz.
                     </p>
                 </div>
             </div>
@@ -30,7 +29,7 @@ export default function Calculadora() {
                     <Title>Calcule seu sistema</Title>
 
                     <Subtitle>
-                        Insira alguns dos seus dados abaixo e faça a simulação online do seu sistema
+                        Insira os dados abaixo e faça a simulação online do seu sistema
                     </Subtitle>
                 </div>
 

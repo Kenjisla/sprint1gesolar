@@ -37,9 +37,9 @@ export const HomeObjectTwo: InfoSectionProps = {
     topLine: 'Investimento',
     headline: 'Instale a energia solar e tenha rendimento em torno de 15% ao ano.',
     alternativeDescription: [
-        {id: 1, text: 'O valor ecnomizado com a sua conta de energia renderá até 04 vezes mais o rendimento da poupança.'},
-        {id: 2, text: 'Após o payback do seus sistema o valor da sua conta de energia ficará no seu bolso'},
-        {id: 3, text: 'É um investimento de baixo risco e tem a garantia de retorno mês a mês.'},
+        { id: 1, text: 'O valor ecnomizado com a sua conta de energia renderá até 04 vezes mais o rendimento da poupança.' },
+        { id: 2, text: 'Todo o dinheiro investido na aquisição da energia solar, retorna para seu bolso como lucro do investimento.' },
+        { id: 3, text: 'É um investimento de baixo risco e tem a garantia de retorno mês a mês.' },
     ],
     buttonLabel: 'Saiba Mais',
     imgStart: false,

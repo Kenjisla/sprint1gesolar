@@ -7,6 +7,8 @@ import axios from 'axios';
 import { useForm, RegisterOptions } from 'react-hook-form'
 import { BlackInputMaskComponent } from '../Input/InputMask/BlackInputMaskComponent';
 import { BlackSelect } from '../BlackSelect';
+import { useCalculator } from '../../hooks/useCalculator';
+import { useRouter } from 'next/router';
 
 type FormValidationProps = {
   selectInputFieldOptions: RegisterOptions;
@@ -19,16 +21,19 @@ type FormValidationProps = {
 
 type SelectData = {
   id: number,
-  amount: string;
+  range: string;
   defaultValue?: boolean;
 }
 
 export function CalculatorPageForm() {
   const [selectValue, setSelectValue] = useState<SelectData>({
     id: 0,
-    amount: 'Selecione o valor da sua conta de luz',
+    range: 'Selecione o valor da sua conta de luz',
     defaultValue: true
   })
+  const { calculateByRange } = useCalculator()
+
+  const router = useRouter()
 
   const {
     register,
@@ -40,7 +45,8 @@ export function CalculatorPageForm() {
   
   const formValidation: FormValidationProps = {
     selectInputFieldOptions: {
-      validate: value => value !== undefined || 'Verifique se voce selecionou algum valor', 
+      validate: value => value !== undefined || 'Verifique se voce selecionou algum valor',
+      setValueAs: value => value.replace('R$ ', '').replace(' - ', '>' )
     },
     nameInputFieldOptions: {
       required: "Este campo é obrigatorio. "
@@ -60,17 +66,22 @@ export function CalculatorPageForm() {
     },
   }
   
+
+  function updateSelectValue(value: SelectData) {
+    setValue("select", value.range)
+    setSelectValue(value)
+    clearErrors("select")
+  }
+
   function onFormSubmit(data: any) {
     const formData = {...data, lp: 'calculator'}
 
-    axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formData)
-  }
+    calculateByRange({
+      name: data.name,
+      rangeSelected: data.select
+    })
 
-  function updateSelectValue(value: SelectData) {
-    console.log(value)
-    setValue("select", value.amount)
-    setSelectValue(value)
-    clearErrors("select")
+    router.push('/resultado')
   }
 
   return (

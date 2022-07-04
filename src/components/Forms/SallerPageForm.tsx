@@ -30,7 +30,6 @@ interface FormData {
 export function SallerPageForm() {
     const [currentSaller, setCurrentSaller] = useState('')
     const [amountFormatted, setAmountFormatted] = useState('')
-    const [fileToUpload, setFileToUpload] = useState('')
 
     const sallers = [
         { id: 'eliano-radio', name: 'saller', label: 'Eliano Santana', value: 'Eliano'},
@@ -78,13 +77,6 @@ export function SallerPageForm() {
         clearErrors("saller_radio")
     }
 
-    function formatAmount(event: any) {
-        const onChangeValue = Number(event.target.value)
-        const valueFormatted = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(onChangeValue)
-
-        setAmountFormatted(valueFormatted)
-    }
-
     function onFormSubmit(formData: any) {
 
         const formatedFormdata = {
@@ -95,8 +87,6 @@ export function SallerPageForm() {
             phoneNumber: formData.phoneNumber,
             lp: 'saller'
         }
-
-        axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
 
         console.log(formatedFormdata)
     };
