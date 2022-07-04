@@ -31,6 +31,7 @@ export function CalculatorPageForm() {
     range: 'Selecione o valor da sua conta de luz',
     defaultValue: true
   })
+
   const { calculateByRange } = useCalculator()
 
   const router = useRouter()

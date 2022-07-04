@@ -8,15 +8,13 @@ import { FieldError } from 'react-hook-form';
 import classNames from 'classnames';
 import { useCalculator } from '../hooks/useCalculator';
 
-type SelectData = {
-    id: number,
-    range: string;
-    defaultValue?: boolean;
-}
+type selectValueData = any 
+// não esta funcionando tipar essa variavel,
+// está dando erro na hora da build
 
 interface SelectProps {
-    selectValue: SelectData;
-    onChangeSelectValue: (value: SelectData) => void;
+    selectValue: selectValueData;
+    onChangeSelectValue: (value: selectValueData) => void;
     error?: FieldError;
 }
 
