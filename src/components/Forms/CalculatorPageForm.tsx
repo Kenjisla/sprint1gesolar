@@ -31,6 +31,7 @@ export function CalculatorPageForm() {
     range: 'Selecione o valor da sua conta de luz',
     defaultValue: true
   })
+  const [isLoading, setIsLoading] = useState(false)
 
   const { calculateByRange } = useCalculator()
 
@@ -74,13 +75,24 @@ export function CalculatorPageForm() {
     clearErrors("select")
   }
 
-  function onFormSubmit(data: any) {
+  async function onFormSubmit(data: any) {
+    setIsLoading(true)
+
     const formData = {...data, lp: 'calculator'}
 
     calculateByRange({
       name: data.name,
       rangeSelected: data.select
     })
+
+    await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formData)
+    
+    calculateByRange({
+      name: data.name,
+      rangeSelected: data.select
+    })
+    
+    setIsLoading(false)
 
     router.push('/resultado')
   }
@@ -133,7 +145,11 @@ export function CalculatorPageForm() {
       </div>
 
       <div className="flex items-center justify-center">
-          <Button type="submit">
+          <Button 
+            type="submit"
+            hasSpinner
+            isLoading={isLoading}
+          >
             Simular online
           </Button>
       </div>

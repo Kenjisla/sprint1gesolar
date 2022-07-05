@@ -24,7 +24,9 @@ export function HeroSection({ title, subtitle, buttonLabel, imgSrc }: HeroSectio
                         </div>
 
                         <div>
-                            <Button>{buttonLabel}</Button>
+                            <Button>
+                                {buttonLabel}
+                            </Button>
                         </div>
                     </div>
                 </div>

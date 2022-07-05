@@ -30,6 +30,7 @@ interface FormData {
 export function SallerPageForm() {
     const [currentSaller, setCurrentSaller] = useState('')
     const [amountFormatted, setAmountFormatted] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
 
     const sallers = [
         { id: 'eliano-radio', name: 'saller', label: 'Eliano Santana', value: 'Eliano'},
@@ -44,6 +45,8 @@ export function SallerPageForm() {
         handleSubmit,
         setValue,
         clearErrors,
+        reset,
+        getValues,
         formState: { errors }
     } = useForm();
 
@@ -77,7 +80,8 @@ export function SallerPageForm() {
         clearErrors("saller_radio")
     }
 
-    function onFormSubmit(formData: any) {
+    async function onFormSubmit(formData: any) {
+        setIsLoading(true)
 
         const formatedFormdata = {
             saller: currentSaller,
@@ -88,13 +92,21 @@ export function SallerPageForm() {
             lp: 'saller'
         }
 
-        console.log(formatedFormdata)
+        const phoneNumberField = getValues('phoneNumber')
+        console.log(phoneNumberField)
+
+        try {
+            await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
+
+        } catch (err) {
+            console.log(err)
+        } finally {
+            setIsLoading(false)
+        }
     };
 
-    const onError = (error: any) => console.log(error)
-
     return (
-        <form onSubmit={handleSubmit(onFormSubmit, onError)} className="w-full h-full flex gap-16 items-start">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="w-full h-full flex gap-16 items-start">
            <div className="w-full max-w-md flex flex-col py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
                 <fieldset className="flex flex-col gap-12">
                     <div className="max-w-2xl flex flex-col gap-3 py-3 border-b border-neutral-600">
@@ -220,7 +232,11 @@ export function SallerPageForm() {
                                 </div>
 
                                 <div className="w-full h-full flex justify-end">
-                                    <Button type="submit">
+                                    <Button 
+                                        type="submit"
+                                        hasSpinner
+                                        isLoading={isLoading}
+                                    >
                                         Cadastar Lead
                                     </Button>
                                 </div>
