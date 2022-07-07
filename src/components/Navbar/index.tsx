@@ -8,8 +8,9 @@ import { Logo } from '../Logo'
 
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import { MdClose } from 'react-icons/md'
-import { FaHome } from 'react-icons/fa'
+import { FaHandshake, FaHome, FaSolarPanel } from 'react-icons/fa'
 import classNames from 'classnames'
+import { BsFillGearFill } from 'react-icons/bs'
 
 
 const solutions = [
@@ -21,16 +22,16 @@ const solutions = [
   {
     name: 'Afiliados',
     href: '#',
-    icon: FaHome
+    icon: FaHandshake
   },
   { name: 'Investir em solar', 
     href: '#',
-    icon: FaHome
+    icon: FaSolarPanel
   },
   {
-    name: 'Plataforma',
+    name: 'Manutenção',
     href: '#',
-    icon: FaHome
+    icon: BsFillGearFill
   },
 ]
 
@@ -114,20 +115,13 @@ export function Navbar() {
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div>
+              <Link href="/calculadora-de-energia-solar">
                 <a
-                  href="#"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
                 >
-                  Cadastrar
+                  Simule seu sistema
                 </a>
-                <p className="mt-6 text-center text-base font-medium text-neutral-200">
-                  já possui uma conta?{' '}
-                  <a href="#" className="text-sun-500 hover:text-amber-500 focus:outline-none focus:text-sun-500 focus:underline focus:underline-offset-2">
-                    Login
-                  </a>
-                </p>
-              </div>
+              </Link>
             </div>
           </div>
         </Popover.Panel>
