@@ -106,8 +106,8 @@ export function SallerPageForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit(onFormSubmit)} className="w-full h-full flex gap-16 items-start">
-           <div className="w-full max-w-md flex flex-col py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="w-full h-full flex flex-col gap-16 lg:items-start lg:flex-row">
+           <div className="w-full flex flex-col py-14 px-4 sm:py-16 sm:px-12 rounded-xl bg-neutral-800 lg:max-w-md">
                 <fieldset className="flex flex-col gap-12">
                     <div className="max-w-2xl flex flex-col gap-3 py-3 border-b border-neutral-600">
                         <div className="flex items-center gap-3">
@@ -139,7 +139,7 @@ export function SallerPageForm() {
                                             onChange={e => handleChangeSaller(e)}
                                         />
 
-                                        <label htmlFor={saller.id} className={classNames('border-neutral-600 flex items-center justify-between w-full max-w-[250px] px-6 py-3 border text-base font-medium text-neutral-500 rounded-lg', {
+                                        <label htmlFor={saller.id} className={classNames('border-neutral-600 flex items-center justify-between w-full max-w-2xl lg:max-w-[250px] px-6 py-3 border text-base font-medium text-neutral-500 rounded-lg', {
                                             'bg-sun-500 text-neutral-100' : isInCurrentSaller,
                                             'border-red-400' : sallerIsEmpty
                                         })}>
@@ -176,10 +176,9 @@ export function SallerPageForm() {
                                 </div>
 
                                 <p className="text-base font-medium text-neutral-400 tracking-tight max-w-2xl sm:text-lg">
-                                    Selecione o vendedor no qual os leads criados serão atribuido
+                                    Preencha as informações do lead abaixo
                                 </p>
                             </div>
-
                         </fieldset>
 
                         <div className="relative max-w-2xl flex flex-col gap-9">
