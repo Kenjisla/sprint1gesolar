@@ -8,14 +8,14 @@ export default function Resultado() {
 
     if (calculatorResult === null) {
         return (
-            <div className="w-full h-[80vh] flex items-center justify-center flex-col gap-12">
-                <div className="flex flex-col gap-4">
-                    <span className="text-neutral-700 text-center text-2xl leading-tight font-semibold">
+            <div className="w-full h-[80vh] flex flex-col gap-16 px-6 justify-center md:items-center">
+                <div className="flex flex-col gap-12">
+                    <span className="text-neutral-700 text-xl leading-tight font-semibold sm:text-2xl sm:text-center">
                         Não temos seus dados sobre sua conta de luz <span className="ml-2">:(</span>
                     </span>
 
                     <img
-                        className="w-full max-h-72 opacity-50"
+                        className="w-full max-h-72 opacity-25"
                         src="/not-found-calculator-data.svg" 
                         alt="" 
                     />
@@ -23,7 +23,7 @@ export default function Resultado() {
 
                 <Link href="/calculadora-de-energia-solar">
                     <a
-                        className='ml-8 whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-md shadow-sm text-base font-medium text-neutral-50 bg-sun-500 border border-sun-500/75 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors duration-200'
+                        className='whitespace-nowrap inline-flex items-center justify-center px-9 py-[6px] rounded-md shadow-sm text-base font-medium text-neutral-200  border border-neutral-700 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors duration-200'
                     >
                         Simular meu sistema
                     </a>

@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Popover, Transition } from '@headlessui/react'
+import { Menu, Popover, Transition } from '@headlessui/react'
 
 import { Navlink } from './Navlink'
 import { Logo } from '../Logo'
@@ -16,21 +16,22 @@ import { BsFillGearFill } from 'react-icons/bs'
 const solutions = [
   {
     name: 'Home',
-    href: '#',
+    href: '/',
     icon: FaHome
   },
   {
     name: 'Afiliados',
-    href: '#',
+    href: '/#cashback',
     icon: FaHandshake
   },
-  { name: 'Investir em solar', 
-    href: '#',
+  { 
+    name: 'Investir em solar', 
+    href: '/#investiment',
     icon: FaSolarPanel
   },
   {
     name: 'Manutenção',
-    href: '#',
+    href: '/manutencao-de-energia-solar',
     icon: BsFillGearFill
   },
 ]
@@ -83,9 +84,9 @@ export function Navbar() {
         enterTo="opacity-100 scale-100"
         leave="duration-100 ease-in"
         leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
+        leaveTo="opacity-0 scale-95 delay-150"
       >
-        <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
+        <Popover as="nav" className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
           <div className="rounded-lg shadow-lg bg-neutral-800 divide-y-2 divide-neutral-700">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
@@ -100,18 +101,18 @@ export function Navbar() {
                 </div>
               </div>
               <div className="mt-10 mb-6">
-                <nav className="grid gap-y-8">
+                <div className="grid gap-y-8">
                   {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
-                    >
-                      <item.icon className="flex-shrink-0 h-6 w-6 text-sun-500" aria-hidden="true" />
-                      <span className="ml-3 text-base font-medium text-neutral-200">{item.name}</span>
-                    </a>
+                    <Link key={item.name} href={item.href}>
+                      <a
+                        className="-m-3 p-3 flex items-center rounded-md hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors"
+                      >
+                        <item.icon className="flex-shrink-0 h-6 w-6 text-sun-500" aria-hidden="true" />
+                        <span className="ml-3 text-base font-medium text-neutral-200">{item.name}</span>
+                      </a>
+                    </Link>
                   ))}
-                </nav>
+                </div>
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
@@ -124,7 +125,7 @@ export function Navbar() {
               </Link>
             </div>
           </div>
-        </Popover.Panel>
+        </Popover>
       </Transition>
     </Popover>
   )

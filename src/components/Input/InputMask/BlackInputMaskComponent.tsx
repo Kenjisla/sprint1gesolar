@@ -35,7 +35,7 @@ const InputMaskBase: ForwardRefRenderFunction<HTMLInputElement, InputMaskBasePro
 
                 {!!error && <span className="block text-xs font-medium text-red-400">{error.message}</span>}
             </div>
-      </div>
+        </div>
     )
 }
 

@@ -10,6 +10,7 @@ import { RegisterOptions, useForm } from "react-hook-form";
 import { FaCheck } from "react-icons/fa";
 
 import axios from "axios";
+import ReactInputMask from "react-input-mask";
 
 type FormValidationProps = {
     radioInputFieldOptions: RegisterOptions;
@@ -93,15 +94,18 @@ export function SallerPageForm() {
         }
 
         const phoneNumberField = getValues('phoneNumber')
-        console.log(phoneNumberField)
 
         try {
-            await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
+            // await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
+            console.log(formatedFormdata)
 
         } catch (err) {
             console.log(err)
         } finally {
             setIsLoading(false)
+            reset()
+            setValue('phoneNumber', '')
+            console.log(phoneNumberField)
         }
     };
 
@@ -201,12 +205,26 @@ export function SallerPageForm() {
                                         {...register("name", formValidation.nameInputFieldOptions)}
                                     />
 
-                                    <BlackInputMaskComponent
-                                        label="Telefone celular"
-                                        mask="99 99999-9999"
-                                        error={errors.phoneNumber}
-                                        {...register("phoneNumber", formValidation.phoneNumberInputFieldOptions)}
-                                    />
+                                    <div className="col-span-full md:col-span-4">
+                                        <div className="flex flex-col gap-2">
+                                            <label className="block text-sm font-semibold text-neutral-200 ml-1">
+                                                Telefone celular
+                                            </label>
+                                            
+                                            <ReactInputMask
+                                                mask="99 99999-9999"
+                                                // @ts-ignore:next-line
+                                                maskChar={null}
+                                                className={classNames('mt-1 relative w-full border bg-neutral-700 text-neutral-300 font-normal rounded-md shadow-sm px-3 py-2 text-left cursor-default sm:text-sm', {
+                                                    'border-neutral-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !errors.phoneNumber,
+                                                    'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : errors.phoneNumber,
+                                                })}
+                                                {...register("phoneNumber", formValidation.phoneNumberInputFieldOptions)}
+                                            />
+
+                                            {!!errors.phoneNumber && <span className="block text-xs font-medium text-red-400">{errors.phoneNumber.message}</span>}
+                                        </div>
+                                    </div>
 
                                     <BlackInput 
                                         label="Valor da conta de luz"
