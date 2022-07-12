@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Subtitle } from "../components/Subtitle";
 import { Title } from "../components/Title";
+import { WhatsappButton } from "../components/WhatsappButton";
 
 import { CalculatorPageForm } from "../components/Forms/CalculatorPageForm";
 
@@ -35,6 +35,8 @@ export default function Calculadora() {
 
                 <CalculatorPageForm />
             </div>
+
+            <WhatsappButton />
         </div>
     )
 }

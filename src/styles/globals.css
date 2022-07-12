@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply w-full min-w-[320px] bg-neutral-900;
-    -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth;
+html, body {
+  @apply w-full min-w-[320px] bg-neutral-900 scroll-smooth;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }

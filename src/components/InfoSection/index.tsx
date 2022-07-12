@@ -6,9 +6,6 @@ import { BsPatchCheckFill } from 'react-icons/bs';
 
 import classNames from 'classnames'
 
-
-
-
 export default function InfoSection ({
     lightBg, 
     id, 
@@ -20,8 +17,8 @@ export default function InfoSection ({
     buttonLabel,
     img,
     alternativeDescription,
-    link = 'https://api.whatsapp.com/send?phone=5511970695992',
-    scroll_link
+    buttonLink = 'https://api.whatsapp.com/send?phone=5511970695992',
+    isExternalLink,
     }: InfoSectionProps){
 
     return(
@@ -69,7 +66,29 @@ export default function InfoSection ({
                                 )}
                                 
                                 <div className="flex justify-start">
-                                    <Button>{buttonLabel}</Button>
+                                    {isExternalLink ? (
+                                        <a
+                                            href={buttonLink}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className={classNames('inline-flex items-center justify-center px-8 py-2 rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-amber-500 transition-colors duration-200', {
+                                                'focus:ring-offset-[#fafafa]' : lightBg,
+                                                'focus:ring-offset-neutral-800' : !lightBg
+                                            })}
+                                        >
+                                            {buttonLabel}
+                                        </a>
+                                    ) : (
+                                        <a 
+                                            href={buttonLink}
+                                            className={classNames('inline-flex items-center justify-center px-8 py-2 rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-amber-500 transition-colors duration-200', {
+                                                'focus:ring-offset-[#fafafa]' : lightBg,
+                                                'focus:ring-offset-neutral-800' : !lightBg
+                                            })}
+                                        >
+                                            {buttonLabel}
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>

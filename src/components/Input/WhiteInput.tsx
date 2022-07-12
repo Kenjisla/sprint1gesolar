@@ -7,8 +7,9 @@ interface WhiteInputProps extends HTMLAttributes<HTMLInputElement> {
     label: string;
     error?: FieldError;
     icon: ReactNode;
+    placeholder: string;
 }
-const WhiteInputBase: ForwardRefRenderFunction<HTMLInputElement, WhiteInputProps>  = ({ name, label, error, icon, ...rest }, ref) => {
+const WhiteInputBase: ForwardRefRenderFunction<HTMLInputElement, WhiteInputProps>  = ({ name, label, error, icon, placeholder, ...rest }, ref) => {
     const hasError = error !== undefined;
 
     return (
@@ -25,12 +26,11 @@ const WhiteInputBase: ForwardRefRenderFunction<HTMLInputElement, WhiteInputProps
                         name={name}
                         arial-label={name}
                         ref={ref}
+                        placeholder={placeholder}
                         className={(classNames('text-neutral-600 font-medium placeholder:text-neutral-500 block bg-transparent w-full h-full border rounded-3xl pl-11 pr-3 shadow-sm', {
                             'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !hasError,
                             'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : hasError,
                         }))}
-                        placeholder="Digite seu nome" 
-                        type="text"
                         {...rest }
                     />
 

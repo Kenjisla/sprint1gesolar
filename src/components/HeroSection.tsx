@@ -1,13 +1,13 @@
-import { Button } from "./Button";
-
 interface HeroSectionProps {
     title: string;
     subtitle: string;
     buttonLabel: string;
+    isExternalLink?: boolean;
+    buttonLink: string;
     imgSrc: string;
 }
 
-export function HeroSection({ title, subtitle, buttonLabel, imgSrc }: HeroSectionProps) {
+export function HeroSection({ title, subtitle, buttonLabel, isExternalLink = false, buttonLink, imgSrc }: HeroSectionProps) {
     return (
         <div className="relative w-full h-full">
             <div className="absolute inset-0 w-full bg-gradient-to-b from-transparent to-neutral-900/75">
@@ -24,9 +24,23 @@ export function HeroSection({ title, subtitle, buttonLabel, imgSrc }: HeroSectio
                         </div>
 
                         <div>
-                            <Button>
-                                {buttonLabel}
-                            </Button>
+                            {isExternalLink ? (
+                                <a
+                                    href={buttonLink}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center justify-center px-8 py-2 rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors duration-200"
+                                >
+                                    {buttonLabel}
+                                </a>
+                            ) : (
+                                <a 
+                                    href={buttonLink}
+                                    className="inline-flex items-center justify-center px-8 py-2 rounded-2xl shadow-sm text-base font-medium text-white bg-sun-500 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-amber-500 transition-colors duration-200"
+                                >
+                                    {buttonLabel}
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import { HomePageFormWhite } from "../components/Forms/HomePageFormWhite";
 import { HeroSection } from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
 import { HomeObjectOne, HomeObjectThree, HomeObjectTwo } from "../components/InfoSection/data";
+import { WhatsappButton } from "../components/WhatsappButton";
 
 export default function Home() {  
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         title="Energia solar para todos"
         subtitle="Produza sua própria energia trocando o custo da sua conta 
         de luz para pagar o investimento no sistema."
+        buttonLink="/#calculator"
         buttonLabel="Começar agora"
         imgSrc="/hero-image.jpg"
       />
@@ -160,6 +162,8 @@ export default function Home() {
 
 
       <InfoSection {...HomeObjectThree}/>
+
+      <WhatsappButton />
     </>
   );
 }

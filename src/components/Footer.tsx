@@ -34,16 +34,31 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-              <BsFacebook className="text-sun-500 w-6 h-6" />
+            <a 
+              href="https://www.facebook.com/gesolarbr"
+              target="_blank"
+              rel="noreferrer"
+              className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800  text-sun-500 rounded-2xl hover:bg-[#1e1e1e] hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#131313] focus:ring-amber-500 transition-colors duration-200"
+            >
+              <BsFacebook className="w-6 h-6" />
             </a>
 
-            <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-              <BsInstagram className="text-sun-500 w-5 h-5"/>
+            <a 
+              href="https://www.instagram.com/gesolarbr/"
+              target="_blank"
+              rel="noreferrer"
+              className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800  text-sun-500 rounded-2xl hover:bg-[#1e1e1e] hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#131313] focus:ring-amber-500 transition-colors duration-200"
+            >
+              <BsInstagram className="w-5 h-5"/>
             </a>
 
-            <a href="" className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800 rounded-2xl">
-              <BsLinkedin className="text-sun-500 w-5 h-5"/>
+            <a 
+              href="https://www.linkedin.com/company/gesolar-br/"
+              target="_blank"
+              rel="noreferrer"
+              className="w-[46px] h-[46px] flex items-center justify-center bg-neutral-800  text-sun-500 rounded-2xl hover:bg-[#1e1e1e] hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#131313] focus:ring-amber-500 transition-colors duration-200"
+            >
+              <BsLinkedin className="w-5 h-5"/>
             </a>
           </div>
         </div>

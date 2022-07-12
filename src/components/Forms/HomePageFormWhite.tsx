@@ -128,6 +128,7 @@ export function HomePageFormWhite() {
 
             <WhiteInput
               label="Nome"
+              placeholder="Digite seu nome"
               icon={<FaUser />}
               error={errors.name}
               {...register("name", formValidation.nameInputFieldOptions)}
@@ -135,6 +136,7 @@ export function HomePageFormWhite() {
 
             <WhiteInput
               label="Email"
+              placeholder="Digite seu melhor email"
               icon={<FaUser />}
               error={errors.email}
               {...register("email", formValidation.emailInputFieldOptions)}
@@ -159,8 +161,8 @@ export function HomePageFormWhite() {
                             'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !errors.phoneNumber,
                             'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : errors.phoneNumber,
                         }))}
-                        placeholder="Digite seu nome" 
-                        type="text"
+                        placeholder="(99) 99999-9999"
+                        type="tel"
                         {...register('phoneNumber', formValidation.phoneNumberInputFieldOptions)}
                       />
 
@@ -186,17 +188,17 @@ export function HomePageFormWhite() {
                         // @ts-ignore:next-line
                         maskChar={null}
                         className={(classNames('text-neutral-600 font-medium placeholder:text-neutral-500 block bg-transparent w-full h-full border rounded-3xl pl-11 pr-3 shadow-sm', {
-                            'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !errors.phoneNumber,
-                            'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : errors.phoneNumber,
+                          'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-sun-500 focus:border-sun-500' : !errors.phoneNumber,
+                          'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : errors.phoneNumber,
                         }))}
-                        placeholder="Digite seu nome" 
-                        type="text"
+                        placeholder="99999-999"
+                        type="number"
                         {...register('zipCode', formValidation.zipCodeInputFieldOptions)}
                       />
 
                   </label>
 
-                  {!!errors.phoneNumber && <span className="block ml-1 text-xs font-medium text-red-400">{errors.phoneNumber.message}</span>}
+                  {!!errors.zipCode && <span className="block ml-1 text-xs font-medium text-red-400">{errors.zipCode.message}</span>}
               </div>
             </div>
 
