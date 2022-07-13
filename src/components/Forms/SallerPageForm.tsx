@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import { ChangeEvent,  useState } from "react";
 
-import { BlackInputMaskComponent } from "../Input/InputMask/BlackInputMaskComponent";
 import { BlackInput } from "../Input/BlackInput";
 import { Button } from "../Button";
 
@@ -11,6 +10,8 @@ import { FaCheck } from "react-icons/fa";
 
 import axios from "axios";
 import ReactInputMask from "react-input-mask";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 type FormValidationProps = {
     radioInputFieldOptions: RegisterOptions;
@@ -38,7 +39,7 @@ export function SallerPageForm() {
         { id: 'tiago-radio', name: 'saller', label: 'Tiago Amorim', value: 'Tiago'},
         { id: 'ivan-radio', name: 'saller', label: 'Ivan', value: 'Ivan'},
         { id: 'lucas-radio', name: 'saller', label: 'Lucas Guedes', value: 'Lucas'},
-        { id: 'larrisa-radio', name: 'saller', label: 'Larissa', value: 'Larissa'},
+        { id: 'Jean-radio', name: 'saller', label: 'Jean', value: 'Jean'},
     ]
     
     const {
@@ -46,9 +47,8 @@ export function SallerPageForm() {
         handleSubmit,
         setValue,
         clearErrors,
-        reset,
-        getValues,
-        formState: { errors }
+        formState: { errors },
+        setError
     } = useForm();
 
     const sallerIsEmpty = !!errors.saller_radio
@@ -81,6 +81,26 @@ export function SallerPageForm() {
         clearErrors("saller_radio")
     }
 
+    const successToast = () => toast.success('Lead criado com suceso!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+
+    const errorToast = () => toast.error('Dados já existentes na sharp', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+
     async function onFormSubmit(formData: any) {
         setIsLoading(true)
 
@@ -93,19 +113,23 @@ export function SallerPageForm() {
             lp: 'saller'
         }
 
-        const phoneNumberField = getValues('phoneNumber')
-
         try {
-            // await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
-            console.log(formatedFormdata)
+            await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
+
+            successToast()
+
+            setValue('email', '')
+            setValue('name', '')
+            setValue('phoneNumber', '')
+            setValue('amount', '')
 
         } catch (err) {
-            console.log(err)
+            errorToast()
+
+            setError('email', { type: 'custom', message: 'Email já atribuido a um cliente na sharp' })
+
         } finally {
             setIsLoading(false)
-            reset()
-            setValue('phoneNumber', '')
-            console.log(phoneNumberField)
         }
     };
 
@@ -230,22 +254,6 @@ export function SallerPageForm() {
                                         label="Valor da conta de luz"
                                         {...register("amount")}
                                     />
-                                    
-                                    <div className="flex flex-col gap-2 items-start">
-                                        <label className="block text-sm font-semibold text-neutral-200 ml-1">Foto da conta de luz</label>
-
-                                        <label
-                                            className="relative cursor-pointer bg-neutral-600 rounded-md px-6 py-3 font-medium text-sun-500 hover:text-amber-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-sun-500 focus-within:ring-offset-neutral-800"
-                                        >
-                                            <span>Upload a file</span>
-                                            <input 
-                                                id="file-upload"
-                                                type="file" 
-                                                className="sr-only"
-                                                {...register("fileToUpload")}
-                                            />
-                                        </label>
-                                    </div>
                                 </div>
 
                                 <div className="w-full h-full flex justify-end">
@@ -261,6 +269,8 @@ export function SallerPageForm() {
                         </div>
                     </div>
                 </div>
+
+                <ToastContainer />
         </form>
     );
 }
