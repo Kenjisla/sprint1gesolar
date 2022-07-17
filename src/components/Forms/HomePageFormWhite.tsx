@@ -192,7 +192,6 @@ export function HomePageFormWhite() {
                           'border-red-500 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-neutral-800 focus:ring-red-500 focus:border-red-500' : errors.phoneNumber,
                         }))}
                         placeholder="99999-999"
-                        type="number"
                         {...register('zipCode', formValidation.zipCodeInputFieldOptions)}
                       />
 
