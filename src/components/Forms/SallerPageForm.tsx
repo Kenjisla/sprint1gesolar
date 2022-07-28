@@ -61,7 +61,6 @@ export function SallerPageForm() {
           required: "Este campo é obrigatorio. "
         },
         emailInputFieldOptions: {
-          required: "Este campo é obrigatorio. ",
           pattern: {
             value: /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/,
             message: 'insira um formato de email valido' 
@@ -108,10 +107,12 @@ export function SallerPageForm() {
             saller: currentSaller,
             amount: formData.amount,
             name: formData.name,
-            email: formData.email,
+            email: formData.email != "" ? formData.email : null,
             phoneNumber: formData.phoneNumber,
             lp: 'saller'
         }
+
+        console.log(formData)
 
         try {
             await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formatedFormdata)
