@@ -17,7 +17,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 
-        <Script id="GoogleTagManager" strategy="afterInteractive" dangerouslySetInnerHTML={GoogleTagManagerScript()}/>
+        <script dangerouslySetInnerHTML={GoogleTagManagerScript()} />
       </Head>
       <body>
         <noscript>
