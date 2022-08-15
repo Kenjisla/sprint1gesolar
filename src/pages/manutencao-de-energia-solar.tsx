@@ -16,7 +16,7 @@ export default function Servicing() {
                     maior produção de energia."
                 buttonLink="https://api.whatsapp.com/send?phone=555511978732309"
                 isExternalLink
-                buttonLabel="Eu quero saber mais"
+                buttonLabel="Fale com um atendente"
                 imgSrc="/manutencao-hero-image.jpg"
             />
             
