@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { FaWhatsapp } from "react-icons/fa";
 import { HomePageFormWhite } from "../components/Forms/HomePageFormWhite";
 import { HeroSection } from "../components/HeroSection";
@@ -7,6 +8,11 @@ import { HomeObjectOne, HomeObjectThree, HomeObjectTwo } from "../components/Inf
 export default function Home() {  
   return (
     <>
+      <Head>
+        <title>GESOLAR | Energia Solar para todos</title>
+        <meta name="description" content="Venda, instalação e manutenção de energia Solar. Produza sua própria energia e pare de pagar conta de luz."></meta>
+      </Head>
+
       <HeroSection 
         title="Energia solar para todos"
         subtitle="Produza sua própria energia trocando o custo da sua conta 

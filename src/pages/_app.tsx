@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>GESOLAR | Energia Solar para todos</title>
+        <meta name="description" content="Venda, instalação e manutenção de energia Solar. Produza sua própria energia e pare de pagar conta de luz."></meta>
       </Head>
 
       <header>
