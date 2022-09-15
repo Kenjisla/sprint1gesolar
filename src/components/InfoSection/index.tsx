@@ -1,7 +1,5 @@
 import { InfoSectionProps } from './data';
 
-import { Button } from '../Button';
-
 import { BsPatchCheckFill } from 'react-icons/bs';
 
 import classNames from 'classnames'
