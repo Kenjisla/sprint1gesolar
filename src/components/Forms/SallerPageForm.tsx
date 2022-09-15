@@ -40,6 +40,8 @@ export function SallerPageForm() {
         { id: 'ivan-radio', name: 'saller', label: 'Ivan', value: 'Ivan'},
         { id: 'lucas-radio', name: 'saller', label: 'Lucas Guedes', value: 'Lucas'},
         { id: 'Jean-radio', name: 'saller', label: 'Jean', value: 'Jean'},
+        { id: 'Bruna-radio', name: 'saller', label: 'Bruna', value: 'Bruna'},
+        { id: 'Carla-radio', name: 'saller', label: 'Carla', value: 'Carla'},
     ]
     
     const {
@@ -144,11 +146,11 @@ export function SallerPageForm() {
                                 <BsFillPersonFill size={20} />
                             </span>
 
-                            <legend className="text-2xl font-bold text-neutral-200 tracking-tight">Selecione o vendedor</legend>
+                            <legend className="text-2xl font-bold text-neutral-200 tracking-tight">Selecione o responsavel</legend>
                         </div>
 
                         <p className="text-base font-medium text-neutral-400 tracking-tight max-w-2xl">
-                            Selecione o vendedor no qual os leads criados serão atribuido
+                            Selecione o responsavel no qual os leads criados serão atribuido
                         </p>
                     </div>
                     

@@ -12,7 +12,7 @@ export function HeroSection({ titlePerCity = null, title, subtitle, buttonLabel,
     return (
         <div className="relative w-full h-full">
             <div className="absolute inset-0 w-full bg-gradient-to-b from-transparent to-neutral-900/75">
-                <div className="w-full max-w-[1450px] mx-auto h-full px-6 pb-20 flex items-end justify-start ">
+                <div className="w-full max-w-[1450px] mx-auto h-full px-6 pb-20 flex items-end justify-start">
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-4">
                             {titlePerCity && <h2 className="block text-sun-500 text-base leading-4 font-bold tracking-widest uppercase">{titlePerCity}</h2>}
