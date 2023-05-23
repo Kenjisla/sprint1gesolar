@@ -31,15 +31,6 @@ export default function Home() {
     const response = await axios.post("https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm", popUpFormData)
     const operationIdGenerated = response.data
 
-    // axios.post("https://sistema.solarnext.app/api", {
-    //   campanha: '168',
-    //   nome: operationIdGenerated,
-    //   email: 'leonardo@teste.com',
-    //   contato: popUpFormData.popUpPhoneNumber
-    // })
-    //  .then(res => console.log(res))
-    //  .catch(err => console.log(err))
-
     closeModal()
     window.open("https://api.whatsapp.com/send?phone=551151984410")
   }
