@@ -28,6 +28,10 @@ export default function Home() {
   async function closeModalAndBackupPhoneNumber(data: any) {
     const popUpFormData = { ...data, lp: "pop-up" }
 
+    setTimeout(() => {
+      window.open("http://api.whatsapp.com/send?phone=551151984410", '_blank');
+    })
+
     const response = await axios.post("https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm", popUpFormData)
     const operationIdGenerated = response.data
 
@@ -37,10 +41,6 @@ export default function Home() {
       contato: data.popUpPhoneNumber,
       campanha: '168'
     }
-
-    setTimeout(() => {
-      window.open("http://api.whatsapp.com/send?phone=551151984410", '_blank');
-    })
 
     closeModal()
   }
