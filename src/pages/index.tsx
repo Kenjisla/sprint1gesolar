@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 
 export default function Home() {  
   const [isOpen, setIsOpen] = useState(false)
-  const { register, handleSubmit, reset, formState: { errors } } = useForm()
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm()
 
   function openModal() {
     setIsOpen(true)
@@ -22,7 +22,7 @@ export default function Home() {
 
   function closeModal() {
     setIsOpen(false)
-    reset()
+    setValue('popUpPhoneNumber', '')
   }
 
   async function closeModalAndBackupPhoneNumber(data: any) {
@@ -31,8 +31,18 @@ export default function Home() {
     const response = await axios.post("https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm", popUpFormData)
     const operationIdGenerated = response.data
 
+    const contactData = {
+      nome: operationIdGenerated,
+      email: "emailTeste@test.com.br",
+      contato: data.popUpPhoneNumber,
+      campanha: '168'
+    }
+
+    setTimeout(() => {
+      window.open("http://api.whatsapp.com/send?phone=551151984410", '_blank');
+    })
+
     closeModal()
-    window.open("https://api.whatsapp.com/send?phone=551151984410")
   }
 
   return (
@@ -202,7 +212,7 @@ export default function Home() {
         <button
           type="button"
           onClick={openModal}
-          className="flex items-center justify-center gap-3 px-4 py-2 max-w-[200px] bg-[#2ecc71] text-neutral-50 z-50 rounded-full md:max-w-full md:bottom-6 hover:bg-[#29b765] hover:text-neutral-300 focus:outline-none transition-colors duration-200"
+          className="flex items-center justify-center gap-3 px-4 py-2 max-w-[225px] bg-[#2ecc71] text-neutral-50 z-50 rounded-full md:max-w-full md:bottom-6 hover:bg-[#29b765] hover:text-neutral-300 focus:outline-none transition-colors duration-200"
         >
           <span className="flex items-center justify-center">
             <FaWhatsapp size={33}/>
@@ -245,7 +255,7 @@ export default function Home() {
                   <div className="w-full flex items-end justify-end">
                     <button
                       type="button"
-                      onClick={() => setIsOpen(false)}
+                      onClick={closeModal}
                     >
                       <IoClose size={22} className="text-neutral-700"/>
                     </button>
