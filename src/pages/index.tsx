@@ -4,8 +4,39 @@ import { HomePageFormWhite } from "../components/Forms/HomePageFormWhite";
 import { HeroSection } from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
 import { HomeObjectOne, HomeObjectThree, HomeObjectTwo } from "../components/InfoSection/data";
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
+import ReactInputMask from "react-input-mask";
+
+import { IoClose } from "react-icons/io5"
+import axios from "axios";
+import { useForm } from "react-hook-form";
 
 export default function Home() {  
+  const [isOpen, setIsOpen] = useState(false)
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm()
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
+  function closeModal() {
+    setIsOpen(false)
+    setValue('popUpPhoneNumber', '')
+  }
+
+  async function closeModalAndBackupPhoneNumber(data: any) {
+    const popUpFormData = { ...data, lp: "pop-up" }
+
+    setTimeout(() => {
+      window.open("http://api.whatsapp.com/send?phone=551151984410", '_blank');
+    })
+
+    await axios.post("https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm", popUpFormData)
+
+    closeModal()
+  }
+
   return (
     <>
       <Head>
@@ -169,18 +200,97 @@ export default function Home() {
 
       <InfoSection {...HomeObjectThree}/>
 
-      <a
-        className="flex items-center justify-center gap-3 px-4 py-2 max-w-[200px] fixed bottom-4 right-4 bg-[#2ecc71] text-neutral-50 z-50 rounded-full md:max-w-full md:bottom-6 hover:bg-[#29b765] hover:text-neutral-300 focus:outline-none transition-colors duration-200"
-        href="https://api.whatsapp.com/send?phone=551151984410" 
-        target="_blank"
-        rel="noreferrer"
-      >
-        <span className="flex items-center justify-center">
+      <div className="fixed bottom-4 right-4">
+        <button
+          type="button"
+          onClick={openModal}
+          className="flex items-center justify-center gap-3 px-4 py-2 max-w-[225px] bg-[#2ecc71] text-neutral-50 z-50 rounded-full md:max-w-full md:bottom-6 hover:bg-[#29b765] hover:text-neutral-300 focus:outline-none transition-colors duration-200"
+        >
+          <span className="flex items-center justify-center">
             <FaWhatsapp size={33}/>
-        </span>
+          </span>
 
-        <span>Orçamento via whatsapp</span>
-      </a>
+          <span>Orçamento via whatsapp</span>
+        </button>
+      </div>
+
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog 
+          as="div"
+          className="relative z-10" 
+          onClose={closeModal}
+        >
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <div className="w-full flex items-end justify-end">
+                    <button
+                      type="button"
+                      onClick={closeModal}
+                    >
+                      <IoClose size={22} className="text-neutral-700"/>
+                    </button>
+                  </div>
+
+                  <form onSubmit={handleSubmit(closeModalAndBackupPhoneNumber)} className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-2">
+                      <label className="block text-sm font-semibold text-neutral-500">
+                        Número de telefone
+                      </label>
+                      
+                      <ReactInputMask
+                        mask="99 99999-9999"
+                        maskChar={null}
+                        className="border border-neutral-300 rounded-lg py-2 px-6 focus:outline-none focus:border-sun-500"
+                        {...register("popUpPhoneNumber", { 
+                          required: "Insira um número de telefone",
+                          minLength: {
+                            value: 13,
+                            message: "Insira um numéro valido"
+                          }
+                        })}
+                      />
+
+                      {!!errors.popUpPhoneNumber && <span className="ml-2 block text-xs font-medium text-red-400">{errors.popUpPhoneNumber.message}</span>}
+                    </div>
+
+                    <button
+                      className="flex items-center justify-center bg-[#2ecc71] text-white font-semibold p-2 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-green-500 transition-colors"
+                      type="submit"
+                    >
+                      Orcamento gratuito via whatsapp
+
+                      <FaWhatsapp size={24} className="ml-3"/>
+                    </button>
+                  </form>
+
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
     </>
   );
 }

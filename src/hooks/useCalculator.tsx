@@ -40,7 +40,7 @@ export const CalculatorProvider = ({ children }: CalculatorProviderProps) => {
     function calculateByRange(value: { name: string; rangeSelected: string; }) {
         const { rangeSelected, name } = value
 
-        const result = calculatorDataJson.filter(data => {
+        const result: any = calculatorDataJson.filter(data => {
             if (data.range === rangeSelected) {
                 return data
             }
