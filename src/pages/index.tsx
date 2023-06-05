@@ -32,15 +32,7 @@ export default function Home() {
       window.open("http://api.whatsapp.com/send?phone=551151984410", '_blank');
     })
 
-    const response = await axios.post("https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm", popUpFormData)
-    const operationIdGenerated = response.data
-
-    const contactData = {
-      nome: operationIdGenerated,
-      email: "emailTeste@test.com.br",
-      contato: data.popUpPhoneNumber,
-      campanha: '168'
-    }
+    await axios.post("https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm", popUpFormData)
 
     closeModal()
   }
