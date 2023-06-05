@@ -8,7 +8,7 @@ export default function Calculadora() {
 
     return (
         <div className="w-full h-full flex flex-col xl:flex-row xl:max-h-100vh">
-            <div className="relative">
+            <div className="hidden relative md:block">
                 <img
                     className="w-full h-[50vh] xl:w-[calc(100vw-500px)] xl:h-[calc(100vh-92px)] object-cover"
                     src="/calculadora-hero-image.png" 
