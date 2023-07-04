@@ -40,8 +40,9 @@ export function SallerPageForm() {
         { id: 'ivan-radio', name: 'saller', label: 'Ivan', value: 'Ivan'},
         { id: 'lucas-radio', name: 'saller', label: 'Lucas Guedes', value: 'Lucas'},
         { id: 'Jean-radio', name: 'saller', label: 'Jean', value: 'Jean'},
-        { id: 'Bruna-radio', name: 'saller', label: 'Bruna', value: 'Bruna'},
         { id: 'Carol-radio', name: 'saller', label: 'Carol', value: 'Carol'},
+        { id: 'Fernando-radio', name: 'saller', label: 'Fernando Domeniconi', value: 'Fernando Domeniconi'},
+
     ]
     
     const {
