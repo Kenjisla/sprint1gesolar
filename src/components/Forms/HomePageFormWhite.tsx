@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 import { WhiteInput } from "../Input/WhiteInput";
 
@@ -67,8 +67,15 @@ export function HomePageFormWhite() {
 
   async function onFormSubmit(data: any) {
     setIsLoading(true)
+    
+    let formData = {}
+    const isSpecificRoute = router.asPath.replace("/", "")
 
-    const formData = {...data, lp: 'primary'}
+    if(isSpecificRoute !== "") {
+      formData = {...data, lp: `lp-${isSpecificRoute.replace("-", " ")}`}
+    } else {
+      formData = {...data, lp: 'primary'}
+    }
 
     await axios.post('https://hook.us1.make.com/hgdw94pi6dfr67dny8pt9sxhd2feakbm', formData)
     
