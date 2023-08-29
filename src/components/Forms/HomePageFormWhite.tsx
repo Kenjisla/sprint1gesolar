@@ -72,7 +72,7 @@ export function HomePageFormWhite() {
     const isSpecificRoute = router.asPath.replace("/", "")
 
     if(isSpecificRoute !== "") {
-      formData = {...data, lp: `lp-${isSpecificRoute.replace("-", " ")}`}
+      formData = {...data, lp: `lp-${isSpecificRoute.replaceAll("-", " ")}`}
     } else {
       formData = {...data, lp: 'primary'}
     }
