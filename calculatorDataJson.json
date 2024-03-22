@@ -1,983 +1,1092 @@
 [
-  {
-      "range": "100,00>199,99",
-      "systemSize": 2,
-      "amount": 8535.48,
-      "installmentOfFinancing": 364.74,
-      "monthlySavings": 60,
-      "annualSavings": 720,
-      "payback": 11.85
-  },
-  {
-      "range": "200,00>209,99",
-      "systemSize": 2,
-      "amount": 8535.48,
-      "installmentOfFinancing": 364.74,
-      "monthlySavings": 160,
-      "annualSavings": 1920,
-      "payback": 4.45
-  },
-  {
-      "range": "210,00>219,99",
-      "systemSize": 2,
-      "amount": 8622.58,
-      "installmentOfFinancing": 368.47,
-      "monthlySavings": 170,
-      "annualSavings": 2040,
-      "payback": 4.23
-  },
-  {
-      "range": "220,00>229,99",
-      "systemSize": 2,
-      "amount": 8709.68,
-      "installmentOfFinancing": 372.19,
-      "monthlySavings": 180,
-      "annualSavings": 2160,
-      "payback": 4.03
-  },
-  {
-      "range": "230,00>239,99",
-      "systemSize": 2.7,
-      "amount": 9580.65,
-      "installmentOfFinancing": 409.41,
-      "monthlySavings": 190,
-      "annualSavings": 2280,
-      "payback": 4.2
-  },
-  {
-      "range": "240,00>249,99",
-      "systemSize": 2.7,
-      "amount": 9963,
-      "installmentOfFinancing": 425.75,
-      "monthlySavings": 200,
-      "annualSavings": 2400,
-      "payback": 4.15
-  },
-  {
-      "range": "250,00>259,99",
-      "systemSize": 2.7,
-      "amount": 10050.1,
-      "installmentOfFinancing": 429.47,
-      "monthlySavings": 210,
-      "annualSavings": 2520,
-      "payback": 3.99
-  },
-  {
-      "range": "260,00>269,99",
-      "systemSize": 2.7,
-      "amount": 10355.81,
-      "installmentOfFinancing": 442.53,
-      "monthlySavings": 220,
-      "annualSavings": 2640,
-      "payback": 3.92
-  },
-  {
-      "range": "270,00>279,99",
-      "systemSize": 2.7,
-      "amount": 11322.58,
-      "installmentOfFinancing": 483.84,
-      "monthlySavings": 230,
-      "annualSavings": 2760,
-      "payback": 4.1
-  },
-  {
-      "range": "280,00>289,99",
-      "systemSize": 2.7,
-      "amount": 11758.06,
-      "installmentOfFinancing": 502.45,
-      "monthlySavings": 240,
-      "annualSavings": 2880,
-      "payback": 4.08
-  },
-  {
-      "range": "290,00>299,99",
-      "systemSize": 3.6,
-      "amount": 11932.26,
-      "installmentOfFinancing": 509.9,
-      "monthlySavings": 250,
-      "annualSavings": 3000,
-      "payback": 3.98
-  },
-  {
-      "range": "300,00>309,99",
-      "systemSize": 3.6,
-      "amount": 12193.55,
-      "installmentOfFinancing": 521.06,
-      "monthlySavings": 260,
-      "annualSavings": 3120,
-      "payback": 3.91
-  },
-  {
-      "range": "310,00>319,99",
-      "systemSize": 3.6,
-      "amount": 12629.03,
-      "installmentOfFinancing": 539.67,
-      "monthlySavings": 270,
-      "annualSavings": 3240,
-      "payback": 3.9
-  },
-  {
-      "range": "320,00>329,99",
-      "systemSize": 3.6,
-      "amount": 12890.32,
-      "installmentOfFinancing": 550.84,
-      "monthlySavings": 280,
-      "annualSavings": 3360,
-      "payback": 3.84
-  },
-  {
-      "range": "330,00>339,99",
-      "systemSize": 3.6,
-      "amount": 13064.52,
-      "installmentOfFinancing": 558.28,
-      "monthlySavings": 290,
-      "annualSavings": 3480,
-      "payback": 3.75
-  },
-  {
-      "range": "340,00>349,99",
-      "systemSize": 3.6,
-      "amount": 13655.03,
-      "installmentOfFinancing": 583.52,
-      "monthlySavings": 300,
-      "annualSavings": 3600,
-      "payback": 3.79
-  },
-  {
-      "range": "350,00>359,99",
-      "systemSize": 3.6,
-      "amount": 13761.29,
-      "installmentOfFinancing": 588.06,
-      "monthlySavings": 310,
-      "annualSavings": 3720,
-      "payback": 3.7
-  },
-  {
-      "range": "360,00>369,99",
-      "systemSize": 4.1,
-      "amount": 13935.48,
-      "installmentOfFinancing": 595.5,
-      "monthlySavings": 320,
-      "annualSavings": 3840,
-      "payback": 3.63
-  },
-  {
-      "range": "370,00>379,99",
-      "systemSize": 4.1,
-      "amount": 14806.45,
-      "installmentOfFinancing": 632.72,
-      "monthlySavings": 330,
-      "annualSavings": 3960,
-      "payback": 3.74
-  },
-  {
-      "range": "380,00>389,99",
-      "systemSize": 4.1,
-      "amount": 14806.45,
-      "installmentOfFinancing": 632.72,
-      "monthlySavings": 340,
-      "annualSavings": 4080,
-      "payback": 3.63
-  },
-  {
-      "range": "390,00>399,99",
-      "systemSize": 4.3,
-      "amount": 15241.94,
-      "installmentOfFinancing": 651.33,
-      "monthlySavings": 350,
-      "annualSavings": 4200,
-      "payback": 3.63
-  },
-  {
-      "range": "400,00>409,99",
-      "systemSize": 4.3,
-      "amount": 15241.94,
-      "installmentOfFinancing": 651.33,
-      "monthlySavings": 360,
-      "annualSavings": 4320,
-      "payback": 3.53
-  },
-  {
-      "range": "410,00>419,99",
-      "systemSize": 4.5,
-      "amount": 15241.94,
-      "installmentOfFinancing": 651.33,
-      "monthlySavings": 370,
-      "annualSavings": 4440,
-      "payback": 3.43
-  },
-  {
-      "range": "420,00>429,99",
-      "systemSize": 4.5,
-      "amount": 15241.94,
-      "installmentOfFinancing": 651.33,
-      "monthlySavings": 380,
-      "annualSavings": 4560,
-      "payback": 3.34
-  },
-  {
-      "range": "430,00>439,99",
-      "systemSize": 4.6,
-      "amount": 15241.94,
-      "installmentOfFinancing": 651.33,
-      "monthlySavings": 390,
-      "annualSavings": 4680,
-      "payback": 3.26
-  },
-  {
-      "range": "440,00>449,99",
-      "systemSize": 4.6,
-      "amount": 15241.94,
-      "installmentOfFinancing": 651.33,
-      "monthlySavings": 400,
-      "annualSavings": 4800,
-      "payback": 3.18
-  },
-  {
-      "range": "450,00>459,99",
-      "systemSize": 4.6,
-      "amount": 15677.42,
-      "installmentOfFinancing": 669.94,
-      "monthlySavings": 410,
-      "annualSavings": 4920,
-      "payback": 3.19
-  },
-  {
-      "range": "460,00>469,99",
-      "systemSize": 4.8,
-      "amount": 15677.42,
-      "installmentOfFinancing": 669.94,
-      "monthlySavings": 420,
-      "annualSavings": 5040,
-      "payback": 3.11
-  },
-  {
-      "range": "470,00>479,99",
-      "systemSize": 4.8,
-      "amount": 15677.42,
-      "installmentOfFinancing": 669.94,
-      "monthlySavings": 430,
-      "annualSavings": 5160,
-      "payback": 3.04
-  },
-  {
-      "range": "480,00>489,99",
-      "systemSize": 5,
-      "amount": 16112.9,
-      "installmentOfFinancing": 688.55,
-      "monthlySavings": 440,
-      "annualSavings": 5280,
-      "payback": 3.05
-  },
-  {
-      "range": "490,00>499,99",
-      "systemSize": 5,
-      "amount": 16112.9,
-      "installmentOfFinancing": 688.55,
-      "monthlySavings": 450,
-      "annualSavings": 5400,
-      "payback": 2.98
-  },
-  {
-      "range": "500,00>509,99",
-      "systemSize": 5.5,
-      "amount": 16548.39,
-      "installmentOfFinancing": 707.16,
-      "monthlySavings": 460,
-      "annualSavings": 5520,
-      "payback": 3
-  },
-  {
-      "range": "510,00>519,99",
-      "systemSize": 5.5,
-      "amount": 16548.39,
-      "installmentOfFinancing": 707.16,
-      "monthlySavings": 470,
-      "annualSavings": 5640,
-      "payback": 2.93
-  },
-  {
-      "range": "520,00>529,99",
-      "systemSize": 5.5,
-      "amount": 16548.39,
-      "installmentOfFinancing": 707.16,
-      "monthlySavings": 480,
-      "annualSavings": 5760,
-      "payback": 2.87
-  },
-  {
-      "range": "530,00>539,99",
-      "systemSize": 5.5,
-      "amount": 16548.39,
-      "installmentOfFinancing": 707.16,
-      "monthlySavings": 490,
-      "annualSavings": 5880,
-      "payback": 2.81
-  },
-  {
-      "range": "540,00>549,99",
-      "systemSize": 5.5,
-      "amount": 16983.87,
-      "installmentOfFinancing": 725.77,
-      "monthlySavings": 500,
-      "annualSavings": 6000,
-      "payback": 2.83
-  },
-  {
-      "range": "550,00>559,99",
-      "systemSize": 5.5,
-      "amount": 16983.87,
-      "installmentOfFinancing": 725.77,
-      "monthlySavings": 510,
-      "annualSavings": 6120,
-      "payback": 2.78
-  },
-  {
-      "range": "560,00>569,99",
-      "systemSize": 5.5,
-      "amount": 16983.87,
-      "installmentOfFinancing": 725.77,
-      "monthlySavings": 520,
-      "annualSavings": 6240,
-      "payback": 2.72
-  },
-  {
-      "range": "570,00>579,99",
-      "systemSize": 5.5,
-      "amount": 16983.87,
-      "installmentOfFinancing": 725.77,
-      "monthlySavings": 530,
-      "annualSavings": 6360,
-      "payback": 2.67
-  },
-  {
-      "range": "580,00>589,99",
-      "systemSize": 5.5,
-      "amount": 16983.87,
-      "installmentOfFinancing": 725.77,
-      "monthlySavings": 540,
-      "annualSavings": 6480,
-      "payback": 2.62
-  },
-  {
-      "range": "590,00>599,99",
-      "systemSize": 5.5,
-      "amount": 16983.87,
-      "installmentOfFinancing": 725.77,
-      "monthlySavings": 550,
-      "annualSavings": 6600,
-      "payback": 2.57
-  },
-  {
-      "range": "600,00>609,99",
-      "systemSize": 5.5,
-      "amount": 18290.32,
-      "installmentOfFinancing": 781.59,
-      "monthlySavings": 560,
-      "annualSavings": 6720,
-      "payback": 2.72
-  },
-  {
-      "range": "610,00>619,99",
-      "systemSize": 6.3,
-      "amount": 18290.32,
-      "installmentOfFinancing": 781.59,
-      "monthlySavings": 570,
-      "annualSavings": 6840,
-      "payback": 2.67
-  },
-  {
-      "range": "620,00>629,99",
-      "systemSize": 6.3,
-      "amount": 18290.32,
-      "installmentOfFinancing": 781.59,
-      "monthlySavings": 580,
-      "annualSavings": 6960,
-      "payback": 2.63
-  },
-  {
-      "range": "630,00>639,99",
-      "systemSize": 6.3,
-      "amount": 18290.32,
-      "installmentOfFinancing": 781.59,
-      "monthlySavings": 590,
-      "annualSavings": 7080,
-      "payback": 2.58
-  },
-  {
-      "range": "640,00>649,99",
-      "systemSize": 6.3,
-      "amount": 18290.32,
-      "installmentOfFinancing": 781.59,
-      "monthlySavings": 600,
-      "annualSavings": 7200,
-      "payback": 2.54
-  },
-  {
-      "range": "650,00>659,99",
-      "systemSize": 6.3,
-      "amount": 19161.29,
-      "installmentOfFinancing": 818.81,
-      "monthlySavings": 610,
-      "annualSavings": 7320,
-      "payback": 2.62
-  },
-  {
-      "range": "660,00>669,99",
-      "systemSize": 6.3,
-      "amount": 19161.29,
-      "installmentOfFinancing": 818.81,
-      "monthlySavings": 620,
-      "annualSavings": 7440,
-      "payback": 2.58
-  },
-  {
-      "range": "670,00>679,99",
-      "systemSize": 6.3,
-      "amount": 19161.29,
-      "installmentOfFinancing": 818.81,
-      "monthlySavings": 630,
-      "annualSavings": 7560,
-      "payback": 2.53
-  },
-  {
-      "range": "680,00>689,99",
-      "systemSize": 6.3,
-      "amount": 19161.29,
-      "installmentOfFinancing": 818.81,
-      "monthlySavings": 640,
-      "annualSavings": 7680,
-      "payback": 2.49
-  },
-  {
-      "range": "690,00>699,99",
-      "systemSize": 6.3,
-      "amount": 19161.29,
-      "installmentOfFinancing": 818.81,
-      "monthlySavings": 650,
-      "annualSavings": 7800,
-      "payback": 2.46
-  },
-  {
-      "range": "700,00>709,99",
-      "systemSize": 7.2,
-      "amount": 20903.23,
-      "installmentOfFinancing": 893.25,
-      "monthlySavings": 660,
-      "annualSavings": 7920,
-      "payback": 2.64
-  },
-  {
-      "range": "710,00>719,99",
-      "systemSize": 7.2,
-      "amount": 20903.23,
-      "installmentOfFinancing": 893.25,
-      "monthlySavings": 670,
-      "annualSavings": 8040,
-      "payback": 2.6
-  },
-  {
-      "range": "720,00>729,99",
-      "systemSize": 7.2,
-      "amount": 20903.23,
-      "installmentOfFinancing": 893.25,
-      "monthlySavings": 680,
-      "annualSavings": 8160,
-      "payback": 2.56
-  },
-  {
-      "range": "730,00>739,99",
-      "systemSize": 7.2,
-      "amount": 20903.23,
-      "installmentOfFinancing": 893.25,
-      "monthlySavings": 690,
-      "annualSavings": 8280,
-      "payback": 2.52
-  },
-  {
-      "range": "740,00>749,99",
-      "systemSize": 7.2,
-      "amount": 20903.23,
-      "installmentOfFinancing": 893.25,
-      "monthlySavings": 700,
-      "annualSavings": 8400,
-      "payback": 2.49
-  },
-  {
-      "range": "750,00>759,99",
-      "systemSize": 7.2,
-      "amount": 21774.19,
-      "installmentOfFinancing": 930.47,
-      "monthlySavings": 710,
-      "annualSavings": 8520,
-      "payback": 2.56
-  },
-  {
-      "range": "760,00>769,99",
-      "systemSize": 7.2,
-      "amount": 21774.19,
-      "installmentOfFinancing": 930.47,
-      "monthlySavings": 720,
-      "annualSavings": 8640,
-      "payback": 2.52
-  },
-  {
-      "range": "770,00>779,99",
-      "systemSize": 7.2,
-      "amount": 21774.19,
-      "installmentOfFinancing": 930.47,
-      "monthlySavings": 730,
-      "annualSavings": 8760,
-      "payback": 2.49
-  },
-  {
-      "range": "780,00>789,99",
-      "systemSize": 7.2,
-      "amount": 21774.19,
-      "installmentOfFinancing": 930.47,
-      "monthlySavings": 740,
-      "annualSavings": 8880,
-      "payback": 2.45
-  },
-  {
-      "range": "790,00>799,99",
-      "systemSize": 7.2,
-      "amount": 21774.19,
-      "installmentOfFinancing": 930.47,
-      "monthlySavings": 750,
-      "annualSavings": 9000,
-      "payback": 2.42
-  },
-  {
-      "range": "800,00>809,99",
-      "systemSize": 8.6,
-      "amount": 24387.1,
-      "installmentOfFinancing": 1042.13,
-      "monthlySavings": 760,
-      "annualSavings": 9120,
-      "payback": 2.67
-  },
-  {
-      "range": "810,00>819,99",
-      "systemSize": 9,
-      "amount": 24387.1,
-      "installmentOfFinancing": 1042.13,
-      "monthlySavings": 770,
-      "annualSavings": 9240,
-      "payback": 2.64
-  },
-  {
-      "range": "820,00>829,99",
-      "systemSize": 9,
-      "amount": 24387.1,
-      "installmentOfFinancing": 1042.13,
-      "monthlySavings": 780,
-      "annualSavings": 9360,
-      "payback": 2.61
-  },
-  {
-      "range": "830,00>839,99",
-      "systemSize": 9.2,
-      "amount": 24387.1,
-      "installmentOfFinancing": 1042.13,
-      "monthlySavings": 790,
-      "annualSavings": 9480,
-      "payback": 2.57
-  },
-  {
-      "range": "840,00>849,99",
-      "systemSize": 9.2,
-      "amount": 25258.06,
-      "installmentOfFinancing": 1079.34,
-      "monthlySavings": 800,
-      "annualSavings": 9600,
-      "payback": 2.63
-  },
-  {
-      "range": "850,00>859,99",
-      "systemSize": 9.2,
-      "amount": 25258.06,
-      "installmentOfFinancing": 1079.34,
-      "monthlySavings": 810,
-      "annualSavings": 9720,
-      "payback": 2.6
-  },
-  {
-      "range": "860,00>869,99",
-      "systemSize": 9.6,
-      "amount": 25258.06,
-      "installmentOfFinancing": 1079.34,
-      "monthlySavings": 820,
-      "annualSavings": 9840,
-      "payback": 2.57
-  },
-  {
-      "range": "870,00>879,99",
-      "systemSize": 9.6,
-      "amount": 25258.06,
-      "installmentOfFinancing": 1079.34,
-      "monthlySavings": 830,
-      "annualSavings": 9960,
-      "payback": 2.54
-  },
-  {
-      "range": "880,00>889,99",
-      "systemSize": 10,
-      "amount": 25258.06,
-      "installmentOfFinancing": 1079.34,
-      "monthlySavings": 840,
-      "annualSavings": 10080,
-      "payback": 2.51
-  },
-  {
-      "range": "890,00>899,99",
-      "systemSize": 10,
-      "amount": 25258.06,
-      "installmentOfFinancing": 1079.34,
-      "monthlySavings": 850,
-      "annualSavings": 10200,
-      "payback": 2.48
-  },
-  {
-      "range": "900,00>909,99",
-      "systemSize": 11,
-      "amount": 27870.97,
-      "installmentOfFinancing": 1191,
-      "monthlySavings": 860,
-      "annualSavings": 10320,
-      "payback": 2.7
-  },
-  {
-      "range": "910,00>919,99",
-      "systemSize": 11,
-      "amount": 27870.97,
-      "installmentOfFinancing": 1191,
-      "monthlySavings": 870,
-      "annualSavings": 10440,
-      "payback": 2.67
-  },
-  {
-      "range": "920,00>929,99",
-      "systemSize": 11,
-      "amount": 27870.97,
-      "installmentOfFinancing": 1191,
-      "monthlySavings": 880,
-      "annualSavings": 10560,
-      "payback": 2.64
-  },
-  {
-      "range": "930,00>939,99",
-      "systemSize": 11,
-      "amount": 27870.97,
-      "installmentOfFinancing": 1191,
-      "monthlySavings": 890,
-      "annualSavings": 10680,
-      "payback": 2.61
-  },
-  {
-      "range": "940,00>949,99",
-      "systemSize": 11,
-      "amount": 27870.97,
-      "installmentOfFinancing": 1191,
-      "monthlySavings": 900,
-      "annualSavings": 10800,
-      "payback": 2.58
-  },
-  {
-      "range": "950,00>959,99",
-      "systemSize": 11,
-      "amount": 29612.9,
-      "installmentOfFinancing": 1265.44,
-      "monthlySavings": 910,
-      "annualSavings": 10920,
-      "payback": 2.71
-  },
-  {
-      "range": "960,00>969,99",
-      "systemSize": 11,
-      "amount": 30483.87,
-      "installmentOfFinancing": 1302.66,
-      "monthlySavings": 920,
-      "annualSavings": 11040,
-      "payback": 2.76
-  },
-  {
-      "range": "970,00>979,99",
-      "systemSize": 11,
-      "amount": 31354.84,
-      "installmentOfFinancing": 1339.88,
-      "monthlySavings": 930,
-      "annualSavings": 11160,
-      "payback": 2.81
-  },
-  {
-      "range": "980,00>989,99",
-      "systemSize": 11,
-      "amount": 32225.81,
-      "installmentOfFinancing": 1377.09,
-      "monthlySavings": 940,
-      "annualSavings": 11280,
-      "payback": 2.86
-  },
-  {
-      "range": "990,00>999,99",
-      "systemSize": 11,
-      "amount": 32661.29,
-      "installmentOfFinancing": 1395.7,
-      "monthlySavings": 950,
-      "annualSavings": 11400,
-      "payback": 2.87
-  },
-  {
-      "range": "1000,00>1009,99",
-      "systemSize": 11,
-      "amount": 33096.77,
-      "installmentOfFinancing": 1414.31,
-      "monthlySavings": 960,
-      "annualSavings": 11520,
-      "payback": 2.87
-  },
-  {
-      "range": "1010,00>1019,99",
-      "systemSize": 12.6,
-      "amount": 33967.74,
-      "installmentOfFinancing": 1451.53,
-      "monthlySavings": 970,
-      "annualSavings": 11640,
-      "payback": 2.92
-  },
-  {
-      "range": "1020,00>1029,99",
-      "systemSize": 12.6,
-      "amount": 33967.74,
-      "installmentOfFinancing": 1451.53,
-      "monthlySavings": 980,
-      "annualSavings": 11760,
-      "payback": 2.89
-  },
-  {
-      "range": "1030,00>1039,99",
-      "systemSize": 12.6,
-      "amount": 33967.74,
-      "installmentOfFinancing": 1451.53,
-      "monthlySavings": 990,
-      "annualSavings": 11880,
-      "payback": 2.86
-  },
-  {
-      "range": "1040,00>1049,99",
-      "systemSize": 12.6,
-      "amount": 33967.74,
-      "installmentOfFinancing": 1451.53,
-      "monthlySavings": 1000,
-      "annualSavings": 12000,
-      "payback": 2.83
-  },
-  {
-      "range": "1050,00>1059,99",
-      "systemSize": 12.6,
-      "amount": 33967.74,
-      "installmentOfFinancing": 1451.53,
-      "monthlySavings": 1010,
-      "annualSavings": 12120,
-      "payback": 2.8
-  },
-  {
-      "range": "1060,00>1069,99",
-      "systemSize": 13,
-      "amount": 34838.71,
-      "installmentOfFinancing": 1488.75,
-      "monthlySavings": 1020,
-      "annualSavings": 12240,
-      "payback": 2.85
-  },
-  {
-      "range": "1070,00>1079,99",
-      "systemSize": 13,
-      "amount": 34838.71,
-      "installmentOfFinancing": 1488.75,
-      "monthlySavings": 1030,
-      "annualSavings": 12360,
-      "payback": 2.82
-  },
-  {
-      "range": "1080,00>1089,99",
-      "systemSize": 13,
-      "amount": 35709.68,
-      "installmentOfFinancing": 1525.97,
-      "monthlySavings": 1040,
-      "annualSavings": 12480,
-      "payback": 2.86
-  },
-  {
-      "range": "1090,00>1099,99",
-      "systemSize": 13,
-      "amount": 35709.68,
-      "installmentOfFinancing": 1525.97,
-      "monthlySavings": 1050,
-      "annualSavings": 12600,
-      "payback": 2.83
-  },
-  {
-      "range": "1100,00>1199,99",
-      "systemSize": 14.4,
-      "amount": 37451.61,
-      "installmentOfFinancing": 1600.41,
-      "monthlySavings": 1060,
-      "annualSavings": 12720,
-      "payback": 2.94
-  },
-  {
-      "range": "1200,00>1299,99",
-      "systemSize": 14.4,
-      "amount": 39193.55,
-      "installmentOfFinancing": 1674.84,
-      "monthlySavings": 1160,
-      "annualSavings": 13920,
-      "payback": 2.82
-  },
-  {
-      "range": "1300,00>1399,99",
-      "systemSize": 14.4,
-      "amount": 40935.48,
-      "installmentOfFinancing": 1749.28,
-      "monthlySavings": 1260,
-      "annualSavings": 15120,
-      "payback": 2.71
-  },
-  {
-      "range": "1400,00>1499,99",
-      "systemSize": 14.4,
-      "amount": 42677.42,
-      "installmentOfFinancing": 1823.72,
-      "monthlySavings": 1360,
-      "annualSavings": 16320,
-      "payback": 2.62
-  },
-  {
-      "range": "1500,00>1599,99",
-      "systemSize": 16,
-      "amount": 46161.29,
-      "installmentOfFinancing": 1972.59,
-      "monthlySavings": 1460,
-      "annualSavings": 17520,
-      "payback": 2.63
-  },
-  {
-      "range": "1600,00>1699,99",
-      "systemSize": 17,
-      "amount": 48774.19,
-      "installmentOfFinancing": 2084.25,
-      "monthlySavings": 1660,
-      "annualSavings": 19920,
-      "payback": 2.45
-  },
-  {
-      "range": "1700,00>1799,99",
-      "systemSize": 17,
-      "amount": 49645.16,
-      "installmentOfFinancing": 2121.47,
-      "monthlySavings": 1760,
-      "annualSavings": 21120,
-      "payback": 2.35
-  },
-  {
-      "range": "1800,00>1899,99",
-      "systemSize": 18,
-      "amount": 51387.1,
-      "installmentOfFinancing": 2195.91,
-      "monthlySavings": 1860,
-      "annualSavings": 22320,
-      "payback": 2.3
-  },
-  {
-      "range": "1900,00>1999,99",
-      "systemSize": 20,
-      "amount": 55741.94,
-      "installmentOfFinancing": 2382,
-      "monthlySavings": 1960,
-      "annualSavings": 23520,
-      "payback": 2.37
-  },
-  {
-      "range": "2000,00>2199,99",
-      "systemSize": 20,
-      "amount": 56430,
-      "installmentOfFinancing": 2411.4,
-      "monthlySavings": 2160,
-      "annualSavings": 25920,
-      "payback": 2.18
-  },
-  {
-      "range": "2200,00>2299,990",
-      "systemSize": 22,
-      "amount": 61481.61,
-      "installmentOfFinancing": 2627.27,
-      "monthlySavings": 2260,
-      "annualSavings": 27120,
-      "payback": 2.27
-  },
-  {
-      "range": "2300,00>2399,00",
-      "systemSize": 24,
-      "amount": 67064.52,
-      "installmentOfFinancing": 2865.84,
-      "monthlySavings": 2360,
-      "annualSavings": 28320,
-      "payback": 2.37
-  },
-  {
-      "range": "2400,00>2499,99",
-      "systemSize": 26,
-      "amount": 72290.32,
-      "installmentOfFinancing": 3089.16,
-      "monthlySavings": 2460,
-      "annualSavings": 29520,
-      "payback": 2.45
-  },
-  {
-      "range": "2500,00>2599,99",
-      "systemSize": 28,
-      "amount": 77516.13,
-      "installmentOfFinancing": 3312.47,
-      "monthlySavings": 2560,
-      "annualSavings": 30720,
-      "payback": 2.52
-  },
-  {
-      "range": "2600,00>2699,99",
-      "systemSize": 28,
-      "amount": 77516.13,
-      "installmentOfFinancing": 3312.47,
-      "monthlySavings": 2660,
-      "annualSavings": 31920,
-      "payback": 2.43
-  },
-  {
-      "range": "2700,00>2799,99",
-      "systemSize": 30,
-      "amount": 85354.84,
-      "installmentOfFinancing": 3647.44,
-      "monthlySavings": 2760,
-      "annualSavings": 33120,
-      "payback": 2.58
-  },
-  {
-      "range": "2800,00>2899,99",
-      "systemSize": 30,
-      "amount": 85354.84,
-      "installmentOfFinancing": 3647.44,
-      "monthlySavings": 2860,
-      "annualSavings": 34320,
-      "payback": 2.49
-  },
-  {
-      "range": "2900,00>3000,00",
-      "systemSize": 32,
-      "amount": 93193.55,
-      "installmentOfFinancing": 3982.41,
-      "monthlySavings": 2960,
-      "annualSavings": 35520,
-      "payback": 2.62
-  }
+    {
+        "rangeId": 149.99,
+        "range": "100,00>199,99",
+        "systemSize": 2,
+        "amount": 8535.48,
+        "installmentOfFinancing": 364.74,
+        "montlySavings": 60,
+        "annualSavings": 720,
+        "payback": 11.85
+    },
+    {
+        "rangeId": 204,
+        "range": "200,00>209,99",
+        "systemSize": 2,
+        "amount": 8535.48,
+        "installmentOfFinancing": 364.74,
+        "montlySavings": 160,
+        "annualSavings": 1920,
+        "payback": 4.45
+    },
+    {
+        "rangeId": 213,
+        "range": "210,00>219,99",
+        "systemSize": 2,
+        "amount": 8622.58,
+        "installmentOfFinancing": 368.47,
+        "montlySavings": 170,
+        "annualSavings": 2040,
+        "payback": 4.23
+    },
+    {
+        "rangeId": 223.98,
+        "range": "220,00>229,99",
+        "systemSize": 2,
+        "amount": 8709.68,
+        "installmentOfFinancing": 372.19,
+        "montlySavings": 180,
+        "annualSavings": 2160,
+        "payback": 4.03
+    },
+    {
+        "rangeId": 233.97,
+        "range": "230,00>239,99",
+        "systemSize": 2.7,
+        "amount": 9580.65,
+        "installmentOfFinancing": 409.41,
+        "montlySavings": 190,
+        "annualSavings": 2280,
+        "payback": 4.2
+    },
+    {
+        "rangeId": 243.96,
+        "range": "240,00>249,99",
+        "systemSize": 2.7,
+        "amount": 9963,
+        "installmentOfFinancing": 425.75,
+        "montlySavings": 200,
+        "annualSavings": 2400,
+        "payback": 4.15
+    },
+    {
+        "rangeId": 253.95,
+        "range": "250,00>259,99",
+        "systemSize": 2.7,
+        "amount": 10050.1,
+        "installmentOfFinancing": 429.47,
+        "montlySavings": 210,
+        "annualSavings": 2520,
+        "payback": 3.99
+    },
+    {
+        "rangeId": 263.94,
+        "range": "260,00>269,99",
+        "systemSize": 2.7,
+        "amount": 10355.81,
+        "installmentOfFinancing": 442.53,
+        "montlySavings": 220,
+        "annualSavings": 2640,
+        "payback": 3.92
+    },
+    {
+        "rangeId": 273.93,
+        "range": "270,00>279,99",
+        "systemSize": 2.7,
+        "amount": 11322.58,
+        "installmentOfFinancing": 483.84,
+        "montlySavings": 230,
+        "annualSavings": 2760,
+        "payback": 4.1
+    },
+    {
+        "rangeId": 283.92,
+        "range": "280,00>289,99",
+        "systemSize": 2.7,
+        "amount": 11758.06,
+        "installmentOfFinancing": 502.45,
+        "montlySavings": 240,
+        "annualSavings": 2880,
+        "payback": 4.08
+    },
+    {
+        "rangeId": 293.91,
+        "range": "290,00>299,99",
+        "systemSize": 3.6,
+        "amount": 11932.26,
+        "installmentOfFinancing": 509.9,
+        "montlySavings": 250,
+        "annualSavings": 3000,
+        "payback": 3.98
+    },
+    {
+        "rangeId": 303.9,
+        "range": "300,00>309,99",
+        "systemSize": 3.6,
+        "amount": 12193.55,
+        "installmentOfFinancing": 521.06,
+        "montlySavings": 260,
+        "annualSavings": 3120,
+        "payback": 3.91
+    },
+    {
+        "rangeId": 313.89,
+        "range": "310,00>319,99",
+        "systemSize": 3.6,
+        "amount": 12629.03,
+        "installmentOfFinancing": 539.67,
+        "montlySavings": 270,
+        "annualSavings": 3240,
+        "payback": 3.9
+    },
+    {
+        "rangeId": 323.88,
+        "range": "320,00>329,99",
+        "systemSize": 3.6,
+        "amount": 12890.32,
+        "installmentOfFinancing": 550.84,
+        "montlySavings": 280,
+        "annualSavings": 3360,
+        "payback": 3.84
+    },
+    {
+        "rangeId": 333.87,
+        "range": "330,00>339,99",
+        "systemSize": 3.6,
+        "amount": 13064.52,
+        "installmentOfFinancing": 558.28,
+        "montlySavings": 290,
+        "annualSavings": 3480,
+        "payback": 3.75
+    },
+    {
+        "rangeId": 343.86,
+        "range": "340,00>349,99",
+        "systemSize": 3.6,
+        "amount": 13655.03,
+        "installmentOfFinancing": 583.52,
+        "montlySavings": 300,
+        "annualSavings": 3600,
+        "payback": 3.79
+    },
+    {
+        "rangeId": 353.85,
+        "range": "350,00>359,99",
+        "systemSize": 3.6,
+        "amount": 13761.29,
+        "installmentOfFinancing": 588.06,
+        "montlySavings": 310,
+        "annualSavings": 3720,
+        "payback": 3.7
+    },
+    {
+        "rangeId": 363.84,
+        "range": "360,00>369,99",
+        "systemSize": 4.1,
+        "amount": 13935.48,
+        "installmentOfFinancing": 595.5,
+        "montlySavings": 320,
+        "annualSavings": 3840,
+        "payback": 3.63
+    },
+    {
+        "rangeId": 373.83,
+        "range": "370,00>379,99",
+        "systemSize": 4.1,
+        "amount": 14806.45,
+        "installmentOfFinancing": 632.72,
+        "montlySavings": 330,
+        "annualSavings": 3960,
+        "payback": 3.74
+    },
+    {
+        "rangeId": 383.82,
+        "range": "380,00>389,99",
+        "systemSize": 4.1,
+        "amount": 14806.45,
+        "installmentOfFinancing": 632.72,
+        "montlySavings": 340,
+        "annualSavings": 4080,
+        "payback": 3.63
+    },
+    {
+        "rangeId": 393.81,
+        "range": "390,00>399,99",
+        "systemSize": 4.3,
+        "amount": 15241.94,
+        "installmentOfFinancing": 651.33,
+        "montlySavings": 350,
+        "annualSavings": 4200,
+        "payback": 3.63
+    },
+    {
+        "rangeId": 403.8,
+        "range": "400,00>409,99",
+        "systemSize": 4.3,
+        "amount": 15241.94,
+        "installmentOfFinancing": 651.33,
+        "montlySavings": 360,
+        "annualSavings": 4320,
+        "payback": 3.53
+    },
+    {
+        "rangeId": 413.79,
+        "range": "410,00>419,99",
+        "systemSize": 4.5,
+        "amount": 15241.94,
+        "installmentOfFinancing": 651.33,
+        "montlySavings": 370,
+        "annualSavings": 4440,
+        "payback": 3.43
+    },
+    {
+        "rangeId": 423.78,
+        "range": "420,00>429,99",
+        "systemSize": 4.5,
+        "amount": 15241.94,
+        "installmentOfFinancing": 651.33,
+        "montlySavings": 380,
+        "annualSavings": 4560,
+        "payback": 3.34
+    },
+    {
+        "rangeId": 433.77,
+        "range": "430,00>439,99",
+        "systemSize": 4.6,
+        "amount": 15241.94,
+        "installmentOfFinancing": 651.33,
+        "montlySavings": 390,
+        "annualSavings": 4680,
+        "payback": 3.26
+    },
+    {
+        "rangeId": 443.76,
+        "range": "440,00>449,99",
+        "systemSize": 4.6,
+        "amount": 15241.94,
+        "installmentOfFinancing": 651.33,
+        "montlySavings": 400,
+        "annualSavings": 4800,
+        "payback": 3.18
+    },
+    {
+        "rangeId": 453.75,
+        "range": "450,00>459,99",
+        "systemSize": 4.6,
+        "amount": 15677.42,
+        "installmentOfFinancing": 669.94,
+        "montlySavings": 410,
+        "annualSavings": 4920,
+        "payback": 3.19
+    },
+    {
+        "rangeId": 463.74,
+        "range": "460,00>469,99",
+        "systemSize": 4.8,
+        "amount": 15677.42,
+        "installmentOfFinancing": 669.94,
+        "montlySavings": 420,
+        "annualSavings": 5040,
+        "payback": 3.11
+    },
+    {
+        "rangeId": 473.73,
+        "range": "470,00>479,99",
+        "systemSize": 4.8,
+        "amount": 15677.42,
+        "installmentOfFinancing": 669.94,
+        "montlySavings": 430,
+        "annualSavings": 5160,
+        "payback": 3.04
+    },
+    {
+        "rangeId": 483.72,
+        "range": "480,00>489,99",
+        "systemSize": 5,
+        "amount": 16112.9,
+        "installmentOfFinancing": 688.55,
+        "montlySavings": 440,
+        "annualSavings": 5280,
+        "payback": 3.05
+    },
+    {
+        "rangeId": 493.71,
+        "range": "490,00>499,99",
+        "systemSize": 5,
+        "amount": 16112.9,
+        "installmentOfFinancing": 688.55,
+        "montlySavings": 450,
+        "annualSavings": 5400,
+        "payback": 2.98
+    },
+    {
+        "rangeId": 503.7,
+        "range": "500,00>509,99",
+        "systemSize": 5.5,
+        "amount": 16548.39,
+        "installmentOfFinancing": 707.16,
+        "montlySavings": 460,
+        "annualSavings": 5520,
+        "payback": 3
+    },
+    {
+        "rangeId": 513.69,
+        "range": "510,00>519,99",
+        "systemSize": 5.5,
+        "amount": 16548.39,
+        "installmentOfFinancing": 707.16,
+        "montlySavings": 470,
+        "annualSavings": 5640,
+        "payback": 2.93
+    },
+    {
+        "rangeId": 523.68,
+        "range": "520,00>529,99",
+        "systemSize": 5.5,
+        "amount": 16548.39,
+        "installmentOfFinancing": 707.16,
+        "montlySavings": 480,
+        "annualSavings": 5760,
+        "payback": 2.87
+    },
+    {
+        "rangeId": 533.67,
+        "range": "530,00>539,99",
+        "systemSize": 5.5,
+        "amount": 16548.39,
+        "installmentOfFinancing": 707.16,
+        "montlySavings": 490,
+        "annualSavings": 5880,
+        "payback": 2.81
+    },
+    {
+        "rangeId": 543.66,
+        "range": "540,00>549,99",
+        "systemSize": 5.5,
+        "amount": 16983.87,
+        "installmentOfFinancing": 725.77,
+        "montlySavings": 500,
+        "annualSavings": 6000,
+        "payback": 2.83
+    },
+    {
+        "rangeId": 553.65,
+        "range": "550,00>559,99",
+        "systemSize": 5.5,
+        "amount": 16983.87,
+        "installmentOfFinancing": 725.77,
+        "montlySavings": 510,
+        "annualSavings": 6120,
+        "payback": 2.78
+    },
+    {
+        "rangeId": 563.64,
+        "range": "560,00>569,99",
+        "systemSize": 5.5,
+        "amount": 16983.87,
+        "installmentOfFinancing": 725.77,
+        "montlySavings": 520,
+        "annualSavings": 6240,
+        "payback": 2.72
+    },
+    {
+        "rangeId": 573.63,
+        "range": "570,00>579,99",
+        "systemSize": 5.5,
+        "amount": 16983.87,
+        "installmentOfFinancing": 725.77,
+        "montlySavings": 530,
+        "annualSavings": 6360,
+        "payback": 2.67
+    },
+    {
+        "rangeId": 583.62,
+        "range": "580,00>589,99",
+        "systemSize": 5.5,
+        "amount": 16983.87,
+        "installmentOfFinancing": 725.77,
+        "montlySavings": 540,
+        "annualSavings": 6480,
+        "payback": 2.62
+    },
+    {
+        "rangeId": 593.61,
+        "range": "590,00>599,99",
+        "systemSize": 5.5,
+        "amount": 16983.87,
+        "installmentOfFinancing": 725.77,
+        "montlySavings": 550,
+        "annualSavings": 6600,
+        "payback": 2.57
+    },
+    {
+        "rangeId": 603.6,
+        "range": "600,00>609,99",
+        "systemSize": 5.5,
+        "amount": 18290.32,
+        "installmentOfFinancing": 781.59,
+        "montlySavings": 560,
+        "annualSavings": 6720,
+        "payback": 2.72
+    },
+    {
+        "rangeId": 613.59,
+        "range": "610,00>619,99",
+        "systemSize": 6.3,
+        "amount": 18290.32,
+        "installmentOfFinancing": 781.59,
+        "montlySavings": 570,
+        "annualSavings": 6840,
+        "payback": 2.67
+    },
+    {
+        "rangeId": 623.58,
+        "range": "620,00>629,99",
+        "systemSize": 6.3,
+        "amount": 18290.32,
+        "installmentOfFinancing": 781.59,
+        "montlySavings": 580,
+        "annualSavings": 6960,
+        "payback": 2.63
+    },
+    {
+        "rangeId": 633.57,
+        "range": "630,00>639,99",
+        "systemSize": 6.3,
+        "amount": 18290.32,
+        "installmentOfFinancing": 781.59,
+        "montlySavings": 590,
+        "annualSavings": 7080,
+        "payback": 2.58
+    },
+    {
+        "rangeId": 643.56,
+        "range": "640,00>649,99",
+        "systemSize": 6.3,
+        "amount": 18290.32,
+        "installmentOfFinancing": 781.59,
+        "montlySavings": 600,
+        "annualSavings": 7200,
+        "payback": 2.54
+    },
+    {
+        "rangeId": 653.55,
+        "range": "650,00>659,99",
+        "systemSize": 6.3,
+        "amount": 19161.29,
+        "installmentOfFinancing": 818.81,
+        "montlySavings": 610,
+        "annualSavings": 7320,
+        "payback": 2.62
+    },
+    {
+        "rangeId": 663.54,
+        "range": "660,00>669,99",
+        "systemSize": 6.3,
+        "amount": 19161.29,
+        "installmentOfFinancing": 818.81,
+        "montlySavings": 620,
+        "annualSavings": 7440,
+        "payback": 2.58
+    },
+    {
+        "rangeId": 673.53,
+        "range": "670,00>679,99",
+        "systemSize": 6.3,
+        "amount": 19161.29,
+        "installmentOfFinancing": 818.81,
+        "montlySavings": 630,
+        "annualSavings": 7560,
+        "payback": 2.53
+    },
+    {
+        "rangeId": 683.52,
+        "range": "680,00>689,99",
+        "systemSize": 6.3,
+        "amount": 19161.29,
+        "installmentOfFinancing": 818.81,
+        "montlySavings": 640,
+        "annualSavings": 7680,
+        "payback": 2.49
+    },
+    {
+        "rangeId": 693.51,
+        "range": "690,00>699,99",
+        "systemSize": 6.3,
+        "amount": 19161.29,
+        "installmentOfFinancing": 818.81,
+        "montlySavings": 650,
+        "annualSavings": 7800,
+        "payback": 2.46
+    },
+    {
+        "rangeId": 703.5,
+        "range": "700,00>709,99",
+        "systemSize": 7.2,
+        "amount": 20903.23,
+        "installmentOfFinancing": 893.25,
+        "montlySavings": 660,
+        "annualSavings": 7920,
+        "payback": 2.64
+    },
+    {
+        "rangeId": 713.49,
+        "range": "710,00>719,99",
+        "systemSize": 7.2,
+        "amount": 20903.23,
+        "installmentOfFinancing": 893.25,
+        "montlySavings": 670,
+        "annualSavings": 8040,
+        "payback": 2.6
+    },
+    {
+        "rangeId": 723.48,
+        "range": "720,00>729,99",
+        "systemSize": 7.2,
+        "amount": 20903.23,
+        "installmentOfFinancing": 893.25,
+        "montlySavings": 680,
+        "annualSavings": 8160,
+        "payback": 2.56
+    },
+    {
+        "rangeId": 733.47,
+        "range": "730,00>739,99",
+        "systemSize": 7.2,
+        "amount": 20903.23,
+        "installmentOfFinancing": 893.25,
+        "montlySavings": 690,
+        "annualSavings": 8280,
+        "payback": 2.52
+    },
+    {
+        "rangeId": 743.46,
+        "range": "740,00>749,99",
+        "systemSize": 7.2,
+        "amount": 20903.23,
+        "installmentOfFinancing": 893.25,
+        "montlySavings": 700,
+        "annualSavings": 8400,
+        "payback": 2.49
+    },
+    {
+        "rangeId": 753.45,
+        "range": "750,00>759,99",
+        "systemSize": 7.2,
+        "amount": 21774.19,
+        "installmentOfFinancing": 930.47,
+        "montlySavings": 710,
+        "annualSavings": 8520,
+        "payback": 2.56
+    },
+    {
+        "rangeId": 763.44,
+        "range": "760,00>769,99",
+        "systemSize": 7.2,
+        "amount": 21774.19,
+        "installmentOfFinancing": 930.47,
+        "montlySavings": 720,
+        "annualSavings": 8640,
+        "payback": 2.52
+    },
+    {
+        "rangeId": 773.43,
+        "range": "770,00>779,99",
+        "systemSize": 7.2,
+        "amount": 21774.19,
+        "installmentOfFinancing": 930.47,
+        "montlySavings": 730,
+        "annualSavings": 8760,
+        "payback": 2.49
+    },
+    {
+        "rangeId": 783.42,
+        "range": "780,00>789,99",
+        "systemSize": 7.2,
+        "amount": 21774.19,
+        "installmentOfFinancing": 930.47,
+        "montlySavings": 740,
+        "annualSavings": 8880,
+        "payback": 2.45
+    },
+    {
+        "rangeId": 793.41,
+        "range": "790,00>799,99",
+        "systemSize": 7.2,
+        "amount": 21774.19,
+        "installmentOfFinancing": 930.47,
+        "montlySavings": 750,
+        "annualSavings": 9000,
+        "payback": 2.42
+    },
+    {
+        "rangeId": 803.4,
+        "range": "800,00>809,99",
+        "systemSize": 8.6,
+        "amount": 24387.1,
+        "installmentOfFinancing": 1042.13,
+        "montlySavings": 760,
+        "annualSavings": 9120,
+        "payback": 2.67
+    },
+    {
+        "rangeId": 813.39,
+        "range": "810,00>819,99",
+        "systemSize": 9,
+        "amount": 24387.1,
+        "installmentOfFinancing": 1042.13,
+        "montlySavings": 770,
+        "annualSavings": 9240,
+        "payback": 2.64
+    },
+    {
+        "rangeId": 823.38,
+        "range": "820,00>829,99",
+        "systemSize": 9,
+        "amount": 24387.1,
+        "installmentOfFinancing": 1042.13,
+        "montlySavings": 780,
+        "annualSavings": 9360,
+        "payback": 2.61
+    },
+    {
+        "rangeId": 833.37,
+        "range": "830,00>839,99",
+        "systemSize": 9.2,
+        "amount": 24387.1,
+        "installmentOfFinancing": 1042.13,
+        "montlySavings": 790,
+        "annualSavings": 9480,
+        "payback": 2.57
+    },
+    {
+        "rangeId": 843.36,
+        "range": "840,00>849,99",
+        "systemSize": 9.2,
+        "amount": 25258.06,
+        "installmentOfFinancing": 1079.34,
+        "montlySavings": 800,
+        "annualSavings": 9600,
+        "payback": 2.63
+    },
+    {
+        "rangeId": 853.35,
+        "range": "850,00>859,99",
+        "systemSize": 9.2,
+        "amount": 25258.06,
+        "installmentOfFinancing": 1079.34,
+        "montlySavings": 810,
+        "annualSavings": 9720,
+        "payback": 2.6
+    },
+    {
+        "rangeId": 863.34,
+        "range": "860,00>869,99",
+        "systemSize": 9.6,
+        "amount": 25258.06,
+        "installmentOfFinancing": 1079.34,
+        "montlySavings": 820,
+        "annualSavings": 9840,
+        "payback": 2.57
+    },
+    {
+        "rangeId": 873.33,
+        "range": "870,00>879,99",
+        "systemSize": 9.6,
+        "amount": 25258.06,
+        "installmentOfFinancing": 1079.34,
+        "montlySavings": 830,
+        "annualSavings": 9960,
+        "payback": 2.54
+    },
+    {
+        "rangeId": 883.32,
+        "range": "880,00>889,99",
+        "systemSize": 10,
+        "amount": 25258.06,
+        "installmentOfFinancing": 1079.34,
+        "montlySavings": 840,
+        "annualSavings": 10080,
+        "payback": 2.51
+    },
+    {
+        "rangeId": 893.31,
+        "range": "890,00>899,99",
+        "systemSize": 10,
+        "amount": 25258.06,
+        "installmentOfFinancing": 1079.34,
+        "montlySavings": 850,
+        "annualSavings": 10200,
+        "payback": 2.48
+    },
+    {
+        "rangeId": 903.3,
+        "range": "900,00>909,99",
+        "systemSize": 11,
+        "amount": 27870.97,
+        "installmentOfFinancing": 1191,
+        "montlySavings": 860,
+        "annualSavings": 10320,
+        "payback": 2.7
+    },
+    {
+        "rangeId": 913.29,
+        "range": "910,00>919,99",
+        "systemSize": 11,
+        "amount": 27870.97,
+        "installmentOfFinancing": 1191,
+        "montlySavings": 870,
+        "annualSavings": 10440,
+        "payback": 2.67
+    },
+    {
+        "rangeId": 923.28,
+        "range": "920,00>929,99",
+        "systemSize": 11,
+        "amount": 27870.97,
+        "installmentOfFinancing": 1191,
+        "montlySavings": 880,
+        "annualSavings": 10560,
+        "payback": 2.64
+    },
+    {
+        "rangeId": 933.27,
+        "range": "930,00>939,99",
+        "systemSize": 11,
+        "amount": 27870.97,
+        "installmentOfFinancing": 1191,
+        "montlySavings": 890,
+        "annualSavings": 10680,
+        "payback": 2.61
+    },
+    {
+        "rangeId": 943.26,
+        "range": "940,00>949,99",
+        "systemSize": 11,
+        "amount": 27870.97,
+        "installmentOfFinancing": 1191,
+        "montlySavings": 900,
+        "annualSavings": 10800,
+        "payback": 2.58
+    },
+    {
+        "rangeId": 953.25,
+        "range": "950,00>959,99",
+        "systemSize": 11,
+        "amount": 29612.9,
+        "installmentOfFinancing": 1265.44,
+        "montlySavings": 910,
+        "annualSavings": 10920,
+        "payback": 2.71
+    },
+    {
+        "rangeId": 963.24,
+        "range": "960,00>969,99",
+        "systemSize": 11,
+        "amount": 30483.87,
+        "installmentOfFinancing": 1302.66,
+        "montlySavings": 920,
+        "annualSavings": 11040,
+        "payback": 2.76
+    },
+    {
+        "rangeId": 973.23,
+        "range": "970,00>979,99",
+        "systemSize": 11,
+        "amount": 31354.84,
+        "installmentOfFinancing": 1339.88,
+        "montlySavings": 930,
+        "annualSavings": 11160,
+        "payback": 2.81
+    },
+    {
+        "rangeId": 983.22,
+        "range": "980,00>989,99",
+        "systemSize": 11,
+        "amount": 32225.81,
+        "installmentOfFinancing": 1377.09,
+        "montlySavings": 940,
+        "annualSavings": 11280,
+        "payback": 2.86
+    },
+    {
+        "rangeId": 993.21,
+        "range": "990,00>999,99",
+        "systemSize": 11,
+        "amount": 32661.29,
+        "installmentOfFinancing": 1395.7,
+        "montlySavings": 950,
+        "annualSavings": 11400,
+        "payback": 2.87
+    },
+    {
+        "rangeId": 1003.2,
+        "range": "1000,00>1009,99",
+        "systemSize": 11,
+        "amount": 33096.77,
+        "installmentOfFinancing": 1414.31,
+        "montlySavings": 960,
+        "annualSavings": 11520,
+        "payback": 2.87
+    },
+    {
+        "rangeId": 1013.19,
+        "range": "1010,00>1019,99",
+        "systemSize": 12.6,
+        "amount": 33967.74,
+        "installmentOfFinancing": 1451.53,
+        "montlySavings": 970,
+        "annualSavings": 11640,
+        "payback": 2.92
+    },
+    {
+        "rangeId": 1023.18,
+        "range": "1020,00>1029,99",
+        "systemSize": 12.6,
+        "amount": 33967.74,
+        "installmentOfFinancing": 1451.53,
+        "montlySavings": 980,
+        "annualSavings": 11760,
+        "payback": 2.89
+    },
+    {
+        "rangeId": 1033.17,
+        "range": "1030,00>1039,99",
+        "systemSize": 12.6,
+        "amount": 33967.74,
+        "installmentOfFinancing": 1451.53,
+        "montlySavings": 990,
+        "annualSavings": 11880,
+        "payback": 2.86
+    },
+    {
+        "rangeId": 1043.16,
+        "range": "1040,00>1049,99",
+        "systemSize": 12.6,
+        "amount": 33967.74,
+        "installmentOfFinancing": 1451.53,
+        "montlySavings": 1000,
+        "annualSavings": 12000,
+        "payback": 2.83
+    },
+    {
+        "rangeId": 1053.15,
+        "range": "1050,00>1059,99",
+        "systemSize": 12.6,
+        "amount": 33967.74,
+        "installmentOfFinancing": 1451.53,
+        "montlySavings": 1010,
+        "annualSavings": 12120,
+        "payback": 2.8
+    },
+    {
+        "rangeId": 1063.14,
+        "range": "1060,00>1069,99",
+        "systemSize": 13,
+        "amount": 34838.71,
+        "installmentOfFinancing": 1488.75,
+        "montlySavings": 1020,
+        "annualSavings": 12240,
+        "payback": 2.85
+    },
+    {
+        "rangeId": 1073.13,
+        "range": "1070,00>1079,99",
+        "systemSize": 13,
+        "amount": 34838.71,
+        "installmentOfFinancing": 1488.75,
+        "montlySavings": 1030,
+        "annualSavings": 12360,
+        "payback": 2.82
+    },
+    {
+        "rangeId": 1083.12,
+        "range": "1080,00>1089,99",
+        "systemSize": 13,
+        "amount": 35709.68,
+        "installmentOfFinancing": 1525.97,
+        "montlySavings": 1040,
+        "annualSavings": 12480,
+        "payback": 2.86
+    },
+    {
+        "rangeId": 1093.11,
+        "range": "1090,00>1099,99",
+        "systemSize": 13,
+        "amount": 35709.68,
+        "installmentOfFinancing": 1525.97,
+        "montlySavings": 1050,
+        "annualSavings": 12600,
+        "payback": 2.83
+    },
+    {
+        "rangeId": 1149.99,
+        "range": "1100,00>1199,99",
+        "systemSize": 14.4,
+        "amount": 37451.61,
+        "installmentOfFinancing": 1600.41,
+        "montlySavings": 1060,
+        "annualSavings": 12720,
+        "payback": 2.94
+    },
+    {
+        "rangeId": 1249.98,
+        "range": "1200,00>1299,99",
+        "systemSize": 14.4,
+        "amount": 39193.55,
+        "installmentOfFinancing": 1674.84,
+        "montlySavings": 1160,
+        "annualSavings": 13920,
+        "payback": 2.82
+    },
+    {
+        "rangeId": 1349.97,
+        "range": "1300,00>1399,99",
+        "systemSize": 14.4,
+        "amount": 40935.48,
+        "installmentOfFinancing": 1749.28,
+        "montlySavings": 1260,
+        "annualSavings": 15120,
+        "payback": 2.71
+    },
+    {
+        "rangeId": 1449.96,
+        "range": "1400,00>1499,99",
+        "systemSize": 14.4,
+        "amount": 42677.42,
+        "installmentOfFinancing": 1823.72,
+        "montlySavings": 1360,
+        "annualSavings": 16320,
+        "payback": 2.62
+    },
+    {
+        "rangeId": 1549.95,
+        "range": "1500,00>1599,99",
+        "systemSize": 16,
+        "amount": 46161.29,
+        "installmentOfFinancing": 1972.59,
+        "montlySavings": 1460,
+        "annualSavings": 17520,
+        "payback": 2.63
+    },
+    {
+        "rangeId": 1649.94,
+        "range": "1600,00>1699,99",
+        "systemSize": 17,
+        "amount": 48774.19,
+        "installmentOfFinancing": 2084.25,
+        "montlySavings": 1660,
+        "annualSavings": 19920,
+        "payback": 2.45
+    },
+    {
+        "rangeId": 1749.93,
+        "range": "1700,00>1799,99",
+        "systemSize": 17,
+        "amount": 49645.16,
+        "installmentOfFinancing": 2121.47,
+        "montlySavings": 1760,
+        "annualSavings": 21120,
+        "payback": 2.35
+    },
+    {
+        "rangeId": 1849.92,
+        "range": "1800,00>1899,99",
+        "systemSize": 18,
+        "amount": 51387.1,
+        "installmentOfFinancing": 2195.91,
+        "montlySavings": 1860,
+        "annualSavings": 22320,
+        "payback": 2.3
+    },
+    {
+        "rangeId": 1949.91,
+        "range": "1900,00>1999,99",
+        "systemSize": 20,
+        "amount": 55741.94,
+        "installmentOfFinancing": 2382,
+        "montlySavings": 1960,
+        "annualSavings": 23520,
+        "payback": 2.37
+    },
+    {
+        "rangeId": 2049.9,
+        "range": "2000,00>2199,99",
+        "systemSize": 20,
+        "amount": 56430,
+        "installmentOfFinancing": 2411.4,
+        "montlySavings": 2160,
+        "annualSavings": 25920,
+        "payback": 2.18
+    },
+    {
+        "rangeId": 2149.89,
+        "range": "2200,00>2299,990",
+        "systemSize": 22,
+        "amount": 61481.61,
+        "installmentOfFinancing": 2627.27,
+        "montlySavings": 2260,
+        "annualSavings": 27120,
+        "payback": 2.27
+    },
+    {
+        "rangeId": 2249.88,
+        "range": "2300,00>2399,00",
+        "systemSize": 24,
+        "amount": 67064.52,
+        "installmentOfFinancing": 2865.84,
+        "montlySavings": 2360,
+        "annualSavings": 28320,
+        "payback": 2.37
+    },
+    {
+        "rangeId": 2349.87,
+        "range": "2400,00>2499,99",
+        "systemSize": 26,
+        "amount": 72290.32,
+        "installmentOfFinancing": 3089.16,
+        "montlySavings": 2460,
+        "annualSavings": 29520,
+        "payback": 2.45
+    },
+    {
+        "rangeId": 2449.86,
+        "range": "2500,00>2599,99",
+        "systemSize": 28,
+        "amount": 77516.13,
+        "installmentOfFinancing": 3312.47,
+        "montlySavings": 2560,
+        "annualSavings": 30720,
+        "payback": 2.52
+    },
+    {
+        "rangeId": 2549.85,
+        "range": "2600,00>2699,99",
+        "systemSize": 28,
+        "amount": 77516.13,
+        "installmentOfFinancing": 3312.47,
+        "montlySavings": 2660,
+        "annualSavings": 31920,
+        "payback": 2.43
+    },
+    {
+        "rangeId": 2649.84,
+        "range": "2700,00>2799,99",
+        "systemSize": 30,
+        "amount": 85354.84,
+        "installmentOfFinancing": 3647.44,
+        "montlySavings": 2760,
+        "annualSavings": 33120,
+        "payback": 2.58
+    },
+    {
+        "rangeId": 2749.83,
+        "range": "2800,00>2899,99",
+        "systemSize": 30,
+        "amount": 85354.84,
+        "installmentOfFinancing": 3647.44,
+        "montlySavings": 2860,
+        "annualSavings": 34320,
+        "payback": 2.49
+    },
+    {
+        "rangeId": 2849.82,
+        "range": "2900,00>3000,00",
+        "systemSize": 32,
+        "amount": 93193.55,
+        "installmentOfFinancing": 3982.41,
+        "montlySavings": 2960,
+        "annualSavings": 35520,
+        "payback": 2.62
+    }
 ]
