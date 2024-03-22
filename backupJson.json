@@ -1,0 +1,982 @@
+[
+    {
+     "rangeId": 200,
+     "range": "100,00>199,99",
+     "systemSize": 2,
+     "totalAmount": 13230,
+     "montlySavings": 60,
+     "annualSavings": 720,
+     "payback": 16.704545454545453
+    },
+    {
+     "rangeId": 210,
+     "range": "200,00>209,99",
+     "systemSize": 2,
+     "totalAmount": 13230,
+     "montlySavings": 160,
+     "annualSavings": 1920,
+     "payback": 6.264204545454546
+    },
+    {
+     "rangeId": 220,
+     "range": "210,00>219,99",
+     "systemSize": 2,
+     "totalAmount": 13365,
+     "montlySavings": 170,
+     "annualSavings": 2040,
+     "payback": 5.955882352941177
+    },
+    {
+     "rangeId": 230,
+     "range": "220,00>229,99",
+     "systemSize": 2,
+     "totalAmount": 13500,
+     "montlySavings": 180,
+     "annualSavings": 2160,
+     "payback": 5.681818181818182
+    },
+    {
+     "rangeId": 240,
+     "range": "230,00>239,99",
+     "systemSize": 2.7,
+     "totalAmount": 14850.000000000002,
+     "montlySavings": 190,
+     "annualSavings": 2280,
+     "payback": 5.921052631578948
+    },
+    {
+     "rangeId": 250,
+     "range": "240,00>249,99",
+     "systemSize": 2.7,
+     "totalAmount": 15442.650000000001,
+     "montlySavings": 200,
+     "annualSavings": 2400,
+     "payback": 5.8494886363636365
+    },
+    {
+     "rangeId": 260,
+     "range": "250,00>259,99",
+     "systemSize": 2.7,
+     "totalAmount": 15577.650000000001,
+     "montlySavings": 210,
+     "annualSavings": 2520,
+     "payback": 5.619642857142858
+    },
+    {
+     "rangeId": 270,
+     "range": "260,00>269,99",
+     "systemSize": 2.7,
+     "totalAmount": 16051.500000000002,
+     "montlySavings": 220,
+     "annualSavings": 2640,
+     "payback": 5.527376033057851
+    },
+    {
+     "rangeId": 280,
+     "range": "270,00>279,99",
+     "systemSize": 2.7,
+     "totalAmount": 17550,
+     "montlySavings": 230,
+     "annualSavings": 2760,
+     "payback": 5.7806324110671925
+    },
+    {
+     "rangeId": 290,
+     "range": "280,00>289,99",
+     "systemSize": 2.7,
+     "totalAmount": 18225,
+     "montlySavings": 240,
+     "annualSavings": 2880,
+     "payback": 5.752840909090908
+    },
+    {
+     "rangeId": 300,
+     "range": "290,00>299,99",
+     "systemSize": 3.6,
+     "totalAmount": 18495,
+     "montlySavings": 250,
+     "annualSavings": 3000,
+     "payback": 5.604545454545454
+    },
+    {
+     "rangeId": 310,
+     "range": "300,00>309,99",
+     "systemSize": 3.6,
+     "totalAmount": 18900,
+     "montlySavings": 260,
+     "annualSavings": 3120,
+     "payback": 5.506993006993007
+    },
+    {
+     "rangeId": 320,
+     "range": "310,00>319,99",
+     "systemSize": 3.6,
+     "totalAmount": 19575,
+     "montlySavings": 270,
+     "annualSavings": 3240,
+     "payback": 5.492424242424241
+    },
+    {
+     "rangeId": 330,
+     "range": "320,00>329,99",
+     "systemSize": 3.6,
+     "totalAmount": 19980,
+     "montlySavings": 280,
+     "annualSavings": 3360,
+     "payback": 5.4058441558441555
+    },
+    {
+     "rangeId": 340,
+     "range": "330,00>339,99",
+     "systemSize": 3.6,
+     "totalAmount": 20250,
+     "montlySavings": 290,
+     "annualSavings": 3480,
+     "payback": 5.289968652037617
+    },
+    {
+     "rangeId": 350,
+     "range": "340,00>349,99",
+     "systemSize": 3.6,
+     "totalAmount": 21165.300000000003,
+     "montlySavings": 300,
+     "annualSavings": 3600,
+     "payback": 5.344772727272727
+    },
+    {
+     "rangeId": 360,
+     "range": "350,00>359,99",
+     "systemSize": 3.6,
+     "totalAmount": 21330,
+     "montlySavings": 310,
+     "annualSavings": 3720,
+     "payback": 5.212609970674486
+    },
+    {
+     "rangeId": 370,
+     "range": "360,00>369,99",
+     "systemSize": 4.1,
+     "totalAmount": 21600,
+     "montlySavings": 320,
+     "annualSavings": 3840,
+     "payback": 5.113636363636363
+    },
+    {
+     "rangeId": 380,
+     "range": "370,00>379,99",
+     "systemSize": 4.1,
+     "totalAmount": 22950,
+     "montlySavings": 330,
+     "annualSavings": 3960,
+     "payback": 5.268595041322314
+    },
+    {
+     "rangeId": 390,
+     "range": "380,00>389,99",
+     "systemSize": 4.1,
+     "totalAmount": 22950,
+     "montlySavings": 340,
+     "annualSavings": 4080,
+     "payback": 5.113636363636363
+    },
+    {
+     "rangeId": 400,
+     "range": "390,00>399,99",
+     "systemSize": 4.3,
+     "totalAmount": 23625,
+     "montlySavings": 350,
+     "annualSavings": 4200,
+     "payback": 5.113636363636363
+    },
+    {
+     "rangeId": 410,
+     "range": "400,00>409,99",
+     "systemSize": 4.3,
+     "totalAmount": 23625,
+     "montlySavings": 360,
+     "annualSavings": 4320,
+     "payback": 4.971590909090909
+    },
+    {
+     "rangeId": 420,
+     "range": "410,00>419,99",
+     "systemSize": 4.5,
+     "totalAmount": 23625,
+     "montlySavings": 370,
+     "annualSavings": 4440,
+     "payback": 4.837223587223587
+    },
+    {
+     "rangeId": 430,
+     "range": "420,00>429,99",
+     "systemSize": 4.5,
+     "totalAmount": 23625,
+     "montlySavings": 380,
+     "annualSavings": 4560,
+     "payback": 4.7099282296650715
+    },
+    {
+     "rangeId": 440,
+     "range": "430,00>439,99",
+     "systemSize": 4.6,
+     "totalAmount": 23625,
+     "montlySavings": 390,
+     "annualSavings": 4680,
+     "payback": 4.589160839160839
+    },
+    {
+     "rangeId": 450,
+     "range": "440,00>449,99",
+     "systemSize": 4.6,
+     "totalAmount": 23625,
+     "montlySavings": 400,
+     "annualSavings": 4800,
+     "payback": 4.474431818181818
+    },
+    {
+     "rangeId": 460,
+     "range": "450,00>459,99",
+     "systemSize": 4.6,
+     "totalAmount": 24300,
+     "montlySavings": 410,
+     "annualSavings": 4920,
+     "payback": 4.490022172949002
+    },
+    {
+     "rangeId": 470,
+     "range": "460,00>469,99",
+     "systemSize": 4.8,
+     "totalAmount": 24300,
+     "montlySavings": 420,
+     "annualSavings": 5040,
+     "payback": 4.383116883116883
+    },
+    {
+     "rangeId": 480,
+     "range": "470,00>479,99",
+     "systemSize": 4.8,
+     "totalAmount": 24300,
+     "montlySavings": 430,
+     "annualSavings": 5160,
+     "payback": 4.281183932346722
+    },
+    {
+     "rangeId": 490,
+     "range": "480,00>489,99",
+     "systemSize": 5,
+     "totalAmount": 24975,
+     "montlySavings": 440,
+     "annualSavings": 5280,
+     "payback": 4.3001033057851235
+    },
+    {
+     "rangeId": 500,
+     "range": "490,00>499,99",
+     "systemSize": 5,
+     "totalAmount": 24975,
+     "montlySavings": 450,
+     "annualSavings": 5400,
+     "payback": 4.204545454545454
+    },
+    {
+     "rangeId": 510,
+     "range": "500,00>509,99",
+     "systemSize": 5.5,
+     "totalAmount": 25650,
+     "montlySavings": 460,
+     "annualSavings": 5520,
+     "payback": 4.224308300395256
+    },
+    {
+     "rangeId": 520,
+     "range": "510,00>519,99",
+     "systemSize": 5.5,
+     "totalAmount": 25650,
+     "montlySavings": 470,
+     "annualSavings": 5640,
+     "payback": 4.134429400386846
+    },
+    {
+     "rangeId": 530,
+     "range": "520,00>529,99",
+     "systemSize": 5.5,
+     "totalAmount": 25650,
+     "montlySavings": 480,
+     "annualSavings": 5760,
+     "payback": 4.048295454545454
+    },
+    {
+     "rangeId": 540,
+     "range": "530,00>539,99",
+     "systemSize": 5.5,
+     "totalAmount": 25650,
+     "montlySavings": 490,
+     "annualSavings": 5880,
+     "payback": 3.965677179962894
+    },
+    {
+     "rangeId": 550,
+     "range": "540,00>549,99",
+     "systemSize": 5.5,
+     "totalAmount": 26325,
+     "montlySavings": 500,
+     "annualSavings": 6000,
+     "payback": 3.988636363636363
+    },
+    {
+     "rangeId": 560,
+     "range": "550,00>559,99",
+     "systemSize": 5.5,
+     "totalAmount": 26325,
+     "montlySavings": 510,
+     "annualSavings": 6120,
+     "payback": 3.9104278074866303
+    },
+    {
+     "rangeId": 570,
+     "range": "560,00>569,99",
+     "systemSize": 5.5,
+     "totalAmount": 26325,
+     "montlySavings": 520,
+     "annualSavings": 6240,
+     "payback": 3.835227272727272
+    },
+    {
+     "rangeId": 580,
+     "range": "570,00>579,99",
+     "systemSize": 5.5,
+     "totalAmount": 26325,
+     "montlySavings": 530,
+     "annualSavings": 6360,
+     "payback": 3.762864493996569
+    },
+    {
+     "rangeId": 590,
+     "range": "580,00>589,99",
+     "systemSize": 5.5,
+     "totalAmount": 26325,
+     "montlySavings": 540,
+     "annualSavings": 6480,
+     "payback": 3.693181818181818
+    },
+    {
+     "rangeId": 600,
+     "range": "590,00>599,99",
+     "systemSize": 5.5,
+     "totalAmount": 26325,
+     "montlySavings": 550,
+     "annualSavings": 6600,
+     "payback": 3.6260330578512394
+    },
+    {
+     "rangeId": 610,
+     "range": "600,00>609,99",
+     "systemSize": 5.5,
+     "totalAmount": 28350.000000000004,
+     "montlySavings": 560,
+     "annualSavings": 6720,
+     "payback": 3.835227272727273
+    },
+    {
+     "rangeId": 620,
+     "range": "610,00>619,99",
+     "systemSize": 6.3,
+     "totalAmount": 28350.000000000004,
+     "montlySavings": 570,
+     "annualSavings": 6840,
+     "payback": 3.7679425837320575
+    },
+    {
+     "rangeId": 630,
+     "range": "620,00>629,99",
+     "systemSize": 6.3,
+     "totalAmount": 28350.000000000004,
+     "montlySavings": 580,
+     "annualSavings": 6960,
+     "payback": 3.7029780564263324
+    },
+    {
+     "rangeId": 640,
+     "range": "630,00>639,99",
+     "systemSize": 6.3,
+     "totalAmount": 28350.000000000004,
+     "montlySavings": 590,
+     "annualSavings": 7080,
+     "payback": 3.640215716486903
+    },
+    {
+     "rangeId": 650,
+     "range": "640,00>649,99",
+     "systemSize": 6.3,
+     "totalAmount": 28350.000000000004,
+     "montlySavings": 600,
+     "annualSavings": 7200,
+     "payback": 3.5795454545454546
+    },
+    {
+     "rangeId": 660,
+     "range": "650,00>659,99",
+     "systemSize": 6.3,
+     "totalAmount": 29700.000000000004,
+     "montlySavings": 610,
+     "annualSavings": 7320,
+     "payback": 3.6885245901639343
+    },
+    {
+     "rangeId": 670,
+     "range": "660,00>669,99",
+     "systemSize": 6.3,
+     "totalAmount": 29700.000000000004,
+     "montlySavings": 620,
+     "annualSavings": 7440,
+     "payback": 3.629032258064516
+    },
+    {
+     "rangeId": 680,
+     "range": "670,00>679,99",
+     "systemSize": 6.3,
+     "totalAmount": 29700.000000000004,
+     "montlySavings": 630,
+     "annualSavings": 7560,
+     "payback": 3.571428571428572
+    },
+    {
+     "rangeId": 690,
+     "range": "680,00>689,99",
+     "systemSize": 6.3,
+     "totalAmount": 29700.000000000004,
+     "montlySavings": 640,
+     "annualSavings": 7680,
+     "payback": 3.5156250000000004
+    },
+    {
+     "rangeId": 700,
+     "range": "690,00>699,99",
+     "systemSize": 6.3,
+     "totalAmount": 29700.000000000004,
+     "montlySavings": 650,
+     "annualSavings": 7800,
+     "payback": 3.461538461538462
+    },
+    {
+     "rangeId": 710,
+     "range": "700,00>709,99",
+     "systemSize": 7.2,
+     "totalAmount": 32400.000000000004,
+     "montlySavings": 660,
+     "annualSavings": 7920,
+     "payback": 3.7190082644628104
+    },
+    {
+     "rangeId": 720,
+     "range": "710,00>719,99",
+     "systemSize": 7.2,
+     "totalAmount": 32400.000000000004,
+     "montlySavings": 670,
+     "annualSavings": 8040,
+     "payback": 3.6635006784260518
+    },
+    {
+     "rangeId": 730,
+     "range": "720,00>729,99",
+     "systemSize": 7.2,
+     "totalAmount": 32400.000000000004,
+     "montlySavings": 680,
+     "annualSavings": 8160,
+     "payback": 3.609625668449198
+    },
+    {
+     "rangeId": 740,
+     "range": "730,00>739,99",
+     "systemSize": 7.2,
+     "totalAmount": 32400.000000000004,
+     "montlySavings": 690,
+     "annualSavings": 8280,
+     "payback": 3.557312252964427
+    },
+    {
+     "rangeId": 750,
+     "range": "740,00>749,99",
+     "systemSize": 7.2,
+     "totalAmount": 32400.000000000004,
+     "montlySavings": 700,
+     "annualSavings": 8400,
+     "payback": 3.506493506493507
+    },
+    {
+     "rangeId": 760,
+     "range": "750,00>759,99",
+     "systemSize": 7.2,
+     "totalAmount": 33750,
+     "montlySavings": 710,
+     "annualSavings": 8520,
+     "payback": 3.6011523687580027
+    },
+    {
+     "rangeId": 770,
+     "range": "760,00>769,99",
+     "systemSize": 7.2,
+     "totalAmount": 33750,
+     "montlySavings": 720,
+     "annualSavings": 8640,
+     "payback": 3.5511363636363638
+    },
+    {
+     "rangeId": 780,
+     "range": "770,00>779,99",
+     "systemSize": 7.2,
+     "totalAmount": 33750,
+     "montlySavings": 730,
+     "annualSavings": 8760,
+     "payback": 3.5024906600249066
+    },
+    {
+     "rangeId": 790,
+     "range": "780,00>789,99",
+     "systemSize": 7.2,
+     "totalAmount": 33750,
+     "montlySavings": 740,
+     "annualSavings": 8880,
+     "payback": 3.455159705159705
+    },
+    {
+     "rangeId": 800,
+     "range": "790,00>799,99",
+     "systemSize": 7.2,
+     "totalAmount": 33750,
+     "montlySavings": 750,
+     "annualSavings": 9000,
+     "payback": 3.409090909090909
+    },
+    {
+     "rangeId": 810,
+     "range": "800,00>809,99",
+     "systemSize": 8.6,
+     "totalAmount": 37800,
+     "montlySavings": 760,
+     "annualSavings": 9120,
+     "payback": 3.7679425837320575
+    },
+    {
+     "rangeId": 820,
+     "range": "810,00>819,99",
+     "systemSize": 9,
+     "totalAmount": 37800,
+     "montlySavings": 770,
+     "annualSavings": 9240,
+     "payback": 3.71900826446281
+    },
+    {
+     "rangeId": 830,
+     "range": "820,00>829,99",
+     "systemSize": 9,
+     "totalAmount": 37800,
+     "montlySavings": 780,
+     "annualSavings": 9360,
+     "payback": 3.6713286713286712
+    },
+    {
+     "rangeId": 840,
+     "range": "830,00>839,99",
+     "systemSize": 9.2,
+     "totalAmount": 37800,
+     "montlySavings": 790,
+     "annualSavings": 9480,
+     "payback": 3.624856156501726
+    },
+    {
+     "rangeId": 850,
+     "range": "840,00>849,99",
+     "systemSize": 9.2,
+     "totalAmount": 39150,
+     "montlySavings": 800,
+     "annualSavings": 9600,
+     "payback": 3.7073863636363638
+    },
+    {
+     "rangeId": 860,
+     "range": "850,00>859,99",
+     "systemSize": 9.2,
+     "totalAmount": 39150,
+     "montlySavings": 810,
+     "annualSavings": 9720,
+     "payback": 3.6616161616161618
+    },
+    {
+     "rangeId": 870,
+     "range": "860,00>869,99",
+     "systemSize": 9.6,
+     "totalAmount": 39150,
+     "montlySavings": 820,
+     "annualSavings": 9840,
+     "payback": 3.6169623059866964
+    },
+    {
+     "rangeId": 880,
+     "range": "870,00>879,99",
+     "systemSize": 9.6,
+     "totalAmount": 39150,
+     "montlySavings": 830,
+     "annualSavings": 9960,
+     "payback": 3.5733844468784226
+    },
+    {
+     "rangeId": 890,
+     "range": "880,00>889,99",
+     "systemSize": 10,
+     "totalAmount": 39150,
+     "montlySavings": 840,
+     "annualSavings": 10080,
+     "payback": 3.530844155844156
+    },
+    {
+     "rangeId": 900,
+     "range": "890,00>899,99",
+     "systemSize": 10,
+     "totalAmount": 39150,
+     "montlySavings": 850,
+     "annualSavings": 10200,
+     "payback": 3.4893048128342246
+    },
+    {
+     "rangeId": 910,
+     "range": "900,00>909,99",
+     "systemSize": 11,
+     "totalAmount": 43200,
+     "montlySavings": 860,
+     "annualSavings": 10320,
+     "payback": 3.8054968287526423
+    },
+    {
+     "rangeId": 920,
+     "range": "910,00>919,99",
+     "systemSize": 11,
+     "totalAmount": 43200,
+     "montlySavings": 870,
+     "annualSavings": 10440,
+     "payback": 3.761755485893416
+    },
+    {
+     "rangeId": 930,
+     "range": "920,00>929,99",
+     "systemSize": 11,
+     "totalAmount": 43200,
+     "montlySavings": 880,
+     "annualSavings": 10560,
+     "payback": 3.7190082644628095
+    },
+    {
+     "rangeId": 940,
+     "range": "930,00>939,99",
+     "systemSize": 11,
+     "totalAmount": 43200,
+     "montlySavings": 890,
+     "annualSavings": 10680,
+     "payback": 3.677221654749744
+    },
+    {
+     "rangeId": 950,
+     "range": "940,00>949,99",
+     "systemSize": 11,
+     "totalAmount": 43200,
+     "montlySavings": 900,
+     "annualSavings": 10800,
+     "payback": 3.636363636363636
+    },
+    {
+     "rangeId": 960,
+     "range": "950,00>959,99",
+     "systemSize": 11,
+     "totalAmount": 45900,
+     "montlySavings": 910,
+     "annualSavings": 10920,
+     "payback": 3.8211788211788207
+    },
+    {
+     "rangeId": 970,
+     "range": "960,00>969,99",
+     "systemSize": 11,
+     "totalAmount": 47250,
+     "montlySavings": 920,
+     "annualSavings": 11040,
+     "payback": 3.8908102766798414
+    },
+    {
+     "rangeId": 980,
+     "range": "970,00>979,99",
+     "systemSize": 11,
+     "totalAmount": 48600,
+     "montlySavings": 930,
+     "annualSavings": 11160,
+     "payback": 3.9589442815249263
+    },
+    {
+     "rangeId": 990,
+     "range": "980,00>989,99",
+     "systemSize": 11,
+     "totalAmount": 49950,
+     "montlySavings": 940,
+     "annualSavings": 11280,
+     "payback": 4.0256286266924555
+    },
+    {
+     "rangeId": 1000,
+     "range": "990,00>999,99",
+     "systemSize": 11,
+     "totalAmount": 50625,
+     "montlySavings": 950,
+     "annualSavings": 11400,
+     "payback": 4.037081339712918
+    },
+    {
+     "rangeId": 1010,
+     "range": "1000,00>1009,99",
+     "systemSize": 11,
+     "totalAmount": 51300,
+     "montlySavings": 960,
+     "annualSavings": 11520,
+     "payback": 4.048295454545454
+    },
+    {
+     "rangeId": 1020,
+     "range": "1010,00>1019,99",
+     "systemSize": 12.6,
+     "totalAmount": 52650,
+     "montlySavings": 970,
+     "annualSavings": 11640,
+     "payback": 4.111996251171508
+    },
+    {
+     "rangeId": 1030,
+     "range": "1020,00>1029,99",
+     "systemSize": 12.6,
+     "totalAmount": 52650,
+     "montlySavings": 980,
+     "annualSavings": 11760,
+     "payback": 4.070037105751391
+    },
+    {
+     "rangeId": 1040,
+     "range": "1030,00>1039,99",
+     "systemSize": 12.6,
+     "totalAmount": 52650,
+     "montlySavings": 990,
+     "annualSavings": 11880,
+     "payback": 4.02892561983471
+    },
+    {
+     "rangeId": 1050,
+     "range": "1040,00>1049,99",
+     "systemSize": 12.6,
+     "totalAmount": 52650,
+     "montlySavings": 1000,
+     "annualSavings": 12000,
+     "payback": 3.988636363636363
+    },
+    {
+     "rangeId": 1060,
+     "range": "1050,00>1059,99",
+     "systemSize": 12.6,
+     "totalAmount": 52650,
+     "montlySavings": 1010,
+     "annualSavings": 12120,
+     "payback": 3.9491449144914488
+    },
+    {
+     "rangeId": 1070,
+     "range": "1060,00>1069,99",
+     "systemSize": 13,
+     "totalAmount": 54000,
+     "montlySavings": 1020,
+     "annualSavings": 12240,
+     "payback": 4.0106951871657746
+    },
+    {
+     "rangeId": 1080,
+     "range": "1070,00>1079,99",
+     "systemSize": 13,
+     "totalAmount": 54000,
+     "montlySavings": 1030,
+     "annualSavings": 12360,
+     "payback": 3.9717563989408644
+    },
+    {
+     "rangeId": 1090,
+     "range": "1080,00>1089,99",
+     "systemSize": 13,
+     "totalAmount": 55350.00000000001,
+     "montlySavings": 1040,
+     "annualSavings": 12480,
+     "payback": 4.031905594405594
+    },
+    {
+     "rangeId": 1100,
+     "range": "1090,00>1099,99",
+     "systemSize": 13,
+     "totalAmount": 55350.00000000001,
+     "montlySavings": 1050,
+     "annualSavings": 12600,
+     "payback": 3.9935064935064934
+    },
+    {
+     "rangeId": 1200,
+     "range": "1100,00>1199,99",
+     "systemSize": 14.4,
+     "totalAmount": 58050.00000000001,
+     "montlySavings": 1060,
+     "annualSavings": 12720,
+     "payback": 4.148799313893654
+    },
+    {
+     "rangeId": 1300,
+     "range": "1200,00>1299,99",
+     "systemSize": 14.4,
+     "totalAmount": 60750.00000000001,
+     "montlySavings": 1160,
+     "annualSavings": 13920,
+     "payback": 3.967476489028213
+    },
+    {
+     "rangeId": 1400,
+     "range": "1300,00>1399,99",
+     "systemSize": 14.4,
+     "totalAmount": 63450.00000000001,
+     "montlySavings": 1260,
+     "annualSavings": 15120,
+     "payback": 3.8149350649350655
+    },
+    {
+     "rangeId": 1500,
+     "range": "1400,00>1499,99",
+     "systemSize": 14.4,
+     "totalAmount": 66150,
+     "montlySavings": 1360,
+     "annualSavings": 16320,
+     "payback": 3.6848262032085564
+    },
+    {
+     "rangeId": 1700,
+     "range": "1500,00>1599,99",
+     "systemSize": 16,
+     "totalAmount": 71550,
+     "montlySavings": 1460,
+     "annualSavings": 17520,
+     "payback": 3.712640099626401
+    },
+    {
+     "rangeId": 1800,
+     "range": "1600,00>1699,99",
+     "systemSize": 17,
+     "totalAmount": 75600,
+     "montlySavings": 1660,
+     "annualSavings": 19920,
+     "payback": 3.4501642935377874
+    },
+    {
+     "rangeId": 1900,
+     "range": "1700,00>1799,99",
+     "systemSize": 17,
+     "totalAmount": 76950,
+     "montlySavings": 1760,
+     "annualSavings": 21120,
+     "payback": 3.3122417355371896
+    },
+    {
+     "rangeId": 2000,
+     "range": "1800,00>1899,99",
+     "systemSize": 18,
+     "totalAmount": 79650,
+     "montlySavings": 1860,
+     "annualSavings": 22320,
+     "payback": 3.2441348973607034
+    },
+    {
+     "rangeId": 2200,
+     "range": "1900,00>1999,99",
+     "systemSize": 20,
+     "totalAmount": 86400,
+     "montlySavings": 1960,
+     "annualSavings": 23520,
+     "payback": 3.3395176252319105
+    },
+    {
+     "rangeId": 2300,
+     "range": "2000,00>2199,99",
+     "systemSize": 20,
+     "totalAmount": 87466.5,
+     "montlySavings": 2160,
+     "annualSavings": 25920,
+     "payback": 3.067708333333333
+    },
+    {
+     "rangeId": 2400,
+     "range": "2200,00>2299,990",
+     "systemSize": 22,
+     "totalAmount": 95296.5,
+     "montlySavings": 2260,
+     "annualSavings": 27120,
+     "payback": 3.194438857602574
+    },
+    {
+     "rangeId": 2500,
+     "range": "2300,00>2399,00",
+     "systemSize": 24,
+     "totalAmount": 103950,
+     "montlySavings": 2360,
+     "annualSavings": 28320,
+     "payback": 3.3368644067796605
+    },
+    {
+     "rangeId": 2600,
+     "range": "2400,00>2499,99",
+     "systemSize": 26,
+     "totalAmount": 112050.00000000001,
+     "montlySavings": 2460,
+     "annualSavings": 29520,
+     "payback": 3.4506651884700665
+    },
+    {
+     "rangeId": 2700,
+     "range": "2500,00>2599,99",
+     "systemSize": 28,
+     "totalAmount": 120150.00000000001,
+     "montlySavings": 2560,
+     "annualSavings": 30720,
+     "payback": 3.5555752840909096
+    },
+    {
+     "rangeId": 2800,
+     "range": "2600,00>2699,99",
+     "systemSize": 28,
+     "totalAmount": 120150.00000000001,
+     "montlySavings": 2660,
+     "annualSavings": 31920,
+     "payback": 3.4219070403280933
+    },
+    {
+     "rangeId": 2900,
+     "range": "2700,00>2799,99",
+     "systemSize": 30,
+     "totalAmount": 132300,
+     "montlySavings": 2760,
+     "annualSavings": 33120,
+     "payback": 3.6314229249011856
+    },
+    {
+     "rangeId": 3000,
+     "range": "2800,00>2899,99",
+     "systemSize": 30,
+     "totalAmount": 132300,
+     "montlySavings": 2860,
+     "annualSavings": 34320,
+     "payback": 3.504450095359186
+    },
+    {
+     "range": "2900,00>3000,00",
+     "systemSize": 32,
+     "totalAmount": 144450,
+     "montlySavings": 2960,
+     "annualSavings": 35520,
+     "payback": 3.6970208845208847
+    }
+   ]
