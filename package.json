@@ -11,12 +11,14 @@
   "dependencies": {
     "@headlessui/react": "^1.6.0",
     "axios": "^0.27.2",
+    "chart.js": "^4.4.6",
     "classnames": "^2.3.1",
     "next": "12.1.6",
     "react": "18.1.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "18.1.0",
     "react-hook-form": "^7.31.3",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.12.0",
     "react-input-mask": "^2.0.4",
     "react-toastify": "^9.0.5"
   },

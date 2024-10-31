@@ -9,6 +9,17 @@ module.exports = {
         sans: 'Poppins, sans-serif',
       },
       colors: {
+        purplekenji: {
+          100: "#e8daef",
+          200: "#d2b4de",
+          300: "#bb8fce",
+          400: "#a569bd",
+          500: "#8e44ad",
+          600: "#72368a",
+          700: "#552968",
+          800: "#391b45",
+          900: "#1c0e23"
+},
         sun: {
           500: '#f9a826',
         }
