@@ -4,9 +4,26 @@ import { MdLightMode } from "react-icons/md";
 import { FaRegHandshake } from "react-icons/fa";
 import { HiLightBulb, HiOutlineLightBulb } from "react-icons/hi";
 import { useState } from "react";
-import Carousel from "../components/Carousel";
+
 
 export default function Condominios() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const slides = [
+        "/gesolarcondo.jpg",
+        "/energiasolar2.jfif",
+        "/painelcondominio.png",
+        "/familia-jovem-com-uma-crianca-pequena-nos-bracos-em-um-fundo-de-paineis-solares-um-homem-e-uma-mulher-se-olham-com-amor-conceito-de-energia-solar_255667-56879.avif",
+        "/Conta-antes-x-depois-reduzida02-1024x983.png"
+    ];
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    };
+
     return (
         <>
             <HeroSection 
@@ -137,7 +154,7 @@ export default function Condominios() {
         </div>
     </div>
     
-    <section className="flex flex-col items-center bg-color-[1e1a1a]">
+    <section className="flex flex-col items-center bg-color-[1e1a1a] py-24">
       <div className="w-full max-w-[880px] h-72 flex justify-center items center">
         <img
           src="/energiasolar2.jfif" 
@@ -148,8 +165,16 @@ export default function Condominios() {
       <h2 className="text-3xl font-bold text-sun-500 py-10">
         Como Funciona
       </h2>
-      <ul>  
-        <li className="flex items-center gap-6 text-white w-full h-full max-w-lg">
+      <ul className="flex flex-col gap-4">  
+        <li className="flex items-center justify-start gap-6 text-white w-full h-full max-w-3xl min-w-[320px] bg-[#1e1e1e] p-8 rounded-2xl">
+              <span className="text-sun-500">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"></path>
+                  </svg>
+              </span>
+              colocar texto adawdad wadwad a dad a da dadwa da da ad ad olocar texto adawdad wadwad a dad a da dadwa da da ad ad 
+        </li>
+        <li className="flex items-center justify-start gap-6 text-white w-full h-full max-w-3xl min-w-[320px] bg-[#1e1e1e] p-8 rounded-2xl">
               <span className="text-sun-500">
                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"></path>
@@ -157,7 +182,7 @@ export default function Condominios() {
               </span>
               colocar texto
         </li>
-        <li className="flex items-center gap-6 text-white w-full h-full max-w-lg">
+        <li className="flex items-center justify-start gap-6 text-white w-full h-full max-w-3xl min-w-[320px] bg-[#1e1e1e] p-8 rounded-2xl">
               <span className="text-sun-500">
                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"></path>
@@ -165,15 +190,7 @@ export default function Condominios() {
               </span>
               colocar texto
         </li>
-        <li className="flex items-center gap-6 text-white w-full h-full max-w-lg">
-              <span className="text-sun-500">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"></path>
-                  </svg>
-              </span>
-              colocar texto
-        </li>
-        <li className="flex items-center gap-6 text-white w-full h-full max-w-lg">
+        <li className="flex items-center justify-start gap-6 text-white w-full h-full max-w-3xl min-w-[320px] bg-[#1e1e1e] p-8 rounded-2xl">
               <span className="text-sun-500">
                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"></path>
@@ -184,7 +201,47 @@ export default function Condominios() {
     </ul>
     </section>
     
-    <Carousel/>     
+    <div className="flex justify-center bg-[#1E1E1E]"> {/* Centralizando o carrossel */}
+            <div className="relative w-96 h-96 "> {/* Removido o padding */}
+                <div id="default-carousel" className="relative h-full overflow-hidden rounded-lg " data-carousel="slide">
+                    {slides.map((src, index) => (
+                        <div key={index} className={`absolute w-full h-full transition-transform duration-700 ease-in-out ${currentSlide === index ? 'block' : 'hidden'}`} data-carousel-item>
+                            <img src={src} className="absolute block w-full h-full object-cover" alt={`Slide ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
+                {/* Slider indicators */}
+                <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-2 rtl:space-x-reverse">
+                    {slides.map((_, index) => (
+                        <button
+                            key={index}
+                            type="button"
+                            className={`w-2 h-2 rounded-full ${currentSlide === index ? 'bg-sun-500' : 'bg-gray-300'}`}
+                            aria-current={currentSlide === index}
+                            aria-label={`Slide ${index + 1}`}
+                            onClick={() => setCurrentSlide(index)}
+                        ></button>
+                    ))}
+                </div>
+                {/* Slider controls */}
+                <button type="button" className="absolute top-1/2 left-0 z-30 flex items-center justify-center h-10 w-10 p-2 -translate-y-1/2 cursor-pointer group focus:outline-none" onClick={prevSlide}>
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
+                        </svg>
+                        <span className="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" className="absolute top-1/2 right-0 z-30 flex items-center justify-center h-10 w-10 p-2 -translate-y-1/2 cursor-pointer group focus:outline-none" onClick={nextSlide}>
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span className="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+        </div>
 </>
     );
 }
